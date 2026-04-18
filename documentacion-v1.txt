@@ -1,0 +1,290 @@
+
+
+
+CHATBOT DE TURNOS MÉDICOS — DOCUMENTACIÓN DE AVANCE
+Trabajo Final de Ingeniería Informática
+========================================================
+
+
+1. QUÉ SE CONSTRUYÓ
+====================
+
+Se desarrolló la base de un chatbot inteligente para gestión de turnos médicos,
+diseñado para funcionar en WhatsApp. El sistema reemplaza los flujos lineales
+tradicionales (donde el bot hace una pregunta, espera la respuesta, hace la siguiente,
+y así sucesivamente) por una interfaz conversacional más natural basada en dos
+conceptos clave: NLU y Slot Filling no lineal.
+
+NLU (Natural Language Understanding) significa que el sistema intenta entender
+el significado del texto del usuario, no solo buscar palabras exactas. Por ejemplo,
+si el usuario escribe "necesito un turno de cora" el sistema puede inferir que
+se refiere a Cardiología.
+
+Slot Filling no lineal significa que el sistema puede recibir múltiples datos
+en cualquier orden y en cualquier mensaje. Si el usuario escribe "soy Juan,
+DNI 30123456, necesito cardiología en sede norte con OSDE", el sistema extrae
+los cuatro datos de una sola vez sin necesidad de hacer cuatro preguntas separadas.
+
+
+2. ESTRUCTURA DE ARCHIVOS
+==========================
+
+El proyecto sigue una arquitectura en capas, separando responsabilidades:
+
+    Codigo/
+    ├── main.py                          → Punto de entrada de la aplicación
+    ├── requirements.txt                 → Lista de dependencias Python
+    ├── .env                             → Variables de entorno (credenciales, config)
+    ├── chat.py                          → Cliente de chat por terminal (sin IA)
+    │
+    └── app/
+        ├── core/
+        │   └── config.py               → Configuración central (lee el .env)
+        │
+        ├── api/
+        │   └── v1/
+        │       ├── webhook.py          → Endpoints HTTP del chatbot
+        │       └── health.py           → Endpoint de verificación del servidor
+        │
+        ├── dialog/
+        │   └── conversation_manager.py → Núcleo: gestión de estado y slots
+        │
+        ├── nlu/
+        │   └── nlu_service.py          → Módulo de comprensión de lenguaje
+        │
+        ├── db/
+        │   ├── models.py               → Definición de tablas de la base de datos
+        │   └── session.py              → Conexión a la base de datos
+        │
+        ├── ocr/
+        │   └── ocr_service.py          → Módulo preparado para leer imágenes (futuro)
+        │
+        └── services/
+            └── whatsapp_sender.py      → Preparado para enviar mensajes a WhatsApp
+
+
+3. COMPONENTES PRINCIPALES
+===========================
+
+3.1 main.py — Punto de entrada
+--------------------------------
+Inicializa la aplicación FastAPI, registra todas las rutas (endpoints),
+configura el middleware de CORS (para permitir conexiones desde distintos
+orígenes) y se encarga de inicializar la base de datos al arrancar.
+
+FastAPI es un framework web moderno para Python que genera automáticamente
+documentación interactiva de la API en /docs.
+
+
+3.2 config.py — Configuración central
+---------------------------------------
+Usa Pydantic Settings para leer variables de configuración desde el archivo .env.
+Esto permite cambiar credenciales, URLs y modos de operación sin modificar el código.
+Variables configurables: URL de base de datos, token de WhatsApp, modo de NLU,
+habilitación de OCR, entre otras.
+
+
+3.3 conversation_manager.py — El núcleo del sistema
+-----------------------------------------------------
+Es el componente más importante del proyecto. Gestiona el estado de cada
+conversación y los datos (slots) que se van recopilando.
+
+Los cuatro slots que se recopilan son:
+- DNI: documento nacional de identidad del paciente
+- Estudio: tipo de estudio o especialidad médica solicitada
+- Obra social: cobertura médica del paciente
+- Sede: sucursal donde se realizará el turno (Centro, Norte o Sur)
+
+Clases principales:
+
+  SlotSet: contiene los cuatro slots y tiene métodos para saber si están
+  todos completos (is_complete) y cuáles faltan (missing_slots).
+
+  ConversationSession: representa la sesión completa de un usuario.
+  Guarda el estado actual, los slots, el historial de mensajes y contadores.
+  Cada usuario tiene su propia sesión identificada por su número de teléfono.
+
+  ConversationManager: la clase principal. Recibe el texto del usuario y
+  las entidades extraídas por el NLU, actualiza los slots, y decide qué
+  responder. Los estados posibles de una conversación son:
+    - greeting: saludo inicial
+    - collecting: recopilando los datos del turno
+    - confirming: esperando que el usuario confirme o cancele
+    - completed: turno confirmado y guardado
+    - cancelled: el usuario canceló
+
+El flujo no lineal funciona así: cuando llega un mensaje con entidades
+detectadas, el ConversationManager las fusiona sobre los slots existentes
+(sin sobrescribir datos ya capturados). Luego pregunta el siguiente slot
+faltante según un orden de prioridad predefinido.
+
+
+3.4 nlu_service.py — Comprensión del lenguaje
+-----------------------------------------------
+Módulo responsable de analizar el texto del usuario y extraer entidades.
+Está diseñado con una arquitectura extensible:
+
+  BaseNLUEngine: interfaz abstracta que define el contrato que debe cumplir
+  cualquier motor de NLU. Esto permite cambiar la implementación en el futuro
+  sin modificar el resto del sistema.
+
+  MockNLUEngine: implementación actual basada en expresiones regulares y
+  listas de vocabulario controlado. Extrae:
+    - DNI: detecta secuencias de 7 u 8 dígitos con distintos formatos
+      (30123456 / 30.123.456 / 30 123 456)
+    - Estudio: compara contra una lista de especialidades y estudios conocidos
+    - Sede: detecta nombres de sedes (Centro, Norte, Sur)
+    - Obra social: compara contra una lista de coberturas conocidas
+    - Intención: detecta si el usuario saluda, confirma, cancela, etc.
+
+  NLUService: fachada pública que selecciona el motor según la configuración.
+  Si NLU_MODE=mock usa el motor de regex. En el futuro podría usar Rasa,
+  Dialogflow, spaCy, o un LLM local.
+
+
+3.5 models.py — Base de datos
+-------------------------------
+Define tres tablas usando SQLAlchemy (ORM para Python):
+
+  Paciente: almacena DNI, nombre, número de WhatsApp y obra social.
+  Sede: almacena las sucursales con nombre, dirección y estado (activa/inactiva).
+  Turno: relaciona un paciente con una sede e incluye el estudio solicitado,
+  el estado del turno (pendiente/confirmado/cancelado/completado), la fecha
+  y hora asignada, y campos reservados para el futuro módulo de OCR
+  (imagen de orden médica y texto extraído).
+
+La base de datos es SQLite por defecto (un archivo local llamado turnos.db),
+lo que simplifica el desarrollo. Para producción se cambiaría a PostgreSQL
+modificando solo una línea en el .env.
+
+
+3.6 webhook.py — Endpoints HTTP
+---------------------------------
+Define tres rutas HTTP:
+
+  GET /api/v1/webhook: verificación del webhook por parte de Meta (WhatsApp).
+  Cuando se conecte la API real de WhatsApp, Meta llama a esta URL para
+  confirmar que el servidor es legítimo.
+
+  POST /api/v1/webhook: recibe los mensajes entrantes. Extrae el texto y el
+  número del remitente del payload de WhatsApp, llama al NLU para extraer
+  entidades, y luego llama al ConversationManager para procesar el turno
+  y generar la respuesta.
+
+  GET /api/v1/webhook/session/{phone}: endpoint auxiliar para inspeccionar
+  el estado actual de una sesión. Útil para debugging y testing.
+
+
+3.7 ocr_service.py — Visión Artificial (preparado)
+----------------------------------------------------
+Módulo stub que define la arquitectura para el futuro módulo de OCR.
+Cuando esté implementado, permitirá al usuario enviar una foto de su orden
+médica por WhatsApp y el sistema extraerá automáticamente los datos
+(estudio, médico derivante, obra social) para pre-completar los slots.
+Actualmente está deshabilitado (OCR_ENABLED=false en el .env).
+
+
+3.8 whatsapp_sender.py — Envío de mensajes (preparado)
+--------------------------------------------------------
+Módulo preparado para enviar mensajes usando la API oficial de WhatsApp
+de Meta (Cloud API). Actualmente no se usa porque el chatbot se prueba
+desde la terminal, pero la estructura está lista para conectarse con
+credenciales reales.
+
+
+4. CÓMO CORRER EL PROYECTO
+============================
+
+Requisitos previos: tener Python 3.12 instalado con pyenv y el entorno
+virtual activado.
+
+Paso 1 — Activar el entorno virtual (cada vez que se abre una terminal):
+    cd /Users/bautistapoli/Documents/Tesis/Codigo
+    eval "$(pyenv init -)"
+    source venv/bin/activate
+
+Paso 2 — Iniciar el servidor (en una terminal):
+    uvicorn main:app --reload
+
+Paso 3 — Chatear (en otra terminal, con el venv activado):
+    python chat.py          (versión simple)
+    python chat_ia.py       (versión con IA, requiere API key)
+
+La documentación interactiva de la API queda disponible en:
+    http://127.0.0.1:8000/docs
+
+
+5. CÓMO FUNCIONA UNA CONVERSACIÓN COMPLETA
+============================================
+
+Ejemplo de conversación con el chat simple (chat.py):
+
+  Usuario: "hola, mi DNI es 30123456 y necesito cardiología"
+  Sistema: [NLU extrae dni=30123456, estudio=Cardiología]
+           [ConversationManager detecta que faltan obra_social y sede]
+  Bot:     "¿Con qué obra social o prepaga contás?"
+
+  Usuario: "tengo OSDE"
+  Sistema: [NLU extrae obra_social=Osde]
+           [ConversationManager detecta que falta sede]
+  Bot:     "¿En qué sede preferís atenderte? Centro, Norte o Sur."
+
+  Usuario: "centro"
+  Sistema: [NLU extrae sede=Centro]
+           [ConversationManager detecta que todos los slots están completos]
+  Bot:     "✅ Revisá los datos: DNI 30123456, Cardiología, OSDE, Centro.
+            ¿Confirmás? Respondé SI o NO."
+
+  Usuario: "si"
+  Sistema: [ConversationManager transiciona a estado completed]
+  Bot:     "🎉 ¡Turno confirmado! Te esperamos en sede Centro."
+
+
+6. DECISIONES DE ARQUITECTURA RELEVANTES PARA LA TESIS
+========================================================
+
+Async de punta a punta: FastAPI y SQLAlchemy se usan en modo asíncrono.
+Esto significa que el servidor puede atender múltiples conversaciones
+simultáneas sin bloquearse, lo cual es crítico para un sistema de WhatsApp
+donde muchos usuarios pueden escribir al mismo tiempo.
+
+Patrón Strategy en NLU: el motor de NLU se puede intercambiar sin tocar
+el resto del código. Esto es un patrón de diseño llamado Strategy y
+facilita la evolución del sistema (de regex a spaCy a un LLM, por ejemplo).
+
+Separación de responsabilidades: el NLU solo extrae entidades, el
+ConversationManager solo gestiona el estado, los endpoints solo manejan
+HTTP. Ninguna capa hace el trabajo de otra.
+
+Extensibilidad para OCR: los modelos de base de datos ya tienen campos
+reservados (imagen_orden_path, datos_ocr_raw) para cuando se integre
+el módulo de visión artificial, sin necesidad de cambiar el esquema.
+
+Sesiones en memoria: actualmente las sesiones de conversación se guardan
+en un diccionario Python en memoria. Esto significa que si se reinicia
+el servidor, las conversaciones en curso se pierden. Para producción se
+reemplazaría por Redis o por la base de datos PostgreSQL.
+
+
+7. PRÓXIMOS PASOS SUGERIDOS
+=============================
+
+Corto plazo:
+- Mejorar el NLU mock con más sinónimos y variaciones de escritura
+- Persistir los turnos confirmados en la base de datos SQLite
+- Agregar tests automatizados para los casos de uso principales
+
+Mediano plazo (opciones para la tesis):
+- Integrar spaCy con un modelo entrenado en datos médicos propios
+- O usar Ollama para correr un LLM (Llama 3, Mistral) completamente local
+- Conectar la API real de WhatsApp (Meta for Developers)
+- Agregar Alembic para gestión de migraciones de base de datos
+
+Largo plazo:
+- Implementar el módulo de OCR para leer órdenes médicas
+- Panel de administración para gestionar turnos y sedes
+- Sistema de recordatorios automáticos 24 horas antes del turno
+- Autenticación y roles (médicos, administrativos, pacientes)
+
+
+Se puede justificar el uso de OLAMA con Ley 25.326 de Protección de Datos Personales en Argentina

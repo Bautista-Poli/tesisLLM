@@ -1,0 +1,482 @@
+preferred_term,requiere_turno,preparacion,tiempo_min
+cribado mediante radiografía de tórax,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+espinograma,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+pielografía simple con contraste intravenoso,true,Ayuno de 6 horas. Hidratación previa (tomar 1 litro de agua). Informar alergias al yodo o contrastes. Traer análisis de creatinina reciente (menos de 30 días). Se colocará vía periférica.,60
+radiografía abdominal en bipedestación,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía cefalométrica lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de abdomen con intensificador móvil de imágenes,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía de aleta de mordida horizontal de dientes,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía de articulación subastragalina,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de cistometrografía,true,El médico indicará preparación específica. Generalmente requiere sonda vesical colocada previamente por el médico derivante.,45
+radiografía de codo para determinación de la edad ósea,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de columna lumbar y pelvis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía de columna vertebral cervical y dorsal,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía de columna vertebral dorsal con intensificador de imágenes móvil,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía de cúbito,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de diente extraído,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía de escafoides,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de fémur,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de hueso,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de hueso cigomático,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía de huesos metatarsianos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de mano y muñeca para el estudio de edad ósea,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de miembro,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de miembro inferior con intensificador móvil de imágenes,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de miembro superior con intensificador de imágenes móvil,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de partes blandas de piso de boca,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de partes blandas: aorta torácica,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía de pie derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de pie izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de próstata y vesículas seminales,true,Vejiga semillena: tomar 1 litro de agua 1 hora antes del estudio y no orinar. No requiere ayuno.,30
+radiografía de rótula,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de sacro con intensificador de imagen móvil,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de shunt de líquido cefalorraquídeo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de tobillo derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía de tórax con intensificador de imágenes móvil,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía de tórax y abdomen,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía dental en vista lateral oblicua,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía dental oclusal,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía dental simple periapical,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía digital con haz hendido,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía digital con haz hendido, longitud de pierna",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía panorámica,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía seriada de tracto gastrointestinal superior con contraste de bario,true,Dieta baja en residuos 2 días antes. Ayuno de 8 horas. Laxante la noche anterior según indicación médica. No fumar ni mascar chicle el día del estudio.,90
+radiografía seriada de tracto gastrointestinal superior y de intestino delgado con contraste de bario,true,Dieta baja en residuos 2 días antes. Ayuno de 8 horas. Laxante la noche anterior según indicación médica. No fumar ni mascar chicle el día del estudio.,90
+radiografía simple bilateral de glándulas salivales,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple bilateral de pies,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple bilateral de tibias y peronés,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple bilateral de tobillos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de abdomen,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de abdomen con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de abdomen en decúbito supino,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de abdomen inferior,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de abdomen superior,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+"radiografía simple de abdomen, decúbito lateral",true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+"radiografía simple de abdomen, oblicua",true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de abertura de conducto auditivo externo,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de acetábulo,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de adenoide,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de aleta de mordida vertical de dientes,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de ambas articulaciones acromioclaviculares,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambas articulaciones sacroilíacas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambas caderas,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de ambas clavículas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambas manos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambas mastoides,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de ambas muñecas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambas rótulas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos antebrazos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos calcáneos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos codos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos conductos nasolagrimales con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de ambos conductos ópticos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos escafoides,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos fémures,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos hombros,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos húmeros,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos miembros inferiores,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos miembros superiores,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos omóplatos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos pulgares,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ambos senos esfenoidales,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de amígdala y adenoides,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de antebrazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de antebrazo derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de antebrazo izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de antebrazo, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de antepié,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de apófisis condílea de mandíbula,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+"radiografía simple de apófisis condílea de mandíbula, posteroanterior",true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de apófisis estiloides de cráneo,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de apófisis odontoides de axis,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de articulación,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación acromioclavicular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación acromioclavicular derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación acromioclavicular izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación atlanto-occipital,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación atloidodontoidea,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación carpometacarpiana en condiciones de estrés,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación de región de hombro,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación de tobillo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación de tobillo en carga,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación esternoclavicular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de articulación sacrococcígea,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de articulación sacroilíaca,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de articulación sacroilíaca derecha,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de articulación sacroilíaca izquierda,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de articulación temporomandibular,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de barrido de esqueleto,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de bazo,true,Ayuno de 6 horas. No consumir grasas ni alimentos pesados el día anterior.,20
+radiografía simple de cabeza de húmero,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de cadera,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de cadera derecha,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de cadera izquierda,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de caja torácica,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de calcáneo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de calcáneo derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de calcáneo izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de calota de cráneo,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cara,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de carpo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de cintura escapular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de cisterna magna con contraste,true,El médico derivante indicará preparación específica según el tipo de procedimiento.,60
+radiografía simple de clavícula,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de clavícula completa,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de clavícula derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de clavícula izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de clivus,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de codo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de codo derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de codo izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de codo, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de columna cervical con intensificador de imágenes móvil,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna cervical, anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna dorsal y lumbar, proyección supina y erecta",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna lumbar,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna lumbar y articulación sacroilíaca,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de columna lumbar y articulación sacroilíaca derecha,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de columna lumbar y articulación sacroilíaca izquierda,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+"radiografía simple de columna lumbar y sacra, proyección en flexión",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna sacra,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de columna sacrococcígea,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+"radiografía simple de columna torácica y lumbar, anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna torácica y lumbar, en bipedestación",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna torácica, anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral cervical,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral completa,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral completa con utilización de intensificador de imágenes móvil,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna vertebral completa, anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral dorsal y lumbar,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral lumbar con intensificador de imágenes móvil,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral lumbar y ambas articulaciones sacroilíacas,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral lumbar y sacra,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna vertebral lumbar y sacra, anteroposterior y lateral",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+"radiografía simple de columna vertebral lumbar y sacra, proyección oblicua",true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de columna vertebral y pelvis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de complejo cigomaticomaxilar,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de conducto biliar con contraste,true,Ayuno de 8 horas. No consumir grasas el día anterior. Informar si tiene alergias al contraste.,45
+radiografía simple de conducto de raíz dental,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de conducto nasolagrimal con contraste,true,No requiere ayuno. El médico aplicará anestesia tópica ocular. Retirar lentes de contacto el día del estudio.,20
+radiografía simple de conducto nasolagrimal derecho con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de conducto nasolagrimal izquierdo con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de conducto óptico,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de conducto óptico derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de conducto óptico izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de corazón,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de costilla derecha,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de costilla izquierda,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de cráneo,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cráneo con intensificador de imágenes móvil,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cráneo proyección anteroposterior,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cráneo proyección combinada anteroposterior y lateral,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cráneo proyección lateral,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de cuello,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de cuello de fémur,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de cuerpo cavernoso de pene con contraste,true,El médico derivante indicará preparación específica. Requiere procedimiento con contraste local.,45
+radiografía simple de cúbito y radio,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo anular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo de la mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo de pie derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo de pie izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo medio de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo meñique de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dedo índice,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de dentición,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de derivación ventriculoperitoneal,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diafragma,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de diente,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de dispositivo de derivación,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diáfisis de cúbito,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diáfisis de hueso de antebrazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diáfisis de húmero,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diáfisis de radio,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de diáfisis de tibia y diáfisis de peroné,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de drenaje con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de drenaje lagrimal con contraste,true,No requiere ayuno. El médico aplicará anestesia tópica ocular. Retirar lentes de contacto el día del estudio.,20
+radiografía simple de epidídimo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de epidídimo con contraste,true,El médico derivante indicará preparación específica. Requiere procedimiento con contraste local.,45
+radiografía simple de epidídimo y conducto deferente con contraste,true,El médico derivante indicará preparación específica. Requiere procedimiento con contraste local.,45
+radiografía simple de escafoides derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de escafoides izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de escroto,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de esfuerzo de columna lumbosacra,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de espécimen de tejido de mama,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de espécimen de tejido de mama derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de esternón,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de estructura genital,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de estructura ósea de costilla,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de estructura ósea de costilla, clavícula y esternón",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de esófago cervical con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de esófago con contraste,true,Ayuno de 6 horas. No tomar medicación oral 4 horas antes sin consultar al médico.,30
+radiografía simple de esófago y estómago con ingestión de medio de contraste gastrografin,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de extremidad inferior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de extremidad inferior para medición de longitud de hueso,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de faringe,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de faringe con contraste,true,Ayuno de 6 horas. No tomar medicación oral 4 horas antes sin consultar al médico.,30
+radiografía simple de faringe y esófago cervical con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de fosa hipofisaria,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de fémur izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de fémur, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ganglio linfático,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de ganglio linfático cervical,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de genital femenino,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de genitales externos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de glándula con contraste,true,El médico derivante indicará preparación específica según el tipo de procedimiento.,60
+radiografía simple de glándula parótida,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de glándula salival,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de glándula salival derecha,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de glándula salival izquierda,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de glándula salival submandibular,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple de hombro,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hombro derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hombro izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de antebrazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de articulación de región de cadera,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de hueso de articulación de región de codo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de cara,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de hueso de cintura escapular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de costillas de ambos hemitórax,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de hueso de cóccix,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de extremidad inferior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de extremidad superior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de mano y hueso de región de muñeca,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de pelvis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de hueso de pelvis en carga,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de hueso de pelvis y hueso de articulación de región de cadera,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de hueso de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de pierna,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de región de articulación de codo y hueso de antebrazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de región de articulación de tobillo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de región de muñeca,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de región de rodilla,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de sacro,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso de órbita,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de hueso del cráneo,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de hueso ilíaco,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de hueso metacarpiano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso nasal,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de hueso sesamoideo de ambos pies,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso sesamoideo de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso sesamoideo de pie derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hueso sesamoideo de pie izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de hígado,true,Ayuno de 6 horas. No consumir grasas ni alimentos pesados el día anterior.,20
+radiografía simple de hígado con contraste,true,Ayuno de 8 horas. No consumir grasas el día anterior. Informar si tiene alergias al contraste.,45
+radiografía simple de húmero,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero proyección anteroposterior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero proyección combinada anteroposterior y lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero proyección lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de húmero y hueso de cintura escapular,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de implante coclear,true,Informar al técnico si tiene implante coclear u otros dispositivos en el área. Retirar objetos metálicos de la cabeza.,20
+radiografía simple de intestino,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de isquion,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de la base del cráneo,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de la cabeza del fémur,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de la diáfisis del fémur,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de labio,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de laringe,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de laringe con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de lengua,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mandíbula inferior,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano proyección anteroposterior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano proyección combinada anteroposterior y lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano proyección lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mano proyección oblicua,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de mastoides,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de mastoides derecha,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de mastoides izquierda,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de maxilar inferior,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+"radiografía simple de maxilar inferior, oblicua lateral",true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+"radiografía simple de maxilar inferior, posteroanterior",true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de maxilar superior,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de meato auditivo interno de hueso temporal,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de miembro inferior derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de miembro inferior izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de miembro superior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de miembro superior derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de miembro superior izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de muestra de tejido,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de muslo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de muñeca,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de muñeca derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de muñeca izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de muñeca, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de muñeca, proyección de túnel carpiano",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de nariz,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de nasofaringe,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de nasofaringe con contraste,true,Ayuno de 6 horas. No tomar medicación oral 4 horas antes sin consultar al médico.,30
+radiografía simple de ojo para cuerpo extraño retenido,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de omóplato,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de omóplato derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de omóplato izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de orofaringe con contraste,true,Ayuno de 6 horas. No tomar medicación oral 4 horas antes sin consultar al médico.,30
+radiografía simple de oído,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de pared anterior de abdomen,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de pared torácica,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de partes blandas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de partes blandas de cavidad bucal,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de partes blandas de mama,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de partes blandas del cuello,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de pelvis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de pelvis con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de pelvis con intensificador de imágenes móvil,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de pelvis y extremidad inferior,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+"radiografía simple de pelvis, vista anteroposterior",true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+"radiografía simple de pelvis, vista lateral en posición de rana",true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de pene,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de periné,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de peroné,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de peroné, proyección combinada anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pie en carga,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de pie, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pierna,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pierna para medición de longitud de hueso,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de placenta,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de porción media de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de primer dedo de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de próstata,true,Vejiga semillena: tomar 1 litro de agua 1 hora antes del estudio y no orinar. No requiere ayuno.,30
+radiografía simple de pulgar,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pulgar derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pulgar en carga,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pulgar izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de pulmón,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de páncreas,true,Ayuno de 6 horas. No consumir grasas ni alimentos pesados el día anterior.,20
+radiografía simple de radio,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de recto con contraste de bario y aire,true,Dieta baja en residuos 2 días antes. Ayuno de 8 horas. Laxante la noche anterior según indicación médica. No fumar ni mascar chicle el día del estudio.,90
+radiografía simple de región coccígea de dorso,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de ambas rodillas,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de articulación de hombro en carga,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de cadera con intensificador de imágenes móvil,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de región de cadera en carga,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de región de clavícula,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de columna vertebral,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de región de columna vertebral con flexión y extensión,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de región de columna vertebral dorsal,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de región de columna vertebral lumbar en carga,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de región de mandíbula,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de región de maxilar superior,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de región de ojo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de rodilla,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de rodilla derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de rodilla en carga,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de rodilla izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de tobillo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región de unión cervicodorsal de espalda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de región posterior de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de riñón,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de riñón con contraste,true,Ayuno de 6 horas. Hidratación previa. Informar alergias al contraste yodado. Traer análisis de creatinina reciente (menos de 30 días).,60
+"radiografía simple de riñón, uréter y vejiga",true,Ayuno de 4 horas. Vejiga en estado normal (no retener ni vaciar en exceso antes del estudio).,20
+"radiografía simple de riñón, uréter y vejiga con contraste",true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de rótula derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de rótula izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de sacro, proyección combinada anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de seno esfenoidal,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno esfenoidal derecho,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno esfenoidal izquierdo,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno etmoidal,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno frontal,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno maxilar,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de seno nasal,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de senos paranasales, proyección occipitomentoniana",false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de silla turca,true,"Retirar aros, aretes, horquillas, piercings y cualquier accesorio metálico de la cabeza antes del estudio.",15
+radiografía simple de sistema esquelético,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de sistema genitourinario,true,Ayuno de 4 horas. Vejiga en estado normal (no retener ni vaciar en exceso antes del estudio).,20
+radiografía simple de sistema genitourinario con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de sistema musculoesquelético,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de sistema urinario,true,Ayuno de 4 horas. Vejiga en estado normal (no retener ni vaciar en exceso antes del estudio).,20
+radiografía simple de sistema urinario con contraste,true,Ayuno de 6 horas. Hidratación previa. Informar alergias al contraste yodado. Traer análisis de creatinina reciente (menos de 30 días).,60
+radiografía simple de surco bicipital,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de surco bicipital interno,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de sínfisis de maxilar inferior,true,Retirar prótesis dentales removibles y objetos metálicos de la cabeza antes del estudio.,15
+radiografía simple de sínfisis de pubis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de tarso,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de abdomen,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de tejido blando de abdomen inferior,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de tejido blando de abdomen superior,true,"Ayuno de 4 horas previo al estudio. No fumar ni mascar chicle antes del estudio. Retirar objetos metálicos de la zona abdominal (cinturón, hebillas).",15
+radiografía simple de tejido blando de antebrazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de brazo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de cabeza,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de cadera,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de tejido blando de cara,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de tejido blando de extremidad,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de extremidad inferior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de extremidad superior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de hombro,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de muslo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de nariz,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de tejido blando de oído externo,true,Retirar aros y objetos metálicos del área de la cabeza. No colocar nada en el oído antes del estudio.,15
+radiografía simple de tejido blando de pared torácica,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de tejido blando de pelvis,true,"Retirar objetos metálicos de la zona pélvica (cinturón, hebillas, piercings). Informar embarazo si aplica.",15
+radiografía simple de tejido blando de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de región de codo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de región de rodilla,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de tobillo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de tronco,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tejido blando de tórax,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de tejido resecado de mama izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné derechos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné izquierdos,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné proyección anteroposterior,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné proyección combinada anteroposterior y lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tibia y peroné proyección lateral,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de tibia, proyección combinada anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tiroides,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de tobillo izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tobillo y pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+"radiografía simple de tobillo, proyección anteroposterior y lateral",false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de toda la dentadura,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos de la mano derecha,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos de la mano izquierda,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos de mano,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos de pie,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos del pie derecho,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de todos los dedos del pie izquierdo,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de tracto gastrointestinal inferior con contraste de aire y enema de bario,true,Dieta baja en residuos 2 días antes. Ayuno de 8 horas. Laxante la noche anterior según indicación médica. No fumar ni mascar chicle el día del estudio.,90
+radiografía simple de tráquea,false,"Retirar collares, aros, piercings y objetos metálicos del cuello antes del estudio.",10
+radiografía simple de tráquea con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de tórax,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, lateral",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, oblicua",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, proyección combinada posteroanterior y lateral",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, vista anteroposterior",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, vista posteroanterior",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+"radiografía simple de tórax, vistas apical y lordótica",false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple de unión cardioesofágica con contraste,true,Ayuno de 6 horas. No tomar medicación oral 4 horas antes sin consultar al médico.,30
+radiografía simple de unión cervicotorácica de columna vertebral,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de unión dorsolumbar de columna vertebral,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de unión lumbosacra,true,"No requiere preparación especial. Retirar objetos metálicos de la espalda y cuello (collares, aros, piercings). Informar si tiene implantes metálicos o prótesis.",15
+radiografía simple de uréter,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de uréter con contraste,true,Ayuno de 6 horas. Hidratación previa. Informar alergias al contraste yodado. Traer análisis de creatinina reciente (menos de 30 días).,60
+radiografía simple de vejiga urinaria,true,Vejiga semillena: tomar 1 litro de agua 1 hora antes del estudio y no orinar.,20
+radiografía simple de vesícula biliar,true,Ayuno de 6 horas. No consumir grasas ni alimentos pesados el día anterior.,20
+radiografía simple de vesícula biliar con contraste,true,Ayuno de 8 horas. No consumir grasas el día anterior. Informar si tiene alergias al contraste.,45
+radiografía simple de vulva,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de vía biliar,true,Ayuno de 6 horas. No consumir grasas ni alimentos pesados el día anterior.,20
+radiografía simple de vía biliar con contraste,true,Ayuno de 8 horas. No consumir grasas el día anterior. Informar si tiene alergias al contraste.,45
+radiografía simple de vía respiratoria baja,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de área supraorbitaria,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de órbita con contraste,true,Informar al médico si tiene alergias conocidas al contraste. Consultar con el médico derivante sobre ayuno y preparación específica.,45
+radiografía simple de órbita propiamente dicha,false,"Retirar aros, aretes, lentes y objetos metálicos del rostro antes del estudio.",10
+radiografía simple de útero,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de útero grávido,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple de úvula palatina,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple dental con aleta de mordida,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+"radiografía simple dental de boca completa, proyección periapical",false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple oclusal de región mandibular,false,"Retirar prótesis dentales removibles, aretes y cualquier accesorio metálico de la cabeza antes del estudio.",10
+radiografía simple pelvimétrica,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
+radiografía simple seriada de tórax,false,"No requiere preparación especial. Retirar collares, aros y objetos metálicos del cuello y tórax antes del estudio.",10
+radiografía simple y fluoroscopia,false,"No requiere preparación. Retirar anillos, pulseras, relojes y objetos metálicos de la zona a estudiar antes del estudio.",10
