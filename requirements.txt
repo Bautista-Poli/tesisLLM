@@ -1,60 +1,14 @@
 # ============================================================
 # Chatbot Turnos Médicos — Dependencias
+# Los modelos FSM y árbol de decisión solo usan la biblioteca estándar.
 # ============================================================
 
-# ------ Web Framework ----------------------------------------
-fastapi==0.111.0
-uvicorn[standard]==0.29.0
-
-# ------ Configuración y validación ---------------------------
-pydantic==2.7.1
-pydantic-settings==2.2.1
-
-# ------ Base de Datos ----------------------------------------
-sqlalchemy==2.0.30
-# SQLite async (desarrollo)
-aiosqlite==0.20.0
-# PostgreSQL async (producción) — descomentar al migrar
-# asyncpg==0.29.0
-# alembic==1.13.1          # Migraciones de esquema
-
-# ------ HTTP Client (para llamadas a APIs externas) ----------
-httpx==0.27.0
-
-# ------ Utilidades -------------------------------------------
-python-dotenv==1.0.1       # Carga del archivo .env
+# ------ Modelo 1 (LLM) ---------------------------------------
+-r modelos/llm/requirements.txt
 
 # ------ Testing ----------------------------------------------
 pytest==8.2.0
-pytest-asyncio==0.23.6
-httpx==0.27.0              # TestClient async de FastAPI
 
 # ------ Calidad de código ------------------------------------
-ruff==0.4.4                # Linter + formatter (reemplaza flake8+black)
+ruff==0.4.4                # Linter + formatter
 mypy==1.10.0               # Type checking estático
-
-# ============================================================
-# Dependencias FUTURAS (descomentar al integrar)
-# ============================================================
-
-# --- NLU real ------------------------------------------------
-# rasa==3.6.20             # Motor NLU/diálogo Rasa Open Source
-# dialogflow-cx            # Google Dialogflow CX
-
-# --- OCR / Visión Artificial ---------------------------------
-# google-cloud-vision==3.7.2
-# boto3==1.34.0            # AWS Textract
-# azure-cognitiveservices-vision-computervision==0.9.0
-# Pillow==10.3.0           # Manipulación de imágenes
-# pytesseract==0.3.10      # Tesseract local
-
-# --- WhatsApp ------------------------------------------------
-# (La API de Meta se consume vía httpx, no requiere SDK especial)
-
-# --- Autenticación -------------------------------------------
-# python-jose[cryptography]==3.3.0    # JWT
-# passlib[bcrypt]==1.7.4
-
-# --- Caché / Sesiones distribuidas ---------------------------
-# redis==5.0.4
-# aioredis==2.0.1

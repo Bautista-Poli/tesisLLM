@@ -1,0 +1,2 @@
+# Modelo 2 — Gestor de diálogo por máquina de estados
+# Sin dependencias externas: solo biblioteca estándar de Python.

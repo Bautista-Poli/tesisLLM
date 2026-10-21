@@ -1,0 +1,2 @@
+# Modelo 3 — Chatbot clásico por menús (árbol de decisión)
+# Sin dependencias externas: solo biblioteca estándar de Python.
