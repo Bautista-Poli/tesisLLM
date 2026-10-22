@@ -9,7 +9,7 @@ MODEL          = "qwen2.5:7b"
 CSV_TERMINOS   = "CSVs/snomed_con_variantes.csv"
 CSV_COBERTURAS = "CSVs/coberturas_medicas.csv"
 
-from modelos.llm.rag import cargar_terminos, cargar_coberturas, buscar_terminos_relevantes, buscar_coberturas_relevantes
+from modelos.llm.rag import TOP_K, cargar_terminos, cargar_coberturas, buscar_terminos_relevantes, buscar_coberturas_relevantes
 from modelos.llm.estudios import normalizar_estudio
 from modelos.llm.validators import validar_dni
 from modelos.llm.prompt import construir_system_prompt
@@ -32,9 +32,10 @@ def fail(msg): print(f"  {ROJO}❌ FAIL{RESET} {msg}")
 
 # ─── INFRAESTRUCTURA ──────────────────────────────────────────────────────────
 
-def extraer(texto, ultima_pregunta="", slots_llenos=None, df_terminos=None, df_coberturas=None):
+def extraer(texto, ultima_pregunta="", slots_llenos=None, df_terminos=None, df_coberturas=None,
+            top_k=TOP_K):
     slots_llenos = slots_llenos or []
-    ctx_est = buscar_terminos_relevantes(texto, df_terminos)
+    ctx_est = buscar_terminos_relevantes(texto, df_terminos, top_k)
     ctx_cob = buscar_coberturas_relevantes(texto, df_coberturas) if df_coberturas is not None else ""
 
     debug("\n" + "─" * 60)

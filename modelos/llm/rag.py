@@ -52,16 +52,21 @@ def cargar_preparaciones(path: str) -> dict:
         return {}
 
 
-def buscar_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K) -> list:
+def similitudes_tfidf(query: str, df: pd.DataFrame):
+    """Similitud coseno TF-IDF entre la query y cada fila de df (array, mismo orden que df)."""
     corpus = df["texto_completo"].tolist() + [query.lower()]
     vectorizer = TfidfVectorizer().fit(corpus)
     matriz = vectorizer.transform(corpus)
-    similitudes = cosine_similarity(matriz[-1], matriz[:-1]).flatten()
+    return cosine_similarity(matriz[-1], matriz[:-1]).flatten()
+
+
+def buscar_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K) -> list:
+    similitudes = similitudes_tfidf(query, df)
     return similitudes.argsort()[-top_k:][::-1]
 
 
-def buscar_terminos_relevantes(query: str, df: pd.DataFrame) -> str:
-    indices = buscar_relevantes(query, df)
+def buscar_terminos_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K) -> str:
+    indices = buscar_relevantes(query, df, top_k)
     query_words = set(query.lower().split())
     lineas = []
     for i in indices:

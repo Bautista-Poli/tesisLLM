@@ -2,4 +2,5 @@
 requests==2.33.1           # Cliente HTTP hacia Ollama
 pandas==3.0.2              # Carga de CSVs de terminología y coberturas
 scikit-learn==1.8.0        # TF-IDF + similitud coseno
+matplotlib==3.11.2         # Gráficos de evaluación (evaluacion/baseline_tfidf.py)
 # Ollama debe estar corriendo en localhost:11434 con el modelo qwen2.5:7b
