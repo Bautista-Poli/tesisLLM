@@ -9,7 +9,11 @@ datos_etiquetados.py — Carga de los sets con etiqueta exacta de estudio.
 
 La columna `esperado` es un preferred_term exacto del catálogo, "AMBIGUO"
 (hay que pedir aclaración) o "null" (no corresponde ningún estudio).
-`tipo_ambiguedad` (solo en los AMBIGUO): falta_lado | falta_segmento | zona_amplia.
+`tipo_ambiguedad` (solo en los AMBIGUO):
+  falta_lado     zona par sin lado (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo)
+  falta_segmento columna o espalda sin segmento (cervical, dorsal, lumbar)
+  zona_amplia    zona mencionada pero amplia (pierna, brazo, huesos largos)
+  falta_zona     sin zona ("rx", "necesito una radiografía", "todo el cuerpo")
 No cambia la accuracy; sirve para el diálogo y para el F1 de AMBIGUO por tipo.
 Ambos sets se cargan con el mismo formato: id, grupo, input, ultima_pregunta,
 esperado, revisar, nota y los datos necesarios para la métrica laxa.
@@ -31,7 +35,7 @@ CSV_HELDOUT2 = os.path.join(DIR_DATOS, "heldout2.csv")
 
 CLASE_AMBIGUO = "AMBIGUO"
 CLASE_NULL = "null"
-TIPOS_AMBIGUEDAD = ("falta_lado", "falta_segmento", "zona_amplia")
+TIPOS_AMBIGUEDAD = ("falta_lado", "falta_segmento", "zona_amplia", "falta_zona")
 
 
 def normalizar(texto: str | None) -> str:

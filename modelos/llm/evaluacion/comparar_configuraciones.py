@@ -53,9 +53,10 @@ from functools import lru_cache
 
 from modelos.llm.estudios import normalizar_estudio
 from modelos.llm.evaluacion.comun import asegurar_dir_resultados, tipo_error
-from modelos.llm.evaluacion.datos_etiquetados import CLASE_AMBIGUO, CLASE_NULL, SETS
+from modelos.llm.evaluacion.datos_etiquetados import CLASE_AMBIGUO, CLASE_NULL, SETS, TIPOS_AMBIGUEDAD
 from modelos.llm.evaluacion.metricas import (
-    clase_desde_slots, correcto_laxo, es_termino, gold_laxo, metricas_estrictas, metricas_laxas,
+    clase_desde_slots, correcto_laxo, es_termino, f1_ambiguo_por_tipo, gold_laxo, metricas_estrictas,
+    metricas_laxas,
 )
 from modelos.llm.extractor import CSV_COBERTURAS, CSV_TERMINOS
 from modelos.llm.ollama_client import extraer_json, llamar_ollama
@@ -360,6 +361,7 @@ def resumir(filas: list[dict], configs: list[str], sets: list[str]) -> list[dict
             predichos = [f["prediccion"] for f in fs]
             m = metricas_estrictas(esperados, predichos)
             ml = metricas_laxas([f["_item"] for f in fs], predichos)
+            por_tipo = f1_ambiguo_por_tipo([f["_item"] for f in fs], predichos)
             latencias = [f["latencia_s"] for f in fs]
             ids_few = CONFIGS[base_config(clave)].get("few_shot", ())
             fuera_few = [f for f in fs if f["id"] not in ids_few]
@@ -371,6 +373,8 @@ def resumir(filas: list[dict], configs: list[str], sets: list[str]) -> list[dict
                 "accuracy": m["accuracy"],
                 "macro_p": m["macro_p"], "macro_r": m["macro_r"], "macro_f1": m["macro_f1"],
                 "f1_ambiguo": m["ambiguo"][2], "f1_null": m["null"][2],
+                **{f"f1_ambiguo_{t}": por_tipo[t]["f1"] for t in TIPOS_AMBIGUEDAD},
+                **{f"n_ambiguo_{t}": por_tipo[t]["n"] for t in TIPOS_AMBIGUEDAD},
                 "laxa_p": ml["p"], "laxa_r": ml["r"], "laxa_f1": ml["f1"],
                 "latencia_media_s": statistics.mean(latencias),
                 "latencia_mediana_s": statistics.median(latencias),
@@ -424,6 +428,16 @@ def tabla_markdown(resumen: list[dict], recup: dict, sets: list[str], k: int, um
         lineas.append(f"| {r['config']}) {r['config_nombre']} | {r['set']} | {rk} | {_f(r['accuracy'])} "
                       f"| {_f(r['macro_p'])} | {_f(r['macro_r'])} | {_f(r['macro_f1'])} | {_f(r['f1_ambiguo'])} "
                       f"| {_f(r['f1_null'])} | {_f(r['laxa_f1'])} | {_lat(r['latencia_media_s'])} | {r['errores']} |")
+
+    lineas += ["", "## F1 de AMBIGUO por tipo_ambiguedad", "",
+               "AMBIGUO vs resto, sin los AMBIGUO de los otros tipos (n = casos AMBIGUO del tipo). "
+               "La predicción no trae tipo: los falsos positivos de AMBIGUO cuentan en todos los tipos.", "",
+               "| Config | Set | F1 AMBIGUO | " + " | ".join(TIPOS_AMBIGUEDAD) + " |",
+               "|---|---|---|" + "---|" * len(TIPOS_AMBIGUEDAD)]
+    for r in resumen:
+        lineas.append(f"| {r['config']}) {r['config_nombre']} | {r['set']} | {_f(r['f1_ambiguo'])} | "
+                      + " | ".join(f"{_f(r[f'f1_ambiguo_{t}'])} (n={r[f'n_ambiguo_{t}']})" for t in TIPOS_AMBIGUEDAD)
+                      + " |")
 
     if "suite" in sets and "heldout" in sets:
         lineas += ["", "## Caída suite → heldout (heldout − suite)", "",

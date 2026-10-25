@@ -1,28 +1,28 @@
 set,id,propuesta_esperado,propuesta_tipo_ambiguedad,propuesta_revisar,justificacion
-suite,mano_especifica,AMBIGUO,falta_lado,False,"CONTRADICE LA REGLA: 'placa de mano' sin lado → AMBIGUO (antes: radiografía simple de mano)"
-suite,rodilla_con_carga_explícita,"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",,True,"CONTRADICE LA REGLA si plural = ambos: 'Rodillas' en plural + 'con carga' (bipedestación) → estudio bilateral en carga. Si el plural NO cuenta como ambos: AMBIGUO / falta_lado. Queda revisar=True hasta decidir el plural"
+suite,mano_especifica,AMBIGUO,falta_lado,False,CONTRADICE LA REGLA: 'placa de mano' sin lado → AMBIGUO (antes: radiografía simple de mano)
+suite,rodilla_con_carga_explícita,"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",,False,CONTRADICE LA REGLA si plural = ambos: 'Rodillas' en plural + 'con carga' (bipedestación) → estudio bilateral en carga. Si el plural NO cuenta como ambos: AMBIGUO / falta_lado. Queda revisar=True hasta decidir el plural
 suite,edge_doble_zona,AMBIGUO,falta_lado,False,"CONTRADICE LA REGLA: mano y pie, ninguno con lado → AMBIGUO (antes: radiografía simple de mano). Sigue siendo un pedido de dos estudios, que la etiqueta de una clase no representa"
-heldout,h07_dedo_gordo,AMBIGUO,falta_lado,True,"CONTRADICE LA REGLA: dedo gordo del pie sin lado → AMBIGUO (antes: radiografía simple de primer dedo de pie). Ojo: el catálogo no tiene 'primer dedo de pie' con lado; tras la aclaración el destino sería 'dedo de pie derecho/izquierdo' (menos específico)"
-heldout,h32_pie_lado,radiografía de pie izquierdo,,False,"CONTRADICE LA REGLA: pie con lado (izquierdo) → estudio con lado (antes: AMBIGUO por la lista de zonas del prompt)"
+heldout,h07_dedo_gordo,AMBIGUO,falta_lado,True,CONTRADICE LA REGLA: dedo gordo del pie sin lado → AMBIGUO (antes: radiografía simple de primer dedo de pie). Ojo: el catálogo no tiene 'primer dedo de pie' con lado; tras la aclaración el destino sería 'dedo de pie derecho/izquierdo' (menos específico)
+heldout,h32_pie_lado,radiografía de pie izquierdo,,False,CONTRADICE LA REGLA: pie con lado (izquierdo) → estudio con lado (antes: AMBIGUO por la lista de zonas del prompt)
 suite,pie_ambiguo,AMBIGUO,falta_lado,False,Se mantiene: pie sin lado → AMBIGUO por la regla; deja de ser dudoso
 suite,cadera_ambigua,AMBIGUO,falta_lado,False,Se mantiene: cadera sin lado → AMBIGUO por la regla; deja de ser dudoso
 suite,hombro_sin_lateralidad,AMBIGUO,falta_lado,False,Se mantiene: hombro sin lado → AMBIGUO por la regla; deja de ser dudoso
 heldout,h29_hombro,AMBIGUO,falta_lado,False,Se mantiene: hombro sin lado → AMBIGUO por la regla; deja de ser dudoso
 heldout,h31_cadera,AMBIGUO,falta_lado,False,Se mantiene: cadera sin lado → AMBIGUO por la regla; deja de ser dudoso
-suite,pierna_ambigua,AMBIGUO,falta_segmento,False,"Se mantiene: pierna no es zona par de la regla; falta el segmento (fémur, tibia/peroné, rodilla). El lado se pregunta después"
-heldout,h27_pierna_lado,AMBIGUO,falta_segmento,False,"Se mantiene: pierna con lado sigue sin segmento (fémur, tibia/peroné, rodilla)"
-suite,serie_huesos_largos_ambigua,AMBIGUO,zona_amplia,False,"Se mantiene: 'huesos largos' abarca varios miembros; la escanometría es solo de miembros inferiores"
-suite,columna_lumbar_especifica,radiografía simple de columna lumbar,,False,"Se mantiene. Convención propuesta: el segmento nombrado va a su término propio; los combinados (lumbosacra) solo si se nombran ambos segmentos"
+suite,pierna_ambigua,AMBIGUO,zona_amplia,False,"Se mantiene: pierna no es zona par de la regla; falta el segmento (fémur, tibia/peroné, rodilla). El lado se pregunta después"
+heldout,h27_pierna_lado,AMBIGUO,zona_amplia,False,"Se mantiene: pierna con lado sigue sin segmento (fémur, tibia/peroné, rodilla)"
+suite,serie_huesos_largos_ambigua,AMBIGUO,zona_amplia,False,Se mantiene: 'huesos largos' abarca varios miembros; la escanometría es solo de miembros inferiores
+suite,columna_lumbar_especifica,radiografía simple de columna lumbar,,False,Se mantiene. Convención propuesta: el segmento nombrado va a su término propio; los combinados (lumbosacra) solo si se nombran ambos segmentos
 suite,columna_lumbar_nombre_medico,radiografía simple de columna lumbar,,False,Se mantiene (misma convención de segmento)
-suite,columna_lumbar_con_contexto,"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",,False,"Se mantiene: 'frente y perfil' = AP y lateral (misma convención de segmento)"
+suite,columna_lumbar_con_contexto,"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",,False,Se mantiene: 'frente y perfil' = AP y lateral (misma convención de segmento)
 suite,aclaracion_lumbar,radiografía simple de columna lumbar,,False,Se mantiene (misma convención de segmento)
 suite,typo_lumbal,radiografía simple de columna lumbar,,False,Se mantiene (misma convención de segmento)
 suite,typo_columna_lumbra,radiografía simple de columna lumbar,,False,Se mantiene (misma convención de segmento)
 heldout,h41_colummna,radiografía simple de columna lumbar,,False,Se mantiene (misma convención de segmento)
 suite,aclaracion_cervical,radiografía simple de columna vertebral cervical,,False,"Se mantiene: la pregunta previa es por la columna, así que 'el cuello' es el segmento cervical y no partes blandas del cuello"
-suite,aclaracion_tibia,radiografía simple de tibia,,False,"Se mantiene: el usuario nombra la tibia; 'tibia y peroné' solo si nombra ambos huesos. Tibia no es zona par de la regla"
-suite,edge_sacro_coxis,radiografía simple de hueso de sacro,,False,"Se mantiene: 'el sacro' = hueso; 'columna sacra' solo si dice columna"
-suite,edad_osea_infiere_mano,radiografía de mano y muñeca para el estudio de edad ósea,,False,"Se mantiene: el mensaje no nombra zona; 'edad ósea' es un estudio estándar de mano y muñeca (el de codo es excepcional). No aplica la regla de lado"
+suite,aclaracion_tibia,radiografía simple de tibia,,False,Se mantiene: el usuario nombra la tibia; 'tibia y peroné' solo si nombra ambos huesos. Tibia no es zona par de la regla
+suite,edge_sacro_coxis,radiografía simple de hueso de sacro,,False,Se mantiene: 'el sacro' = hueso; 'columna sacra' solo si dice columna
+suite,edad_osea_infiere_mano,radiografía de mano y muñeca para el estudio de edad ósea,,False,Se mantiene: el mensaje no nombra zona; 'edad ósea' es un estudio estándar de mano y muñeca (el de codo es excepcional). No aplica la regla de lado
 heldout,h02_senos,"radiografía simple de senos paranasales, proyección occipitomentoniana",,False,Se mantiene: es el único término de senos paranasales en conjunto; los senos individuales solo si se nombran
-heldout,h19_nariz,radiografía simple de nariz,,False,"Se mantiene: el usuario dice 'nariz'; 'hueso nasal' solo si lo nombra"
+heldout,h19_nariz,radiografía simple de nariz,,False,Se mantiene: el usuario dice 'nariz'; 'hueso nasal' solo si lo nombra
 heldout,h45_densitometria,null,,False,Se mantiene: la densitometría (DXA) no está en el catálogo de radiología simple → fuera de dominio

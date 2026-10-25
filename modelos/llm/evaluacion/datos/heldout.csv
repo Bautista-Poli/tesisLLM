@@ -1,11 +1,11 @@
 id,categoria,input,ultima_pregunta,esperado,tipo_ambiguedad,revisar,nota,clave_laxa
 h01_craneo,claro,me pidieron una radiografía del cráneo,,radiografía simple de cráneo,,False,,cráneo
-h02_senos,claro,el otorrino me mandó a hacer una placa de los senos paranasales,,"radiografía simple de senos paranasales, proyección occipitomentoniana",,True,"único término de senos paranasales; también existen senos individuales (maxilar, frontal)",seno
+h02_senos,claro,el otorrino me mandó a hacer una placa de los senos paranasales,,"radiografía simple de senos paranasales, proyección occipitomentoniana",,False,"único término de senos paranasales; también existen senos individuales (maxilar, frontal)",seno
 h03_abdomen,claro,tengo que hacerme una radiografía del abdomen,,radiografía simple de abdomen,,False,,abdomen
 h04_seno_frontal,claro,me duele mucho la frente y el otorrino quiere ver con rayos el seno de la frente,,radiografía simple de seno frontal,,False,,seno frontal|frontal
 h05_talon,claro,el traumatólogo me pidió rayos del talón izquierdo,,radiografía simple de calcáneo izquierdo,,False,talón = calcáneo,calcáneo
 h06_rotula,claro,"necesito ver si me fisuré la rótula derecha, me pidieron rayos x",,radiografía simple de rótula derecha,,False,,rótula
-h07_dedo_gordo,claro,"me golpeé el dedo gordo del pie, quiero una placa",,radiografía simple de primer dedo de pie,,False,dedo gordo = primer dedo,dedo
+h07_dedo_gordo,claro,"me golpeé el dedo gordo del pie, quiero una placa",,AMBIGUO,falta_lado,True,"pie sin lado (regla de lateralidad); el catálogo no tiene primer dedo de pie con lado: tras aclarar, dedo de pie derecho/izquierdo",dedo
 h08_pulgar,claro,necesito radiografiar el pulgar de la mano izquierda,,radiografía simple de pulgar izquierdo,,False,,pulgar
 h09_esternon,claro,me mandaron una radiografía del esternón,,radiografía simple de esternón,,False,,esternón
 h10_atm,claro,me cruje la mandíbula al abrir la boca y el odontólogo quiere estudiar con rayos x la articulación temporomandibular,,radiografía simple de articulación temporomandibular,,False,,temporomandibular
@@ -17,21 +17,21 @@ h15_pelvis,claro,me pidieron estudiar la pelvis con rayos,,radiografía simple d
 h16_panoramica,claro,el dentista me pidió una panorámica de los dientes,,radiografía panorámica,,False,,panorámica
 h17_costillas,claro,me golpeé una costilla del lado izquierdo y quieren una placa,,radiografía simple de costilla izquierda,,False,,costilla
 h18_antebrazo,claro,rayos x del antebrazo izquierdo por una caída,,radiografía simple de antebrazo izquierdo,,False,,antebrazo
-h19_nariz,claro,necesito una radiografía de la nariz por un golpe,,radiografía simple de nariz,,True,también válido: radiografía simple de hueso nasal,nariz|nasal
+h19_nariz,claro,necesito una radiografía de la nariz por un golpe,,radiografía simple de nariz,,False,también válido: radiografía simple de hueso nasal,nariz|nasal
 h20_tobillo_esguince,claro,me hice un esguince en el tobillo izquierdo y el médico quiere descartar fractura con una placa,,radiografía simple de tobillo izquierdo,,False,,tobillo
 h21_dorsal,claro,tengo control de la columna dorsal con radiografía,,radiografía simple de región de columna vertebral dorsal,,False,,dorsal
 h22_omoplato,claro,"necesito rayos del omóplato, el del lado derecho",,radiografía simple de omóplato derecho,,False,,omóplato
 h23_codo_izq,claro,me pidieron una radiografía del codo izquierdo,,radiografía simple de codo izquierdo,,False,,codo
-h24_brazo,ambiguo,"me duele mucho el brazo izquierdo, me dijeron que me haga una radiografía",,AMBIGUO,falta_segmento,False,brazo: húmero o antebrazo,
-h25_sin_zona_orden,ambiguo,tengo una orden de rayos pero no me acuerdo de qué parte,,AMBIGUO,zona_amplia,False,sin zona anatómica,
+h24_brazo,ambiguo,"me duele mucho el brazo izquierdo, me dijeron que me haga una radiografía",,AMBIGUO,zona_amplia,False,brazo: húmero o antebrazo,
+h25_sin_zona_orden,ambiguo,tengo una orden de rayos pero no me acuerdo de qué parte,,AMBIGUO,falta_zona,False,sin zona anatómica,
 h26_espalda,ambiguo,quiero rayos x porque tengo una contractura en la espalda,,AMBIGUO,falta_segmento,False,"espalda: cervical, dorsal o lumbar",
-h27_pierna_lado,ambiguo,"me lastimé la pierna derecha jugando al fútbol, quiero una placa",,AMBIGUO,falta_segmento,True,pierna con lateralidad sigue siendo ambigua (tibia/fémur/rodilla); existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
+h27_pierna_lado,ambiguo,"me lastimé la pierna derecha jugando al fútbol, quiero una placa",,AMBIGUO,zona_amplia,False,pierna con lateralidad sigue siendo ambigua (tibia/fémur/rodilla); existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
 h28_columna,ambiguo,me tienen que radiografiar la columna,,AMBIGUO,falta_segmento,False,columna sin segmento,
-h29_hombro,ambiguo,el médico me pidió una placa del hombro,,AMBIGUO,falta_lado,True,sin lateralidad; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
-h30_sin_zona,ambiguo,necesito hacerme una radiografía,,AMBIGUO,zona_amplia,False,sin zona anatómica,
-h31_cadera,ambiguo,"me caí y me duele la cadera, necesito rayos",,AMBIGUO,falta_lado,True,existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
-h32_pie_lado,ambiguo,me lastimé el pie izquierdo y quiero que lo vean con rayos,,AMBIGUO,falta_segmento,True,existe 'radiografía de pie izquierdo'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
-h33_cuerpo,ambiguo,quiero placas por un dolor en todo el cuerpo,,AMBIGUO,zona_amplia,False,sin zona específica,
+h29_hombro,ambiguo,el médico me pidió una placa del hombro,,AMBIGUO,falta_lado,False,sin lateralidad; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
+h30_sin_zona,ambiguo,necesito hacerme una radiografía,,AMBIGUO,falta_zona,False,sin zona anatómica,
+h31_cadera,ambiguo,"me caí y me duele la cadera, necesito rayos",,AMBIGUO,falta_lado,False,existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt),
+h32_pie_lado,ambiguo,me lastimé el pie izquierdo y quiero que lo vean con rayos,,radiografía de pie izquierdo,,False,pie con lado (regla de lateralidad),
+h33_cuerpo,ambiguo,quiero placas por un dolor en todo el cuerpo,,AMBIGUO,falta_zona,False,sin zona específica,
 h34_plaka_torax,typo,nesesito una plaka del torax,,radiografía simple de tórax,,False,,tórax
 h35_rodiya,typo,rallos de la rodiya izquierda,,radiografía simple de región de rodilla izquierda,,False,,rodilla
 h36_muneca,typo,nesesito rayos en la muneca derecha,,radiografía simple de muñeca derecha,,False,,muñeca
@@ -39,11 +39,11 @@ h37_panoramica,typo,me pidieron una panoramica dentl,,radiografía panorámica,,
 h38_clavicula,typo,necesito placa de clabicula isquierda,,radiografía simple de clavícula izquierda,,False,,clavícula
 h39_colunma,typo,rayos de colunma cervical,,radiografía simple de columna vertebral cervical,,False,,cervical
 h40_codo,typo,una radiografia del codo isquierdo,,radiografía simple de codo izquierdo,,False,,codo
-h41_colummna,typo,necesito rx de la colummna lumbar,,radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),lumbar|sacra
+h41_colummna,typo,necesito rx de la colummna lumbar,,radiografía simple de columna lumbar,,False,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),lumbar|sacra
 h42_abdomenn,typo,plca del abdomenn,,radiografía simple de abdomen,,False,,abdomen
 h43_cranio,typo,radiografía del cranio,,radiografía simple de cráneo,,False,,cráneo
 h44_mamografia,fuera_dominio,quiero sacar turno para una mamografía,,null,,False,no está en el catálogo de radiología simple,
-h45_densitometria,fuera_dominio,necesito una densitometría ósea,,null,,True,usa rayos X (DXA) pero no está en el catálogo,
+h45_densitometria,fuera_dominio,necesito una densitometría ósea,,null,,False,usa rayos X (DXA) pero no está en el catálogo,
 h46_ecg,fuera_dominio,me tienen que hacer un electrocardiograma,,null,,False,,
 h47_dermato,fuera_dominio,turno con el dermatólogo por un lunar,,null,,False,,
 h48_eco_tiroides,fuera_dominio,necesito una ecografía de tiroides,,null,,False,,
@@ -54,7 +54,7 @@ h52_horario,fuera_dominio,¿a qué hora abren los sábados?,,null,,False,,
 h53_multi_rodilla,multislot,"Hola, soy Lucía Benítez, DNI 33.222.111, tengo Swiss Medical y necesito que me radiografíen la rodilla izquierda en la sede Norte",,radiografía simple de región de rodilla izquierda,,False,,rodilla
 h54_multi_pecho,multislot,"Me llamo Martín Sosa, documento 28456123, OSDE 210, quiero hacerme rayos en el pecho en el Centro",,radiografía simple de tórax,,False,,tórax
 h55_multi_cervical,multislot,"buenas, Ana Gómez, dni 40111222, me pidieron rayos en la columna cervical, tengo PAMI, me queda cómoda la sede Sur",,radiografía simple de columna vertebral cervical,,False,,cervical
-h56_multi_sin_zona,multislot,"Soy Jorge Ruiz, 25.987.654, Galeno, necesito una radiografía, sede Centro",,AMBIGUO,zona_amplia,False,sin zona anatómica,
+h56_multi_sin_zona,multislot,"Soy Jorge Ruiz, 25.987.654, Galeno, necesito una radiografía, sede Centro",,AMBIGUO,falta_zona,False,sin zona anatómica,
 h57_multi_eco,multislot,"Carla Méndez, DNI 36555444, IOMA, quiero turno para una ecografía abdominal en Norte",,null,,False,fuera de dominio,
 h58_multi_codo,multislot,"soy Pablo Díaz, mi DNI es 31222333, particular, necesito rayos x en el codo derecho, sede sur",,radiografía simple de codo derecho,,False,,codo
 h59_multi_tobillo,multislot,"Sofía Herrera, 42.333.444, Medifé, me mandaron a radiografiar el tobillo derecho por un esguince, prefiero Centro",,radiografía de tobillo derecho,,False,,tobillo

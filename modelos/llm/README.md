@@ -44,9 +44,9 @@ Las salidas (CSV, tablas y gráficos) se guardan en `modelos/llm/evaluacion/resu
 | `heldout.csv` | Held-out 1: 60 mensajes nuevos (claros, ambiguos, typos, fuera de dominio, multislot) con etiqueta exacta y `clave_laxa` para la métrica laxa. Ya se usó para elegir la configuración: **no se evalúa nada más contra él**. |
 | `heldout2.csv` | Held-out 2: plantilla de 35 filas (12 claros, 8 ambiguos, 5 typos, 5 multislot, 5 fuera de dominio) con solo `categoria` completa. Los mensajes y las etiquetas se escriben a mano. Es para una única evaluación final. |
 
-En los casos `AMBIGUO`, la columna `tipo_ambiguedad` dice qué falta: `falta_lado` (zona par sin lado), `falta_segmento` (columna, espalda, brazo, pierna) o `zona_amplia` (sin zona o todo el cuerpo). No cambia la accuracy; se usa para reportar el F1 de `AMBIGUO` por tipo y, más adelante, para el diálogo.
+En los casos `AMBIGUO`, la columna `tipo_ambiguedad` dice qué falta: `falta_lado` (zona par sin lado), `falta_segmento` (columna o espalda sin cervical / dorsal / lumbar), `zona_amplia` (zona mencionada pero amplia: pierna, brazo, huesos largos) o `falta_zona` (sin zona: "rx", "necesito una radiografía", "todo el cuerpo"). No cambia la accuracy; se usa para reportar el F1 de `AMBIGUO` por tipo y, más adelante, para el diálogo.
 
-**Regla de lateralidad.** Para las zonas pares (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo), si el mensaje no dice el lado (derecho / izquierdo / ambos), la etiqueta es `AMBIGUO` con `falta_lado`. En el catálogo, una variante sin lado no puede apuntar a un estudio con lado. La zona en plural sin lado ("rodillas", "rayos de pies") se toma como ambos (pendiente de confirmar).
+**Regla de lateralidad.** Para las zonas pares (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo), si el mensaje no dice el lado (derecho / izquierdo / ambos), la etiqueta es `AMBIGUO` con `falta_lado`. En el catálogo, una variante sin lado no puede apuntar a un estudio con lado. La zona en plural sin lado ("rodillas", "rayos de pies") cuenta como ambos.
 
 > Pendiente: el gestor de diálogo todavía hace la misma pregunta de aclaración para todo `AMBIGUO`. La pregunta según `tipo_ambiguedad` (qué lado / qué segmento / qué zona) se implementa después.
 
@@ -115,3 +115,7 @@ python3 -m modelos.llm.evaluacion.baseline_tfidf
 ```
 
 En estas, un estudio es correcto si cumple todos los checks de `estudio` del caso de test; los casos que esperan `null` (zonas ambiguas, fuera de dominio) cuentan como negativos.
+
+## Limitaciones
+
+- **Un solo slot de estudio.** El sistema extrae un único estudio por mensaje, pero hay mensajes que piden dos (por ejemplo `edge_doble_zona`: "necesito una placa de mano y otra de pie"). La etiqueta de una sola clase no representa ese pedido: en ese caso queda `AMBIGUO` / `falta_lado` porque ninguna de las dos zonas tiene lado, pero el segundo estudio se pierde igual.

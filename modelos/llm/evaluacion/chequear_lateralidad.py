@@ -4,7 +4,8 @@ chequear_lateralidad.py — Regla de lateralidad para zonas pares.
 Regla: si el mensaje menciona una zona par (hombro, pie, cadera, rodilla, mano,
 codo, muñeca, tobillo) y no especifica lado (derecho / izquierdo / ambos), la
 etiqueta es AMBIGUO (tipo_ambiguedad = falta_lado). Si especifica lado, la
-etiqueta es un estudio con ese lado.
+etiqueta es un estudio con ese lado. La zona en plural sin lado ("rodillas",
+"rayos de pies") cuenta como ambos.
 En el catálogo: una variante sin lado no puede apuntar a un estudio con lado.
 
 Chequeos (no modifican nada):
@@ -12,7 +13,8 @@ Chequeos (no modifican nada):
      la propuesta de corrección de resultados/propuesta_lateralidad.csv (escrita
      a mano, pendiente de aprobación). Falla si una contradicción no tiene propuesta.
   2. Variantes del catálogo (v1 y v2.1) con zona par y sin lado que apuntan a un
-     estudio con lado, o con un lado que apuntan a un estudio con otro lado.
+     estudio con lado, o con un lado que apuntan a un estudio con otro lado. Las de
+     v2.1 se listan en resultados/variantes_basura_v2_1.csv (v2.1 no se corrige).
   3. Por zona par: variantes sin lado que quedan como única variante de un estudio
      sin lado (en v2.1, acción a). La regla no las prohíbe, pero compiten con la
      etiqueta AMBIGUO de los mensajes con esa zona sin lado.
@@ -50,8 +52,7 @@ LADOS = {
     "izquierdo": r"\b(izquierd|isquierd|izq)\w*",
     "ambos":     r"\b(ambos|ambas|bilateral(es)?|dos)\b",
 }
-# Zona par en plural sin lado explícito ("rayos de pies", "las rodillas"): se toma como
-# ambos, pero se informa aparte porque la regla no lo dice explícitamente.
+# Zona par en plural sin lado explícito ("rayos de pies", "las rodillas"): cuenta como ambos.
 PLURALES = r"\b(hombros|pies|caderas|rodillas|rodiyas|rotulas|manos|pulgares|codos|munecas|tobillos|calcaneos|talones)\b"
 CSV_PROPUESTA = "propuesta_lateralidad.csv"
 VIOLACIONES = ("variante sin lado → estudio con lado", "lado distinto")
@@ -217,7 +218,15 @@ def main() -> int:
         w = csv.DictWriter(fh, fieldnames=["catalogo", "zona", "tipo", "variante", "estudio"])
         w.writeheader()
         w.writerows(todas)
-    print(f"\n  Detalle: {os.path.relpath(ruta)}\n")
+    print(f"\n  Detalle: {os.path.relpath(ruta)}")
+
+    basura = [f for f in todas if f["catalogo"] == "v2.1" and f["tipo"] in VIOLACIONES]
+    ruta = os.path.join(d, "variantes_basura_v2_1.csv")
+    with open(ruta, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["zona", "tipo", "variante", "estudio"], extrasaction="ignore")
+        w.writeheader()
+        w.writerows(basura)
+    print(f"  Variantes de v2.1 que violan la regla ({len(basura)}): {os.path.relpath(ruta)}\n")
     return 0 if ok else 1
 
 

@@ -15,7 +15,7 @@ Métrica estricta
     siempre (aunque no se predigan ni aparezcan en el gold; una clase sin
     aciertos aporta 0).
   - P/R/F1 de las clases AMBIGUO y null por separado.
-  - F1 de AMBIGUO por tipo_ambiguedad (falta_lado / falta_segmento / zona_amplia):
+  - F1 de AMBIGUO por tipo_ambiguedad (falta_lado / falta_segmento / zona_amplia / falta_zona):
     AMBIGUO vs resto, sacando los casos AMBIGUO de los otros tipos. La predicción
     no trae tipo, así que los falsos positivos (predijo AMBIGUO y no lo era) cuentan
     en todos los tipos.
