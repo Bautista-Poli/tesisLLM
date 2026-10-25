@@ -1,81 +1,81 @@
-id,grupo,input,ultima_pregunta,esperado,revisar,nota,check_estudio_en_suite
-torax_especifico,estudios,quiero sacar una placa de tórax,,radiografía simple de tórax,False,,True
-rodilla_especifica,estudios,necesito rx de rodilla derecha,,radiografía simple de región de rodilla derecha,False,,True
-columna_lumbar_especifica,estudios,rayos de columna lumbar,,radiografía simple de columna lumbar,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
-mano_especifica,estudios,necesito una placa de mano,,radiografía simple de mano,True,también válido: radiografía simple de hueso de mano,True
-torax_sin_turno,estudios,quiero una placa de tórax,,radiografía simple de tórax,False,,True
-columna_cervical_especifica,estudios,necesito rayos de la columna cervical,,radiografía simple de columna vertebral cervical,False,,True
-codo_especifico,estudios,"me lastimé el codo derecho, necesito una placa",,radiografía simple de codo derecho,False,,True
-muneca_especifica,estudios,tengo una fractura en la muñeca izquierda,,radiografía simple de muñeca izquierda,False,,True
-tobillo_especifico,estudios,me torcí el tobillo derecho,,radiografía de tobillo derecho,False,,True
-columna_lumbar_con_contexto,estudios,me mandaron a sacar unos rayos de la columna lumbar frente y perfil,,"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",True,"frente y perfil = AP y lateral; también válido: radiografía simple de columna vertebral lumbar y sacra, anteroposterior y lateral",True
-edad_osea_infiere_mano,estudios,Radiografía de Edad Ósea,,radiografía de mano y muñeca para el estudio de edad ósea,True,también existe: radiografía de codo para determinación de la edad ósea (menos habitual),True
-espinograma_reconocido,estudios,Espinograma,,espinograma,False,,True
-ortopantomografia_no_ambigua,estudios,ortopantomografía,,radiografía panorámica,False,,True
-rodilla_con_carga_explícita,estudios,Radiografía de Rodillas con Carga,,radiografía simple de región de rodilla en carga,True,"'Rodillas' en plural; también válido: radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",True
-sacroiliacas_bilateral,estudios,Radiografía de Articulaciones Sacroilíacas,,radiografía simple de ambas articulaciones sacroilíacas,False,,True
-columna_lumbar_nombre_medico,estudios,Radiografía de Columna Lumbar,,radiografía simple de columna lumbar,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
-serie_huesos_largos_ambigua,ambiguos,Serie de Huesos Largos,,AMBIGUO,True,la suite acepta null o escanometría de miembros inferiores,True
-cavum_rinofaringeo_no_pide_lateralidad,ambiguos,Radiografía de Cavum Rinofaríngeo,,radiografía simple de nasofaringe,False,,True
-espalda_ambigua,ambiguos,quiero sacar rayos x de espalda,,AMBIGUO,False,"espalda: cervical, dorsal o lumbar",True
-pierna_ambigua,ambiguos,me duele la pierna y necesito unos rayos,,AMBIGUO,True,"existe 'radiografía simple de pierna'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
-rayos_solos,ambiguos,necesito hacerme unos rayos,,AMBIGUO,False,sin zona anatómica,True
-brazo_ambiguo,ambiguos,placa del brazo,,AMBIGUO,False,brazo: húmero o antebrazo,True
-pie_ambiguo,ambiguos,necesito rayos del pie,,AMBIGUO,True,"existe 'radiografía simple de pie'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
-cadera_ambigua,ambiguos,"me duele la cadera, quiero una placa",,AMBIGUO,True,"existe 'radiografía simple de cadera'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
-columna_sola_ambigua,ambiguos,necesito rayos de columna,,AMBIGUO,False,columna sin segmento,True
-hombro_sin_lateralidad,ambiguos,"me duele el hombro, quiero una placa",,AMBIGUO,True,"existe 'radiografía simple de hombro'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
-rx_corta_sin_zona,ambiguos,rx,,AMBIGUO,False,sin zona anatómica,True
-aclaracion_lumbar,aclaraciones,la parte baja,"¿La radiografía es de la zona cervical (cuello), dorsal (parte media) o lumbar (parte baja)?",radiografía simple de columna lumbar,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
-aclaracion_tibia,aclaraciones,es la tibia,"¿Es la pierna en sí (tibia/peroné), el muslo (fémur) o la rodilla?",radiografía simple de tibia,True,también válido: radiografía simple de tibia y peroné,True
-aclaracion_antebrazo,aclaraciones,el antebrazo,¿Es el brazo (húmero) o el antebrazo (radio y cúbito)?,radiografía simple de antebrazo,False,,True
-aclaracion_cervical,aclaraciones,el cuello,"¿Qué parte de la columna? ¿Lumbar (baja), dorsal (media) o cervical (cuello)?",radiografía simple de columna vertebral cervical,True,'el cuello' respondiendo por la columna; no confundir con radiografía simple de cuello (partes blandas),True
-aclaracion_hombro_derecho,aclaraciones,el derecho,¿Es el hombro derecho o izquierdo?,radiografía simple de hombro derecho,False,,True
-aclaracion_cadera_izquierda,aclaraciones,la cadera izquierda,¿Es la cadera derecha o la izquierda?,radiografía simple de cadera izquierda,False,,True
-dni_completo,dni,"soy Juan Pérez, DNI 30456789",,null,False,mensaje sin estudio,False
-dni_con_puntos,dni,mi DNI es 30.456.789,,null,False,mensaje sin estudio,False
-dni_con_espacios,dni,mi DNI es 30 456 789,,null,False,mensaje sin estudio,False
-dni_parcial,dni,"mi dni termina en 456, no me acuerdo bien",,null,False,mensaje sin estudio,False
-dni_mezclado_con_edad,dni,"tengo 54 años, mi dni termina en 456",,null,False,mensaje sin estudio,False
-dni_7_digitos,dni,mi DNI es 8456789,,null,False,mensaje sin estudio,False
-dni_solo_numero,dni,30456789,,null,False,mensaje sin estudio,False
-dni_en_frase_larga,dni,"soy María García, necesito turno para el miércoles a las 10, mi DNI es 27654321",,null,False,mensaje sin estudio,False
-osde_directo,coberturas,tengo osde 310,,null,False,mensaje sin estudio,False
-osecac_por_descripcion,coberturas,la cobertura la tengo a través del sindicato de empleados de comercio,,null,False,mensaje sin estudio,False
-pami_coloquial,coberturas,"soy jubilado, tengo el pami",,null,False,mensaje sin estudio,False
-swiss_con_typo,coberturas,tengo suiss medical,,null,False,mensaje sin estudio,False
-ioma_coloquial,coberturas,tengo la obra social de la provincia de buenos aires,,null,False,mensaje sin estudio,False
-galeno_directo,coberturas,mi obra social es Galeno,,null,False,mensaje sin estudio,False
-sin_cobertura,coberturas,"no tengo obra social, soy particular",,null,False,mensaje sin estudio,False
-sede_no_inferida,sede,"vivo en Palermo, ¿qué sede me queda cerca?",,null,False,mensaje sin estudio,False
-sede_explicita,sede,prefiero la sede norte,¿En qué sede preferís atenderte?,null,False,mensaje sin estudio,False
-sede_sur_coloquial,sede,quiero ir a la del sur,"¿En qué sede preferís atenderte? Tenemos Centro, Norte y Sur.",null,False,mensaje sin estudio,False
-sede_centro_directo,sede,prefiero la sede del centro,"¿En qué sede preferís atenderte? Tenemos Centro, Norte y Sur.",null,False,mensaje sin estudio,False
-todo_en_uno,multislot,"Soy Bautista Alvarez, DNI 40123456, necesito placa de tórax, OSDE, sede Centro",,radiografía simple de tórax,False,,True
-nombre_compuesto,multislot,me llamo María de los Ángeles Bustamante,,null,False,mensaje sin estudio,False
-mensaje_con_ruido,multislot,"hola buen día, me mandó el doctor López para hacerme una placa de tórax, soy Carlos Ruiz DNI 25678901, tengo galeno",,radiografía simple de tórax,False,,True
-disponibilidad_horaria,multislot,puedo los miércoles y jueves antes de las 14hs,,null,False,mensaje sin estudio,False
-nombre_apellido_invertido,multislot,"me llamo Fernández, Roberto",,null,False,mensaje sin estudio,False
-fuera_dominio_cardiologia,fuera_dominio,quiero turno para cardiología,,null,False,fuera de dominio,True
-fuera_dominio_laboratorio,fuera_dominio,necesito hacerme un análisis de sangre,,null,False,fuera de dominio,True
-fuera_dominio_ecografia,fuera_dominio,quiero sacar turno para una eco abdominal,,null,False,fuera de dominio,True
-fuera_dominio_resonancia,fuera_dominio,necesito una resonancia de rodilla,,null,False,fuera de dominio,True
-fuera_dominio_tomografia,fuera_dominio,me pidieron una tomografía de tórax,,null,False,fuera de dominio,True
-fuera_dominio_consulta_medica,fuera_dominio,quiero ver a un médico por un dolor de cabeza,,null,False,fuera de dominio,True
-edge_pecho_sino_torax,edge_estudios,necesito una placa del pecho,,radiografía simple de tórax,False,,True
-edge_columna_dorsal,edge_estudios,necesito rayos de la columna dorsal,,radiografía simple de región de columna vertebral dorsal,False,,True
-edge_sacro_coxis,edge_estudios,necesito rayos del sacro,,radiografía simple de hueso de sacro,True,también válido: radiografía simple de columna sacra,True
-edge_input_vacio_equivalente,edge_estudios,"hola, buenos días",,null,False,saludo,True
-edge_doble_zona,edge_estudios,necesito una placa de mano y otra de pie,,radiografía simple de mano,True,pide dos estudios (mano y pie); etiqueta de una sola clase con el primero,True
-edge_rodilla_bilateral,edge_estudios,necesito rayos de ambas rodillas,,radiografía simple de región de ambas rodillas,False,,True
-typo_torax_sin_tilde,typos,quiero sacar una placa de torax,,radiografía simple de tórax,False,,True
-typo_lumbal,typos,necesito rayos de columna lumbal,,radiografía simple de columna lumbar,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
-typo_columna_lumbra,typos,rayos de columna lumbra,,radiografía simple de columna lumbar,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
-typo_radigrafia,typos,quiero una radigrafia de rodilla derecha,,radiografía simple de región de rodilla derecha,False,,True
-typo_cervival,typos,necesito rayos de columna cervival,,radiografía simple de columna vertebral cervical,False,,True
-typo_dni_guiones,typos,mi DNI es 30-456-789,,null,False,mensaje sin estudio,False
-typo_deni,typos,mi deni es 30456789,,null,False,mensaje sin estudio,False
-typo_dni_con_letra_o,typos,mi DNI es 3O456789,,null,False,mensaje sin estudio,False
-typo_osde_osdi,typos,mi cobertura es OSDI,,null,False,mensaje sin estudio,False
-typo_pami_pame,typos,tengo el pame,,null,False,mensaje sin estudio,False
-typo_galeno_doble_o,typos,tengo galenoo,,null,False,mensaje sin estudio,False
+id,grupo,input,ultima_pregunta,esperado,tipo_ambiguedad,revisar,nota,check_estudio_en_suite
+torax_especifico,estudios,quiero sacar una placa de tórax,,radiografía simple de tórax,,False,,True
+rodilla_especifica,estudios,necesito rx de rodilla derecha,,radiografía simple de región de rodilla derecha,,False,,True
+columna_lumbar_especifica,estudios,rayos de columna lumbar,,radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
+mano_especifica,estudios,necesito una placa de mano,,radiografía simple de mano,,True,también válido: radiografía simple de hueso de mano,True
+torax_sin_turno,estudios,quiero una placa de tórax,,radiografía simple de tórax,,False,,True
+columna_cervical_especifica,estudios,necesito rayos de la columna cervical,,radiografía simple de columna vertebral cervical,,False,,True
+codo_especifico,estudios,"me lastimé el codo derecho, necesito una placa",,radiografía simple de codo derecho,,False,,True
+muneca_especifica,estudios,tengo una fractura en la muñeca izquierda,,radiografía simple de muñeca izquierda,,False,,True
+tobillo_especifico,estudios,me torcí el tobillo derecho,,radiografía de tobillo derecho,,False,,True
+columna_lumbar_con_contexto,estudios,me mandaron a sacar unos rayos de la columna lumbar frente y perfil,,"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",,True,"frente y perfil = AP y lateral; también válido: radiografía simple de columna vertebral lumbar y sacra, anteroposterior y lateral",True
+edad_osea_infiere_mano,estudios,Radiografía de Edad Ósea,,radiografía de mano y muñeca para el estudio de edad ósea,,True,también existe: radiografía de codo para determinación de la edad ósea (menos habitual),True
+espinograma_reconocido,estudios,Espinograma,,espinograma,,False,,True
+ortopantomografia_no_ambigua,estudios,ortopantomografía,,radiografía panorámica,,False,,True
+rodilla_con_carga_explícita,estudios,Radiografía de Rodillas con Carga,,radiografía simple de región de rodilla en carga,,True,"'Rodillas' en plural; también válido: radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",True
+sacroiliacas_bilateral,estudios,Radiografía de Articulaciones Sacroilíacas,,radiografía simple de ambas articulaciones sacroilíacas,,False,,True
+columna_lumbar_nombre_medico,estudios,Radiografía de Columna Lumbar,,radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
+serie_huesos_largos_ambigua,ambiguos,Serie de Huesos Largos,,AMBIGUO,zona_amplia,True,la suite acepta null o escanometría de miembros inferiores,True
+cavum_rinofaringeo_no_pide_lateralidad,ambiguos,Radiografía de Cavum Rinofaríngeo,,radiografía simple de nasofaringe,,False,,True
+espalda_ambigua,ambiguos,quiero sacar rayos x de espalda,,AMBIGUO,falta_segmento,False,"espalda: cervical, dorsal o lumbar",True
+pierna_ambigua,ambiguos,me duele la pierna y necesito unos rayos,,AMBIGUO,falta_segmento,True,"existe 'radiografía simple de pierna'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
+rayos_solos,ambiguos,necesito hacerme unos rayos,,AMBIGUO,zona_amplia,False,sin zona anatómica,True
+brazo_ambiguo,ambiguos,placa del brazo,,AMBIGUO,falta_segmento,False,brazo: húmero o antebrazo,True
+pie_ambiguo,ambiguos,necesito rayos del pie,,AMBIGUO,falta_lado,True,"existe 'radiografía simple de pie'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
+cadera_ambigua,ambiguos,"me duele la cadera, quiero una placa",,AMBIGUO,falta_lado,True,"existe 'radiografía simple de cadera'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
+columna_sola_ambigua,ambiguos,necesito rayos de columna,,AMBIGUO,falta_segmento,False,columna sin segmento,True
+hombro_sin_lateralidad,ambiguos,"me duele el hombro, quiero una placa",,AMBIGUO,falta_lado,True,"existe 'radiografía simple de hombro'; existe un término genérico en SNOMED; AMBIGUO por la regla del sistema (prompt), revisar si se mantiene",True
+rx_corta_sin_zona,ambiguos,rx,,AMBIGUO,zona_amplia,False,sin zona anatómica,True
+aclaracion_lumbar,aclaraciones,la parte baja,"¿La radiografía es de la zona cervical (cuello), dorsal (parte media) o lumbar (parte baja)?",radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
+aclaracion_tibia,aclaraciones,es la tibia,"¿Es la pierna en sí (tibia/peroné), el muslo (fémur) o la rodilla?",radiografía simple de tibia,,True,también válido: radiografía simple de tibia y peroné,True
+aclaracion_antebrazo,aclaraciones,el antebrazo,¿Es el brazo (húmero) o el antebrazo (radio y cúbito)?,radiografía simple de antebrazo,,False,,True
+aclaracion_cervical,aclaraciones,el cuello,"¿Qué parte de la columna? ¿Lumbar (baja), dorsal (media) o cervical (cuello)?",radiografía simple de columna vertebral cervical,,True,'el cuello' respondiendo por la columna; no confundir con radiografía simple de cuello (partes blandas),True
+aclaracion_hombro_derecho,aclaraciones,el derecho,¿Es el hombro derecho o izquierdo?,radiografía simple de hombro derecho,,False,,True
+aclaracion_cadera_izquierda,aclaraciones,la cadera izquierda,¿Es la cadera derecha o la izquierda?,radiografía simple de cadera izquierda,,False,,True
+dni_completo,dni,"soy Juan Pérez, DNI 30456789",,null,,False,mensaje sin estudio,False
+dni_con_puntos,dni,mi DNI es 30.456.789,,null,,False,mensaje sin estudio,False
+dni_con_espacios,dni,mi DNI es 30 456 789,,null,,False,mensaje sin estudio,False
+dni_parcial,dni,"mi dni termina en 456, no me acuerdo bien",,null,,False,mensaje sin estudio,False
+dni_mezclado_con_edad,dni,"tengo 54 años, mi dni termina en 456",,null,,False,mensaje sin estudio,False
+dni_7_digitos,dni,mi DNI es 8456789,,null,,False,mensaje sin estudio,False
+dni_solo_numero,dni,30456789,,null,,False,mensaje sin estudio,False
+dni_en_frase_larga,dni,"soy María García, necesito turno para el miércoles a las 10, mi DNI es 27654321",,null,,False,mensaje sin estudio,False
+osde_directo,coberturas,tengo osde 310,,null,,False,mensaje sin estudio,False
+osecac_por_descripcion,coberturas,la cobertura la tengo a través del sindicato de empleados de comercio,,null,,False,mensaje sin estudio,False
+pami_coloquial,coberturas,"soy jubilado, tengo el pami",,null,,False,mensaje sin estudio,False
+swiss_con_typo,coberturas,tengo suiss medical,,null,,False,mensaje sin estudio,False
+ioma_coloquial,coberturas,tengo la obra social de la provincia de buenos aires,,null,,False,mensaje sin estudio,False
+galeno_directo,coberturas,mi obra social es Galeno,,null,,False,mensaje sin estudio,False
+sin_cobertura,coberturas,"no tengo obra social, soy particular",,null,,False,mensaje sin estudio,False
+sede_no_inferida,sede,"vivo en Palermo, ¿qué sede me queda cerca?",,null,,False,mensaje sin estudio,False
+sede_explicita,sede,prefiero la sede norte,¿En qué sede preferís atenderte?,null,,False,mensaje sin estudio,False
+sede_sur_coloquial,sede,quiero ir a la del sur,"¿En qué sede preferís atenderte? Tenemos Centro, Norte y Sur.",null,,False,mensaje sin estudio,False
+sede_centro_directo,sede,prefiero la sede del centro,"¿En qué sede preferís atenderte? Tenemos Centro, Norte y Sur.",null,,False,mensaje sin estudio,False
+todo_en_uno,multislot,"Soy Bautista Alvarez, DNI 40123456, necesito placa de tórax, OSDE, sede Centro",,radiografía simple de tórax,,False,,True
+nombre_compuesto,multislot,me llamo María de los Ángeles Bustamante,,null,,False,mensaje sin estudio,False
+mensaje_con_ruido,multislot,"hola buen día, me mandó el doctor López para hacerme una placa de tórax, soy Carlos Ruiz DNI 25678901, tengo galeno",,radiografía simple de tórax,,False,,True
+disponibilidad_horaria,multislot,puedo los miércoles y jueves antes de las 14hs,,null,,False,mensaje sin estudio,False
+nombre_apellido_invertido,multislot,"me llamo Fernández, Roberto",,null,,False,mensaje sin estudio,False
+fuera_dominio_cardiologia,fuera_dominio,quiero turno para cardiología,,null,,False,fuera de dominio,True
+fuera_dominio_laboratorio,fuera_dominio,necesito hacerme un análisis de sangre,,null,,False,fuera de dominio,True
+fuera_dominio_ecografia,fuera_dominio,quiero sacar turno para una eco abdominal,,null,,False,fuera de dominio,True
+fuera_dominio_resonancia,fuera_dominio,necesito una resonancia de rodilla,,null,,False,fuera de dominio,True
+fuera_dominio_tomografia,fuera_dominio,me pidieron una tomografía de tórax,,null,,False,fuera de dominio,True
+fuera_dominio_consulta_medica,fuera_dominio,quiero ver a un médico por un dolor de cabeza,,null,,False,fuera de dominio,True
+edge_pecho_sino_torax,edge_estudios,necesito una placa del pecho,,radiografía simple de tórax,,False,,True
+edge_columna_dorsal,edge_estudios,necesito rayos de la columna dorsal,,radiografía simple de región de columna vertebral dorsal,,False,,True
+edge_sacro_coxis,edge_estudios,necesito rayos del sacro,,radiografía simple de hueso de sacro,,True,también válido: radiografía simple de columna sacra,True
+edge_input_vacio_equivalente,edge_estudios,"hola, buenos días",,null,,False,saludo,True
+edge_doble_zona,edge_estudios,necesito una placa de mano y otra de pie,,radiografía simple de mano,,True,pide dos estudios (mano y pie); etiqueta de una sola clase con el primero,True
+edge_rodilla_bilateral,edge_estudios,necesito rayos de ambas rodillas,,radiografía simple de región de ambas rodillas,,False,,True
+typo_torax_sin_tilde,typos,quiero sacar una placa de torax,,radiografía simple de tórax,,False,,True
+typo_lumbal,typos,necesito rayos de columna lumbal,,radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
+typo_columna_lumbra,typos,rayos de columna lumbra,,radiografía simple de columna lumbar,,True,también válido: radiografía simple de columna vertebral lumbar y sacra (lumbosacra),True
+typo_radigrafia,typos,quiero una radigrafia de rodilla derecha,,radiografía simple de región de rodilla derecha,,False,,True
+typo_cervival,typos,necesito rayos de columna cervival,,radiografía simple de columna vertebral cervical,,False,,True
+typo_dni_guiones,typos,mi DNI es 30-456-789,,null,,False,mensaje sin estudio,False
+typo_deni,typos,mi deni es 30456789,,null,,False,mensaje sin estudio,False
+typo_dni_con_letra_o,typos,mi DNI es 3O456789,,null,,False,mensaje sin estudio,False
+typo_osde_osdi,typos,mi cobertura es OSDI,,null,,False,mensaje sin estudio,False
+typo_pami_pame,typos,tengo el pame,,null,,False,mensaje sin estudio,False
+typo_galeno_doble_o,typos,tengo galenoo,,null,,False,mensaje sin estudio,False

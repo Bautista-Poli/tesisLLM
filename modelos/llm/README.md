@@ -41,12 +41,38 @@ Las salidas (CSV, tablas y gráficos) se guardan en `modelos/llm/evaluacion/resu
 | Archivo | Contenido |
 |---|---|
 | `suite_etiquetada.csv` | Los 80 casos de la suite de tests con su `preferred_term` exacto, `AMBIGUO` o `null`. La columna `revisar` marca los casos con más de un término clínicamente válido; `check_estudio_en_suite` indica si el test original evalúa el estudio. |
-| `heldout.csv` | 60 mensajes nuevos (claros, ambiguos, typos, fuera de dominio, multislot) con etiqueta exacta y `clave_laxa` para la métrica laxa. |
+| `heldout.csv` | Held-out 1: 60 mensajes nuevos (claros, ambiguos, typos, fuera de dominio, multislot) con etiqueta exacta y `clave_laxa` para la métrica laxa. Ya se usó para elegir la configuración: **no se evalúa nada más contra él**. |
+| `heldout2.csv` | Held-out 2: plantilla de 35 filas (12 claros, 8 ambiguos, 5 typos, 5 multislot, 5 fuera de dominio) con solo `categoria` completa. Los mensajes y las etiquetas se escriben a mano. Es para una única evaluación final. |
+
+En los casos `AMBIGUO`, la columna `tipo_ambiguedad` dice qué falta: `falta_lado` (zona par sin lado), `falta_segmento` (columna, espalda, brazo, pierna) o `zona_amplia` (sin zona o todo el cuerpo). No cambia la accuracy; se usa para reportar el F1 de `AMBIGUO` por tipo y, más adelante, para el diálogo.
+
+**Regla de lateralidad.** Para las zonas pares (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo), si el mensaje no dice el lado (derecho / izquierdo / ambos), la etiqueta es `AMBIGUO` con `falta_lado`. En el catálogo, una variante sin lado no puede apuntar a un estudio con lado. La zona en plural sin lado ("rodillas", "rayos de pies") se toma como ambos (pendiente de confirmar).
+
+> Pendiente: el gestor de diálogo todavía hace la misma pregunta de aclaración para todo `AMBIGUO`. La pregunta según `tipo_ambiguedad` (qué lado / qué segmento / qué zona) se implementa después.
 
 ```bash
-# Chequeo de contaminación del held-out: ninguna variante del CSV de >8 caracteres
-# y ningún input repetido de la suite. Sale con código 1 si falla.
-python3 -m modelos.llm.evaluacion.verificar_heldout
+# Chequeo de contaminación: ninguna variante del catálogo de >8 caracteres, ningún input
+# repetido de la suite, etiquetas en el catálogo y tipo_ambiguedad válido. Código 1 si falla.
+python3 -m modelos.llm.evaluacion.verificar_heldout                    # held-out 1, catálogo v1
+python3 -m modelos.llm.evaluacion.verificar_heldout --set heldout2     # held-out 2 contra v1 y v2.1, la suite,
+                                                                       # el held-out 1, la plantilla y la regla de lateralidad
+
+# Regla de lateralidad: etiquetas que la contradicen (con la propuesta de
+# resultados/propuesta_lateralidad.csv) y variantes del catálogo v1 / v2.1 que la violan.
+python3 -m modelos.llm.evaluacion.chequear_lateralidad
+```
+
+### Catálogos
+
+| Versión | Archivo | Contenido |
+|---|---|---|
+| v1 | `CSVs/snomed_con_variantes.csv` | Original. **Es el de la configuración elegida.** |
+| v2 | `CSVs/snomed_con_variantes_v2.csv` | Acciones (a) y (b) de `propuesta_variantes.csv`. No mejoró: en held-out 1, f baja de 0.70 a 0.65 e i de 0.73 a 0.68 (McNemar i vs i@v2, p≈0.45). |
+| v2.1 | `CSVs/snomed_con_variantes_v2_1.csv` | Solo las acciones (a); las (b) no se eliminan. Mismos conceptId corregidos que v2, sin ".0". |
+
+```bash
+python3 -m modelos.llm.evaluacion.generar_catalogo_v2                  # v2
+python3 -m modelos.llm.evaluacion.generar_catalogo_v2 --version v2.1
 ```
 
 ### Comparación de configuraciones
@@ -65,6 +91,15 @@ Reporta por configuración y set: recall@k de la recuperación, accuracy top-1 e
 b2) devuelve `null` si el coseno top-1 < `umbral_null` y `AMBIGUO` si el margen top1−top2 < `umbral_margen`; ambos umbrales se calibran solo sobre la suite (búsqueda en grilla, máxima accuracy), así que la cifra válida es la del held-out. `--reusar` toma de `comparacion_por_caso.csv` las predicciones de las configs que no se corren y recalcula todas las métricas con las etiquetas actuales.
 
 Los defaults del sistema no cambian: `rag.TOP_K = 3` y el analizador por palabras. El analizador por n-gramas de caracteres es una opción de `rag.py` (`analizador="char"`).
+
+### Evaluación final sobre el held-out 2 (una sola vez)
+
+Configuración elegida: **i) con catálogo v1**. La evaluación final compara i) con v1 contra i) con v2.1 sobre el held-out 2: accuracy estricta con IC 95% bootstrap (y el de la diferencia), F1 de `AMBIGUO` (total y por `tipo_ambiguedad`), F1 de `null` y McNemar exacto entre los dos. Antes de llamar al LLM corre `verificar_heldout --set heldout2` y no sigue si falla; si el resultado ya existe no vuelve a evaluar (`--forzar` lo pisa y queda anotado). Requiere Ollama.
+
+```bash
+python3 -m modelos.llm.evaluacion.evaluar_heldout2 --chequear   # solo prerequisitos, sin LLM
+python3 -m modelos.llm.evaluacion.evaluar_heldout2              # la evaluación (genera heldout2_por_caso.csv y heldout2_resumen.md)
+```
 
 ### Evaluaciones anteriores (métrica laxa)
 

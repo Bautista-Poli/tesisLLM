@@ -17,8 +17,8 @@ Todas las configuraciones se corren sobre los MISMOS casos (suite_etiquetada y h
   i)  f) + 3 ejemplos few-shot de la suite SOLO de fuera de dominio (→ null),
       manteniendo la lista original de zonas ambiguas del prompt.
 
-Catálogo: --catalogo v1 (CSVs/snomed_con_variantes.csv, default) o v2
-(snomed_con_variantes_v2.csv). Las corridas con v2 se guardan como "<config>@v2".
+Catálogo: --catalogo v1 (CSVs/snomed_con_variantes.csv, default), v2 o v2.1
+(snomed_con_variantes_v2.csv / _v2_1.csv). Las corridas se guardan como "<config>@v2" o "@v2.1".
 
 Los defaults del sistema no cambian (rag.TOP_K=3, analizador por palabras, prompt y
 modelo de prompt.py / ollama_client.py): todo se pasa como parámetro. El pipeline LLM
@@ -82,7 +82,8 @@ CONFIGS = {
 }
 
 CATALOGOS = {"v1": CSV_TERMINOS,
-             "v2": CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2.csv")}
+             "v2": CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2.csv"),
+             "v2.1": CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2_1.csv")}
 
 
 def base_config(clave: str) -> str:

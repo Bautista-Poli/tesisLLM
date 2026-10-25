@@ -1,11 +1,13 @@
 """
-generar_catalogo_v2.py — Genera CSVs/snomed_con_variantes_v2.csv a partir de la propuesta revisada.
+generar_catalogo_v2.py — Genera el catálogo v2 o v2.1 a partir de la propuesta revisada.
 
 No modifica el CSV original. Aplica resultados/propuesta_variantes.csv tal como esté:
   (a) la variante queda SOLO en estudio_por_defecto (se agrega si no la tenía,
       con su forma original más frecuente);
-  (b) la variante se elimina de todos los estudios;
+  (b) la variante se elimina de todos los estudios (solo v2; en v2.1 no se toca);
   (c) no se toca.
+  v2   → CSVs/snomed_con_variantes_v2.csv   (a + b)
+  v2.1 → CSVs/snomed_con_variantes_v2_1.csv (solo a)
 Además (sin efecto en recuperación ni prompt, que no usan conceptId):
   - conceptId sin el ".0" final;
   - los conceptId en notación científica se reemplazan por el único candidato ±1
@@ -14,11 +16,13 @@ Además (sin efecto en recuperación ni prompt, que no usan conceptId):
 Valida que las demás columnas y el orden de filas no cambien.
 
 Uso:
-    python -m modelos.llm.evaluacion.generar_catalogo_v2
+    python -m modelos.llm.evaluacion.generar_catalogo_v2                  # v2
+    python -m modelos.llm.evaluacion.generar_catalogo_v2 --version v2.1
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import io
 import os
@@ -31,6 +35,8 @@ from modelos.llm.evaluacion.datos_etiquetados import normalizar
 from modelos.llm.extractor import CSV_TERMINOS
 
 CSV_V2 = CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2.csv")
+CSV_V2_1 = CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2_1.csv")
+VERSIONES = {"v2": (CSV_V2, "abc"), "v2.1": (CSV_V2_1, "ac")}  # versión -> (salida, acciones aplicadas)
 
 
 def corregir_id(crudo: str) -> tuple[str, str]:
@@ -48,6 +54,10 @@ def corregir_id(crudo: str) -> tuple[str, str]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Genera el catálogo v2 (acciones a y b) o v2.1 (solo a).")
+    parser.add_argument("--version", choices=list(VERSIONES), default="v2")
+    args = parser.parse_args()
+    csv_salida, aplicadas = VERSIONES[args.version]
     d = asegurar_dir_resultados()
     with open(CSV_TERMINOS, newline="", encoding="utf-8") as f:
         original = list(csv.DictReader(f))
@@ -55,6 +65,9 @@ def main() -> None:
         columnas = next(csv.reader(f))
     with open(os.path.join(d, "propuesta_variantes.csv"), newline="", encoding="utf-8") as f:
         propuesta = {r["variante_normalizada"]: r for r in csv.DictReader(f)}
+    for p in propuesta.values():  # acciones que esta versión no aplica quedan como (c)
+        if p["accion"] not in aplicadas:
+            p["accion"] = "c"
 
     catalogo = {r["preferred_term"] for r in original}
     for v, p in propuesta.items():
@@ -129,7 +142,7 @@ def main() -> None:
     w = csv.DictWriter(out, fieldnames=columnas, lineterminator="\n")
     w.writeheader()
     w.writerows(nuevas)
-    with open(CSV_V2, "w", newline="", encoding="utf-8") as f:
+    with open(csv_salida, "w", newline="", encoding="utf-8") as f:
         f.write(out.getvalue())
 
     def n_var(filas):
@@ -137,16 +150,18 @@ def main() -> None:
     sin_var = lambda filas: sum(1 for r in filas if not r["variantes_coloquiales"].strip())
     cambiadas = sum(a["variantes_coloquiales"] != b["variantes_coloquiales"] for a, b in zip(original, nuevas))
     acciones = Counter(p["accion"] for p in propuesta.values())
+    v = args.version
 
     lineas = [
-        f"Catálogo v2: {os.path.relpath(CSV_V2)}",
-        f"Propuesta aplicada: a = {acciones['a']}, b = {acciones['b']}, c (sin tocar) = {acciones['c']}",
-        f"Ocurrencias de variantes: v1 = {n_var(original)} → v2 = {n_var(nuevas)}",
+        f"Catálogo {v}: {os.path.relpath(csv_salida)}",
+        f"Propuesta aplicada: a = {acciones['a']}, b = {acciones['b']}, c (sin tocar) = {acciones['c']}"
+        + (" (las b de la propuesta se dejan como c)" if "b" not in aplicadas else ""),
+        f"Ocurrencias de variantes: v1 = {n_var(original)} → {v} = {n_var(nuevas)}",
         f"  eliminadas por (a) de estudios no por defecto: {eliminadas['a']}",
         f"  eliminadas por (b): {eliminadas['b']}",
         f"  agregadas al estudio por defecto: {len(agregadas)}",
         f"Estudios con variantes modificadas: {cambiadas} de {len(nuevas)}",
-        f"Estudios sin variantes: v1 = {sin_var(original)} → v2 = {sin_var(nuevas)}",
+        f"Estudios sin variantes: v1 = {sin_var(original)} → {v} = {sin_var(nuevas)}",
         f"Variantes que siguen compartidas (solo las de acción c): {sum(1 for c in compartidas.values() if c > 1)}",
         "conceptId: sin '.0'; corregidos por notación científica:",
         *[f"  {n}" for n in notas_id],
@@ -154,7 +169,8 @@ def main() -> None:
         "", "Variantes agregadas:", *[f"  {a}" for a in agregadas],
     ]
     print("\n" + "\n".join(lineas) + "\n")
-    with open(os.path.join(d, "generacion_catalogo_v2.txt"), "w", encoding="utf-8") as f:
+    nombre = "generacion_catalogo_v2.txt" if v == "v2" else "generacion_catalogo_v2_1.txt"
+    with open(os.path.join(d, nombre), "w", encoding="utf-8") as f:
         f.write("\n".join(lineas) + "\n")
 
 

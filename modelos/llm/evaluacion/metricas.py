@@ -15,6 +15,10 @@ Métrica estricta
     siempre (aunque no se predigan ni aparezcan en el gold; una clase sin
     aciertos aporta 0).
   - P/R/F1 de las clases AMBIGUO y null por separado.
+  - F1 de AMBIGUO por tipo_ambiguedad (falta_lado / falta_segmento / zona_amplia):
+    AMBIGUO vs resto, sacando los casos AMBIGUO de los otros tipos. La predicción
+    no trae tipo, así que los falsos positivos (predijo AMBIGUO y no lo era) cuentan
+    en todos los tipos.
 
 Métrica laxa (la anterior, para comparar)
 -----------------------------------------
@@ -30,7 +34,7 @@ from __future__ import annotations
 from collections import defaultdict
 
 from modelos.llm.evaluacion.comun import NEGATIVO, POSITIVO, es_correcto, tipo_gold
-from modelos.llm.evaluacion.datos_etiquetados import CLASE_AMBIGUO, CLASE_NULL
+from modelos.llm.evaluacion.datos_etiquetados import CLASE_AMBIGUO, CLASE_NULL, TIPOS_AMBIGUEDAD
 
 
 def clase_desde_slots(slots: dict) -> str:
@@ -72,6 +76,27 @@ def metricas_estrictas(esperados: list[str], predichos: list[str]) -> dict:
         "ambiguo": _prf(**conteo[CLASE_AMBIGUO]),
         "null": _prf(**conteo[CLASE_NULL]),
     }
+
+
+def f1_ambiguo_por_tipo(items: list[dict], predichos: list[str]) -> dict[str, dict]:
+    """tipo -> {p, r, f1, n} (n = casos AMBIGUO de ese tipo)."""
+    res = {}
+    for tipo in TIPOS_AMBIGUEDAD:
+        tp = fp = fn = n = 0
+        for item, pred in zip(items, predichos):
+            es_amb = item["esperado"] == CLASE_AMBIGUO
+            if es_amb and item["tipo_ambiguedad"] != tipo:
+                continue
+            n += es_amb
+            if es_amb and pred == CLASE_AMBIGUO:
+                tp += 1
+            elif es_amb:
+                fn += 1
+            elif pred == CLASE_AMBIGUO:
+                fp += 1
+        p, r, f = _prf(tp, fp, fn)
+        res[tipo] = {"p": p, "r": r, "f1": f, "n": n}
+    return res
 
 
 def gold_laxo(item: dict) -> str | None:

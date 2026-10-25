@@ -2,13 +2,14 @@
   VERIFICACIÓN DEL SET HELD-OUT — catálogo v1
 ================================================================================
   Mensajes: 60  |  por categoría: {'claro': 23, 'ambiguo': 10, 'typo': 10, 'fuera_dominio': 9, 'multislot': 8}
-  Variantes del CSV con más de 8 caracteres (tras expandir '/'): 2846
-  Inputs únicos de la suite (normalizados): 79
+  Inputs únicos de suite (normalizados): 79
 
-  [OK] Variantes de >8 caracteres: 0 mensajes las contienen
-  [OK] Coincidencias con inputs de la suite: 0
-  [OK] Etiquetas fuera del catálogo: 0
+  — Catálogo v1: 2846 variantes de más de 8 caracteres (tras expandir '/')
+  [OK] [v1] Mensajes con variantes de >8 caracteres: 0
+  [OK] [v1] Etiquetas fuera del catálogo: 0
+  [OK] Coincidencias con inputs de suite: 0
   [OK] Ids duplicados: 0
+  [OK] tipo_ambiguedad faltante o inválido: 0
 
   Resultado: PASA
 ================================================================================

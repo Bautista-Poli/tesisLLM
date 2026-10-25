@@ -1,0 +1,817 @@
+catalogo,zona,tipo,variante,estudio
+v1,pie,sin lado → sin lado,rayos de la panza en pie,radiografía abdominal en bipedestación
+v1,codo,sin lado → sin lado,rayos del codo para saber la edad,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,placa del codo para edad,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,rx de codo para edad osea,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,rayos para saber la edad del codo,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,placa de codo para edad osea,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,radiografia de codo para saber la edad,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,rayos del codo,radiografía de codo para determinación de la edad ósea
+v1,codo,sin lado → sin lado,placa de codo,radiografía de codo para determinación de la edad ósea
+v1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía de cúbito
+v1,muñeca,sin lado → sin lado,placa de la muneca,radiografía de cúbito
+v1,mano,sin lado → sin lado,rayo de escafoides,radiografía de escafoides
+v1,mano,sin lado → sin lado,placa de escafoides,radiografía de escafoides
+v1,mano,sin lado → sin lado,rx de escafoides,radiografía de escafoides
+v1,mano,sin lado → sin lado,rayos de escafoides,radiografía de escafoides
+v1,mano,sin lado → sin lado,escafoides radiografia,radiografía de escafoides
+v1,mano,sin lado → sin lado,placa escafoides,radiografía de escafoides
+v1,pie,sin lado → sin lado,el rx de los huesos del pie,radiografía de huesos metatarsianos
+v1,pie,sin lado → sin lado,los huesos del pie,radiografía de huesos metatarsianos
+v1,pie,sin lado → sin lado,el estudio de los huesos del pie,radiografía de huesos metatarsianos
+v1,rodilla,sin lado → sin lado,un placa de rotula,radiografía de rótula
+v1,rodilla,sin lado → sin lado,rx de rotula,radiografía de rótula
+v1,rodilla,sin lado → sin lado,rayos de rotula,radiografía de rótula
+v1,rodilla,sin lado → sin lado,rayos de la rotula,radiografía de rótula
+v1,rodilla,sin lado → sin lado,placa de la rotula,radiografía de rótula
+v1,rodilla,sin lado → sin lado,placa de rotula,radiografía de rótula
+v1,pie,plural → estudio bilateral,rayos de pies,radiografía simple bilateral de pies
+v1,pie,plural → estudio bilateral,rayos simples de pies,radiografía simple bilateral de pies
+v1,pie,plural → estudio bilateral,radiografia de pies,radiografía simple bilateral de pies
+v1,pie,plural → estudio bilateral,rx de pies,radiografía simple bilateral de pies
+v1,pie,plural → estudio bilateral,placa de pies,radiografía simple bilateral de pies
+v1,tobillo,plural → estudio bilateral,rayos de tobillos,radiografía simple bilateral de tobillos
+v1,tobillo,plural → estudio bilateral,placa de tobillos,radiografía simple bilateral de tobillos
+v1,tobillo,plural → estudio bilateral,rx tobillos,radiografía simple bilateral de tobillos
+v1,tobillo,plural → estudio bilateral,radiografia de tobillos,radiografía simple bilateral de tobillos
+v1,tobillo,lado distinto,rayos de tobillos derechxs,radiografía simple bilateral de tobillos
+v1,hombro,variante sin lado → estudio con lado,una placa de las articulaciones del hombro,radiografía simple de ambas articulaciones acromioclaviculares
+v1,hombro,variante sin lado → estudio con lado,rayos de las articulaciones del hombro,radiografía simple de ambas articulaciones acromioclaviculares
+v1,cadera,plural → estudio bilateral,rayos de las caderas,radiografía simple de ambas articulaciones sacroilíacas
+v1,cadera,plural → estudio bilateral,placa de caderas,radiografía simple de ambas caderas
+v1,cadera,plural → estudio bilateral,rayos de las caderas,radiografía simple de ambas caderas
+v1,cadera,plural → estudio bilateral,rx de caderas,radiografía simple de ambas caderas
+v1,cadera,plural → estudio bilateral,radiografia simple caderas,radiografía simple de ambas caderas
+v1,cadera,plural → estudio bilateral,rayos de caderas simple,radiografía simple de ambas caderas
+v1,mano,plural → estudio bilateral,rayo de las manos,radiografía simple de ambas manos
+v1,mano,plural → estudio bilateral,rayos de las manos,radiografía simple de ambas manos
+v1,mano,plural → estudio bilateral,placa de las manos,radiografía simple de ambas manos
+v1,mano,plural → estudio bilateral,rayos de manos,radiografía simple de ambas manos
+v1,mano,plural → estudio bilateral,radiografia de las manos,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v1,mano,plural → estudio bilateral,placa de manos,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v1,"mano, muñeca",plural → estudio bilateral,radiografia de las manos y munecas,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v1,muñeca,plural → estudio bilateral,munecas ap,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v1,rodilla,variante sin lado → estudio con lado,me duele la rodilla,"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior"
+v1,rodilla,plural → estudio bilateral,hacen una plaquita de las rodillas,radiografía simple de ambas rótulas
+v1,pie,plural → estudio bilateral,radiografia simple de calcaneos,radiografía simple de ambos calcáneos
+v1,pie,plural → estudio bilateral,placa de calcaneos,radiografía simple de ambos calcáneos
+v1,pie,plural → estudio bilateral,rayos de calcaneos,radiografía simple de ambos calcáneos
+v1,pie,plural → estudio bilateral,rx de calcaneos,radiografía simple de ambos calcáneos
+v1,pie,plural → estudio bilateral,rayos de los calcaneos,radiografía simple de ambos calcáneos
+v1,pie,plural → estudio bilateral,radiografia de calcaneos,radiografía simple de ambos calcáneos
+v1,codo,plural → estudio bilateral,placa de los codos,radiografía simple de ambos codos
+v1,codo,plural → estudio bilateral,rx de los codos,radiografía simple de ambos codos
+v1,codo,plural → estudio bilateral,rayos de los codos,radiografía simple de ambos codos
+v1,mano,variante sin lado → estudio con lado,rayo del escafoides,radiografía simple de ambos escafoides
+v1,mano,variante sin lado → estudio con lado,rx de escafoides,radiografía simple de ambos escafoides
+v1,mano,variante sin lado → estudio con lado,rayos de escafoides,radiografía simple de ambos escafoides
+v1,mano,variante sin lado → estudio con lado,rayo simple de escafoides,radiografía simple de ambos escafoides
+v1,hombro,plural → estudio bilateral,rayos de los hombros,radiografía simple de ambos hombros
+v1,hombro,plural → estudio bilateral,placa de hombros,radiografía simple de ambos hombros
+v1,codo,plural → estudio bilateral,rayos de codos hacia arriba,radiografía simple de ambos hombros
+v1,hombro,plural → estudio bilateral,radiografia de hombros,radiografía simple de ambos hombros
+v1,hombro,plural → estudio bilateral,rx de los hombros,radiografía simple de ambos hombros
+v1,hombro,plural → estudio bilateral,rayos para hombros,radiografía simple de ambos hombros
+v1,hombro,plural → estudio bilateral,hombros en xray,radiografía simple de ambos hombros
+v1,pie,plural → estudio bilateral,rayos de los pies,radiografía simple de ambos miembros inferiores
+v1,hombro,plural → estudio bilateral,rayos de los hombros,radiografía simple de ambos miembros superiores
+v1,hombro,plural → estudio bilateral,rx de hombros,radiografía simple de ambos miembros superiores
+v1,hombro,plural → estudio bilateral,rayos de hombros y brazos,radiografía simple de ambos miembros superiores
+v1,mano,plural → estudio bilateral,rx de pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,rayos de pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,placa de pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,radiografia de pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,rayos de los pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,rayos pulgares,radiografía simple de ambos pulgares
+v1,mano,plural → estudio bilateral,rx pulgares,radiografía simple de ambos pulgares
+v1,pie,sin lado → sin lado,una placa simple del pie,radiografía simple de antepié
+v1,hombro,sin lado → sin lado,rayo de hombro,radiografía simple de articulación acromioclavicular
+v1,muñeca,lado distinto,rayos de la muneca izquierda no,radiografía simple de articulación acromioclavicular derecha
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v1,mano,sin lado → sin lado,radiografia de la mano,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v1,mano,sin lado → sin lado,rayos de la mano con estres,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v1,mano,sin lado → sin lado,placa de mano,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v1,mano,sin lado → sin lado,rayos de la mano con fuerza,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v1,hombro,sin lado → sin lado,hacer un rayo simple de hombro,radiografía simple de articulación de región de hombro
+v1,tobillo,sin lado → sin lado,rayos de tobillo,radiografía simple de articulación de tobillo
+v1,tobillo,sin lado → sin lado,placa de tobillo,radiografía simple de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rx de tobillo,radiografía simple de articulación de tobillo
+v1,tobillo,sin lado → sin lado,radiografia de tobillo,radiografía simple de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rayos x de tobillo,radiografía simple de articulación de tobillo
+v1,tobillo,sin lado → sin lado,hacer una placa de tobillo,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,hacer una rx del tobillo,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,hacer rayos de tobillo,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,hacer rayos para el tobillo,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,tomar un rx del tobillo,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,tomar una placa de tobillo en carga,radiografía simple de articulación de tobillo en carga
+v1,tobillo,sin lado → sin lado,radiografia simple de tobillo,radiografía simple de articulación de tobillo en carga
+v1,cadera,sin lado → sin lado,rayo de la cadera,radiografía simple de cadera
+v1,cadera,sin lado → sin lado,placa de cadera,radiografía simple de cadera
+v1,cadera,sin lado → sin lado,rx de cadera,radiografía simple de cadera
+v1,cadera,sin lado → sin lado,radiografia de cadera,radiografía simple de cadera
+v1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de cadera
+v1,pie,sin lado → sin lado,una placa de calcaneo,radiografía simple de calcáneo
+v1,pie,sin lado → sin lado,rayos de calcaneo,radiografía simple de calcáneo
+v1,pie,sin lado → sin lado,una rx de calcaneo,radiografía simple de calcáneo
+v1,codo,sin lado → sin lado,rayos de codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,placa de codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,rx de codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,rayos del codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,rx del codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,rayo simple del codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,corte codo,radiografía simple de codo
+v1,codo,sin lado → sin lado,codo simple,radiografía simple de codo
+v1,codo,sin lado → sin lado,rayo de codo,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,codo,sin lado → sin lado,placa de codo,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,codo,sin lado → sin lado,rx de codo,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,codo,sin lado → sin lado,rayos de codo,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,rayos de la muneca,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,placa de la muneca,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,codo,sin lado → sin lado,codo placa,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,codo,sin lado → sin lado,codo rayos,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v1,cadera,sin lado → sin lado,rx de la cadera,radiografía simple de columna lumbar
+v1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de columna vertebral lumbar y sacra
+v1,cadera,sin lado → sin lado,rayos de la lumbar y la cadera,radiografía simple de columna vertebral lumbar y sacra
+v1,rodilla,sin lado → sin lado,rayos de la rodilla arriba,radiografía simple de cuello de fémur
+v1,mano,sin lado → sin lado,rayos x del dedo de la mano,radiografía simple de dedo de la mano
+v1,pie,sin lado → sin lado,placa del pie,radiografía simple de dedo de pie
+v1,pie,sin lado → sin lado,rx del pie,radiografía simple de dedo de pie
+v1,pie,sin lado → sin lado,rayos del dedo del pie,radiografía simple de dedo de pie
+v1,pie,sin lado → sin lado,rayos de la punta del pie,radiografía simple de dedo de pie
+v1,pie,sin lado → sin lado,rayo del pie,radiografía simple de dedo de pie
+v1,mano,sin lado → sin lado,rayos del dedo medio de la mano,radiografía simple de dedo medio de mano
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de extremidad inferior
+v1,pie,sin lado → sin lado,placa del pie,radiografía simple de extremidad inferior para medición de longitud de hueso
+v1,hombro,sin lado → sin lado,radiografia de hombro,radiografía simple de hombro
+v1,hombro,sin lado → sin lado,rayos de hombro,radiografía simple de hombro
+v1,hombro,sin lado → sin lado,rx de hombro,radiografía simple de hombro
+v1,hombro,sin lado → sin lado,rayos de la placa de hombro,radiografía simple de hombro
+v1,hombro,sin lado → sin lado,rayos de hombro simple,radiografía simple de hombro
+v1,hombro,sin lado → sin lado,radiografia de hombro simple,radiografía simple de hombro
+v1,cadera,sin lado → sin lado,rayo x de la cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rx de la cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rayos de mi cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rayos de cadera,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,cadera para rayos,radiografía simple de hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,cadera para rx,radiografía simple de hueso de articulación de región de cadera
+v1,codo,sin lado → sin lado,rayo de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,placa de hueso de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,rx de articulacion de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,rayos de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,placa sencilla de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,rayo simple de hueso de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,radiografia de codo,radiografía simple de hueso de articulación de región de codo
+v1,codo,sin lado → sin lado,rayo de hueso de articulacion de codo,radiografía simple de hueso de articulación de región de codo
+v1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía simple de hueso de extremidad superior
+v1,mano,sin lado → sin lado,rayos de hueso de la mano,radiografía simple de hueso de extremidad superior
+v1,mano,sin lado → sin lado,rayo de mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,placa de mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,rx de mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,rayo x de mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,placa de huesos de mano,radiografía simple de hueso de mano
+v1,mano,sin lado → sin lado,rayo de la mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,placa de la mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,rx de mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,radiografia de mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,la placa de la mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,mano,sin lado → sin lado,rayos de mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,"mano, muñeca",sin lado → sin lado,placa de mano y muneca,radiografía simple de hueso de mano y hueso de región de muñeca
+v1,cadera,sin lado → sin lado,rayos de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,placa de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rx de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v1,cadera,sin lado → sin lado,rayos de cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v1,pie,sin lado → sin lado,placa de pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,rayos de pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,rayos simples de pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,placa del pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,rx de pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de hueso de pie
+v1,pie,sin lado → sin lado,placa simple de pie,radiografía simple de hueso de pie
+v1,codo,sin lado → sin lado,rayos de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,placa de codo y brazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,rx de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,rayos de articulacion de codo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,placa simple de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,rayos de brazo y codo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,codo,sin lado → sin lado,radiografia simple de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v1,tobillo,sin lado → sin lado,rayo simple tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,placa tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rx de tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rayos de tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rayo simple del tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,rayos de la articulacion de tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,tobillo,sin lado → sin lado,radiografia del tobillo,radiografía simple de hueso de región de articulación de tobillo
+v1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía simple de hueso de región de muñeca
+v1,muñeca,sin lado → sin lado,placa de la muneca,radiografía simple de hueso de región de muñeca
+v1,muñeca,sin lado → sin lado,rx de la muneca,radiografía simple de hueso de región de muñeca
+v1,muñeca,sin lado → sin lado,rayos de la muneca sin torax,radiografía simple de hueso de región de muñeca
+v1,muñeca,sin lado → sin lado,radiografia simple de la muneca,radiografía simple de hueso de región de muñeca
+v1,rodilla,sin lado → sin lado,rayo de la rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,rx de rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,rayos de la rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,radiografia de rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de la rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,rx de la rodilla,radiografía simple de hueso de región de rodilla
+v1,rodilla,sin lado → sin lado,radiografia simple de rodilla,radiografía simple de hueso de región de rodilla
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de hueso metacarpiano
+v1,mano,sin lado → sin lado,placa de la mano,radiografía simple de hueso metacarpiano
+v1,mano,sin lado → sin lado,rx de la mano,radiografía simple de hueso metacarpiano
+v1,pie,plural → estudio bilateral,rayos de pies,radiografía simple de hueso sesamoideo de ambos pies
+v1,pie,plural → estudio bilateral,placa de pies,radiografía simple de hueso sesamoideo de ambos pies
+v1,pie,plural → estudio bilateral,radiografia de pies,radiografía simple de hueso sesamoideo de ambos pies
+v1,pie,plural → estudio bilateral,rayos de los pies,radiografía simple de hueso sesamoideo de ambos pies
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de hueso sesamoideo de pie
+v1,pie,sin lado → sin lado,rx del pie,radiografía simple de hueso sesamoideo de pie
+v1,pie,sin lado → sin lado,rayos de los huesos del pie,radiografía simple de hueso sesamoideo de pie
+v1,pie,sin lado → sin lado,placa del sesamoideo del pie,radiografía simple de hueso sesamoideo de pie
+v1,pie,sin lado → sin lado,placa de los huesos del pie,radiografía simple de hueso sesamoideo de pie
+v1,pie,sin lado → sin lado,del pie,radiografía simple de hueso sesamoideo de pie
+v1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de la cabeza del fémur
+v1,cadera,sin lado → sin lado,x de la cadera,radiografía simple de la cabeza del fémur
+v1,cadera,sin lado → sin lado,radiografia simple de la cadera,radiografía simple de la cabeza del fémur
+v1,mano,sin lado → sin lado,un rayo de la mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,la placa de la mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,un rx de mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,rayos de mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,la radiografia de la mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,un rayo simple de mano,radiografía simple de mano
+v1,mano,sin lado → sin lado,la mano por rayos,radiografía simple de mano
+v1,mano,variante sin lado → estudio con lado,placa de mano,radiografía simple de mano derecha
+v1,mano,variante sin lado → estudio con lado,rayos de mano,radiografía simple de mano derecha
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de mano proyección anteroposterior
+v1,mano,sin lado → sin lado,la mano en rx,radiografía simple de mano proyección anteroposterior
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,placa de la mano,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,rx simple de mano,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,rayos de la mano ap y lateral,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,placa de mano combinada,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,rayos de mano ap y lateral,radiografía simple de mano proyección combinada anteroposterior y lateral
+v1,mano,sin lado → sin lado,placa de mano oblicua,radiografía simple de mano proyección oblicua
+v1,mano,sin lado → sin lado,rayos de la mano oblicua,radiografía simple de mano proyección oblicua
+v1,mano,sin lado → sin lado,rx oblicua de la mano,radiografía simple de mano proyección oblicua
+v1,mano,sin lado → sin lado,rayos oblicuos de la mano,radiografía simple de mano proyección oblicua
+v1,mano,sin lado → sin lado,rayos oblicuos de mano simple,radiografía simple de mano proyección oblicua
+v1,muñeca,sin lado → sin lado,rayo de muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,placa de muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,rx simple de muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,placa de muneca simple,radiografía simple de muñeca
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,rx de la muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,radiografia de la muneca,radiografía simple de muñeca
+v1,muñeca,sin lado → sin lado,rayo de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,placa de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,rx de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,rayos de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,mano,sin lado → sin lado,rayos de mano,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,mano,sin lado → sin lado,placa de mano,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,rayo simple de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,mano,sin lado → sin lado,radiografia de mano,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v1,muñeca,sin lado → sin lado,rayos de muneca,"radiografía simple de muñeca, proyección de túnel carpiano"
+v1,muñeca,sin lado → sin lado,placa de la muneca,"radiografía simple de muñeca, proyección de túnel carpiano"
+v1,hombro,sin lado → sin lado,radiografia del hombro,radiografía simple de omóplato
+v1,pie,sin lado → sin lado,radiografia simple de pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,rx de pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,rayo simple de pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,placa de pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,rayos de pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,radiografia de pie simple,radiografía simple de pie
+v1,pie,sin lado → sin lado,placa del pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,rayo del pie,radiografía simple de pie
+v1,pie,sin lado → sin lado,rayo simple del pie,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,radiografia simple del pie cargado,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,placa del pie cargado,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,rx del pie en carga,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,placa del pie,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,rayo simple del pie en carga,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,radiografia simple del pie,radiografía simple de pie en carga
+v1,pie,sin lado → sin lado,me hace una placa simple del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v1,pie,sin lado → sin lado,hacer un rx simple del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v1,pie,sin lado → sin lado,rayos simples del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v1,pie,sin lado → sin lado,rayo de pie,radiografía simple de porción media de pie
+v1,pie,sin lado → sin lado,placa de pie,radiografía simple de porción media de pie
+v1,pie,sin lado → sin lado,rx de pie,radiografía simple de porción media de pie
+v1,pie,sin lado → sin lado,rayos de pie,radiografía simple de porción media de pie
+v1,pie,sin lado → sin lado,rayo de pie medio,radiografía simple de porción media de pie
+v1,pie,sin lado → sin lado,mandame el rx del pie,radiografía simple de porción media de pie
+v1,mano,sin lado → sin lado,rayo del pulgar,radiografía simple de pulgar
+v1,mano,sin lado → sin lado,placa del pulgar,radiografía simple de pulgar
+v1,mano,sin lado → sin lado,rx del pulgar,radiografía simple de pulgar
+v1,mano,sin lado → sin lado,rayos del pulgar,radiografía simple de pulgar
+v1,mano,sin lado → sin lado,radiografia simple pulgar,radiografía simple de pulgar
+v1,mano,sin lado → sin lado,rx pulgar simple,radiografía simple de pulgar
+v1,mano,variante sin lado → estudio con lado,radiografia de pulgar,radiografía simple de pulgar derecho
+v1,mano,sin lado → sin lado,rayo de pulgar bajo carga,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,rx de pulgar descargado,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,placa de pulgar con peso,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,rayos de pulgar en carga,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,radiografia de pulgar con carga,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,rayos de pulgar cargado,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,radiografia simple de pulgar,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,rx pulgar en carga descargado,radiografía simple de pulgar en carga
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de radio
+v1,rodilla,plural → estudio bilateral,un rx de las rodillas,radiografía simple de región de ambas rodillas
+v1,rodilla,plural → estudio bilateral,placa de rodillas,radiografía simple de región de ambas rodillas
+v1,rodilla,plural → estudio bilateral,rayos de rodillas,radiografía simple de región de ambas rodillas
+v1,hombro,sin lado → sin lado,rayo de la articulacion de hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,placa de hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,r x hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,rayos de la articulacion de hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,rx hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,la placa de hombro,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,rayos de hombro en carga,radiografía simple de región de articulación de hombro en carga
+v1,hombro,sin lado → sin lado,rayo simple de hombro,radiografía simple de región de articulación de hombro en carga
+v1,cadera,sin lado → sin lado,placa de la cadera con rx movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,radiografia de la cadera con placa movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,rayos de la cadera con placa,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,cadera con rayos,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,placa simple de la cadera con movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,radiografia de cadera con rx movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v1,cadera,sin lado → sin lado,rayo de la cadera,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,rx cadera,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,radiografia simple de la cadera,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,radiografia de cadera en carga,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,rayo de cadera en carga,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,placa de cadera,radiografía simple de región de cadera en carga
+v1,cadera,sin lado → sin lado,cadera en carga,radiografía simple de región de cadera en carga
+v1,rodilla,sin lado → sin lado,radiografia de la rodilla,radiografía simple de región de rodilla
+v1,rodilla,sin lado → sin lado,radiografia simple de la rodilla,radiografía simple de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de la rodilla,radiografía simple de región de rodilla
+v1,rodilla,sin lado → sin lado,rx de la rodilla,radiografía simple de región de rodilla
+v1,rodilla,sin lado → sin lado,rayos de la rodilla,radiografía simple de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de rodilla en carga,radiografía simple de región de rodilla en carga
+v1,rodilla,sin lado → sin lado,rodilla con peso,radiografía simple de región de rodilla en carga
+v1,rodilla,sin lado → sin lado,rayos de rodilla en carga,radiografía simple de región de rodilla en carga
+v1,rodilla,sin lado → sin lado,rx rodilla carga,radiografía simple de región de rodilla en carga
+v1,rodilla,sin lado → sin lado,rodilla cargada,radiografía simple de región de rodilla en carga
+v1,rodilla,variante sin lado → estudio con lado,rayos de la rodilla chata,radiografía simple de región de rodilla izquierda
+v1,rodilla,sin lado → sin lado,un rayo de la rodilla,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral"
+v1,rodilla,sin lado → sin lado,la rx de la rodilla,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral"
+v1,rodilla,sin lado → sin lado,rayos de la rodilla,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral"
+v1,tobillo,sin lado → sin lado,placa del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,rayo del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,rx del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,rayos del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,rayo simple del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,radiografia del tobillo,radiografía simple de región de tobillo
+v1,tobillo,sin lado → sin lado,placa de tobillo,radiografía simple de región de tobillo
+v1,pie,sin lado → sin lado,rayos de atras del pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,placa de pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,rx del pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,rayos de la region posterior del pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,placa de la region posterior del pie,radiografía simple de región posterior de pie
+v1,pie,sin lado → sin lado,rx de atras del pie,radiografía simple de región posterior de pie
+v1,rodilla,sin lado → sin lado,rayo de la rodilla,radiografía simple de sistema esquelético
+v1,muñeca,sin lado → sin lado,placa de la muneca,radiografía simple de tejido blando de antebrazo
+v1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía simple de tejido blando de antebrazo
+v1,cadera,sin lado → sin lado,un rx de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,una placa de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,una radiografia de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,placa de tejido blando de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,rayos de tejido blando de la cadera,radiografía simple de tejido blando de cadera
+v1,cadera,sin lado → sin lado,un escaneo de la cadera,radiografía simple de tejido blando de cadera
+v1,pie,sin lado → sin lado,rayo simple del tejido blando del pie,radiografía simple de tejido blando de extremidad
+v1,hombro,sin lado → sin lado,placa de hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,rayos de hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,rx de hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,rayos de la hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,placa de la hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,rx simple de hombro,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,rayos de hombro simple,radiografía simple de tejido blando de hombro
+v1,hombro,sin lado → sin lado,radiografia de hombro sencillo,radiografía simple de tejido blando de hombro
+v1,mano,sin lado → sin lado,radiografia simple de mano,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,rayos de mano,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,placa de mano,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,rx de mano,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,radiografia mano,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,mano con rayos,radiografía simple de tejido blando de mano
+v1,mano,sin lado → sin lado,radiografia simple mano,radiografía simple de tejido blando de mano
+v1,pie,sin lado → sin lado,una placa del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,rayos del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,una rx del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,rayos x del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,placa simple del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,placa del tejido blando del pie,radiografía simple de tejido blando de pie
+v1,pie,sin lado → sin lado,un rayo x del pie,radiografía simple de tejido blando de pie
+v1,codo,sin lado → sin lado,rayo del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,placa del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,rx del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,rayos del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,placa de la region del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,rayos de la region del codo,radiografía simple de tejido blando de región de codo
+v1,codo,sin lado → sin lado,placa simple del codo,radiografía simple de tejido blando de región de codo
+v1,rodilla,sin lado → sin lado,rayo de la rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de la rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,rx de la rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,rayos de rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,rx de tejido blando de rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,placa de tejido blando de la rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,rayos de tejido blando de rodilla,radiografía simple de tejido blando de región de rodilla
+v1,rodilla,sin lado → sin lado,rayos de la rodilla de adelante,radiografía simple de tejido blando de región de rodilla
+v1,tobillo,sin lado → sin lado,rayos de tobillo,radiografía simple de tejido blando de tobillo
+v1,tobillo,sin lado → sin lado,placa de tobillo,radiografía simple de tejido blando de tobillo
+v1,tobillo,sin lado → sin lado,rx de tobillo,radiografía simple de tejido blando de tobillo
+v1,tobillo,sin lado → sin lado,rayos x de tobillo,radiografía simple de tejido blando de tobillo
+v1,tobillo,sin lado → sin lado,radiografia de tobillo,radiografía simple de tejido blando de tobillo
+v1,tobillo,sin lado → sin lado,placa de tobillo,radiografía simple de tibia y peroné
+v1,tobillo,sin lado → sin lado,rayos de tobillo,radiografía simple de tibia y peroné
+v1,"pie, tobillo",sin lado → sin lado,rayos de tobillo y pie,radiografía simple de tobillo y pie
+v1,"pie, tobillo",sin lado → sin lado,placa de tobillo y pie,radiografía simple de tobillo y pie
+v1,"pie, tobillo",sin lado → sin lado,rx de tobillo y pie,radiografía simple de tobillo y pie
+v1,tobillo,sin lado → sin lado,rayos de tobillo y pe,radiografía simple de tobillo y pie
+v1,tobillo,sin lado → sin lado,un rayo de tobillo,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v1,tobillo,sin lado → sin lado,una rx de tobillo ap,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v1,tobillo,sin lado → sin lado,rayos de tobillo,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v1,tobillo,sin lado → sin lado,una radiografia de tobillo ap,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de todos los dedos de mano
+v1,mano,sin lado → sin lado,rx de mano,radiografía simple de todos los dedos de mano
+v1,mano,sin lado → sin lado,placa simple de la mano,radiografía simple de todos los dedos de mano
+v1,mano,sin lado → sin lado,rayos de dedos de mano,radiografía simple de todos los dedos de mano
+v1,mano,sin lado → sin lado,rayos de mano toda,radiografía simple de todos los dedos de mano
+v1,pie,sin lado → sin lado,rayos de los dedos de pie,radiografía simple de todos los dedos de pie
+v1,pie,sin lado → sin lado,una placa de los dedos del pie,radiografía simple de todos los dedos de pie
+v1,pie,sin lado → sin lado,rx de todos los dedos de pie,radiografía simple de todos los dedos de pie
+v1,pie,sin lado → sin lado,placa de los dedos de pie,radiografía simple de todos los dedos de pie
+v1,pie,sin lado → sin lado,rayos de pie,radiografía simple de todos los dedos de pie
+v1,pie,sin lado → sin lado,una imagen de los dedos de pie,radiografía simple de todos los dedos de pie
+v1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de unión lumbosacra
+v2.1,pie,sin lado → sin lado,rayos de la panza en pie,radiografía abdominal en bipedestación
+v2.1,codo,sin lado → sin lado,rayos del codo para saber la edad,radiografía de codo para determinación de la edad ósea
+v2.1,codo,sin lado → sin lado,placa del codo para edad,radiografía de codo para determinación de la edad ósea
+v2.1,codo,sin lado → sin lado,rx de codo para edad osea,radiografía de codo para determinación de la edad ósea
+v2.1,codo,sin lado → sin lado,rayos para saber la edad del codo,radiografía de codo para determinación de la edad ósea
+v2.1,codo,sin lado → sin lado,placa de codo para edad osea,radiografía de codo para determinación de la edad ósea
+v2.1,codo,sin lado → sin lado,radiografia de codo para saber la edad,radiografía de codo para determinación de la edad ósea
+v2.1,mano,sin lado → sin lado,rayo de escafoides,radiografía de escafoides
+v2.1,mano,sin lado → sin lado,placa de escafoides,radiografía de escafoides
+v2.1,mano,sin lado → sin lado,rx de escafoides,radiografía de escafoides
+v2.1,mano,sin lado → sin lado,rayos de escafoides,radiografía de escafoides
+v2.1,mano,sin lado → sin lado,escafoides radiografia,radiografía de escafoides
+v2.1,mano,sin lado → sin lado,placa escafoides,radiografía de escafoides
+v2.1,pie,sin lado → sin lado,el rx de los huesos del pie,radiografía de huesos metatarsianos
+v2.1,pie,sin lado → sin lado,los huesos del pie,radiografía de huesos metatarsianos
+v2.1,pie,sin lado → sin lado,el estudio de los huesos del pie,radiografía de huesos metatarsianos
+v2.1,rodilla,sin lado → sin lado,un placa de rotula,radiografía de rótula
+v2.1,rodilla,sin lado → sin lado,rx de rotula,radiografía de rótula
+v2.1,rodilla,sin lado → sin lado,rayos de rotula,radiografía de rótula
+v2.1,rodilla,sin lado → sin lado,rayos de la rotula,radiografía de rótula
+v2.1,rodilla,sin lado → sin lado,placa de la rotula,radiografía de rótula
+v2.1,rodilla,sin lado → sin lado,placa de rotula,radiografía de rótula
+v2.1,pie,plural → estudio bilateral,rayos de pies,radiografía simple bilateral de pies
+v2.1,pie,plural → estudio bilateral,rayos simples de pies,radiografía simple bilateral de pies
+v2.1,pie,plural → estudio bilateral,radiografia de pies,radiografía simple bilateral de pies
+v2.1,pie,plural → estudio bilateral,rx de pies,radiografía simple bilateral de pies
+v2.1,pie,plural → estudio bilateral,placa de pies,radiografía simple bilateral de pies
+v2.1,pie,plural → estudio bilateral,rayos de los pies,radiografía simple bilateral de pies
+v2.1,tobillo,plural → estudio bilateral,rayos de tobillos,radiografía simple bilateral de tobillos
+v2.1,tobillo,plural → estudio bilateral,placa de tobillos,radiografía simple bilateral de tobillos
+v2.1,tobillo,plural → estudio bilateral,rx tobillos,radiografía simple bilateral de tobillos
+v2.1,tobillo,plural → estudio bilateral,radiografia de tobillos,radiografía simple bilateral de tobillos
+v2.1,tobillo,lado distinto,rayos de tobillos derechxs,radiografía simple bilateral de tobillos
+v2.1,hombro,variante sin lado → estudio con lado,una placa de las articulaciones del hombro,radiografía simple de ambas articulaciones acromioclaviculares
+v2.1,hombro,variante sin lado → estudio con lado,rayos de las articulaciones del hombro,radiografía simple de ambas articulaciones acromioclaviculares
+v2.1,cadera,plural → estudio bilateral,placa de caderas,radiografía simple de ambas caderas
+v2.1,cadera,plural → estudio bilateral,rayos de las caderas,radiografía simple de ambas caderas
+v2.1,cadera,plural → estudio bilateral,rx de caderas,radiografía simple de ambas caderas
+v2.1,cadera,plural → estudio bilateral,radiografia simple caderas,radiografía simple de ambas caderas
+v2.1,cadera,plural → estudio bilateral,rayos de caderas simple,radiografía simple de ambas caderas
+v2.1,mano,plural → estudio bilateral,rayo de las manos,radiografía simple de ambas manos
+v2.1,mano,plural → estudio bilateral,rayos de las manos,radiografía simple de ambas manos
+v2.1,mano,plural → estudio bilateral,placa de las manos,radiografía simple de ambas manos
+v2.1,mano,plural → estudio bilateral,rayos de manos,radiografía simple de ambas manos
+v2.1,mano,plural → estudio bilateral,radiografia de las manos,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v2.1,mano,plural → estudio bilateral,placa de manos,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v2.1,"mano, muñeca",plural → estudio bilateral,radiografia de las manos y munecas,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v2.1,muñeca,plural → estudio bilateral,munecas ap,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota"
+v2.1,rodilla,variante sin lado → estudio con lado,me duele la rodilla,"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior"
+v2.1,rodilla,plural → estudio bilateral,hacen una plaquita de las rodillas,radiografía simple de ambas rótulas
+v2.1,pie,plural → estudio bilateral,radiografia simple de calcaneos,radiografía simple de ambos calcáneos
+v2.1,pie,plural → estudio bilateral,placa de calcaneos,radiografía simple de ambos calcáneos
+v2.1,pie,plural → estudio bilateral,rayos de calcaneos,radiografía simple de ambos calcáneos
+v2.1,pie,plural → estudio bilateral,rx de calcaneos,radiografía simple de ambos calcáneos
+v2.1,pie,plural → estudio bilateral,rayos de los calcaneos,radiografía simple de ambos calcáneos
+v2.1,pie,plural → estudio bilateral,radiografia de calcaneos,radiografía simple de ambos calcáneos
+v2.1,codo,plural → estudio bilateral,placa de los codos,radiografía simple de ambos codos
+v2.1,codo,plural → estudio bilateral,rx de los codos,radiografía simple de ambos codos
+v2.1,codo,plural → estudio bilateral,rayos de los codos,radiografía simple de ambos codos
+v2.1,mano,variante sin lado → estudio con lado,rayo del escafoides,radiografía simple de ambos escafoides
+v2.1,mano,variante sin lado → estudio con lado,rayo simple de escafoides,radiografía simple de ambos escafoides
+v2.1,hombro,plural → estudio bilateral,rayos de los hombros,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,placa de hombros,radiografía simple de ambos hombros
+v2.1,codo,plural → estudio bilateral,rayos de codos hacia arriba,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,radiografia de hombros,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,rx de los hombros,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,rayos para hombros,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,hombros en xray,radiografía simple de ambos hombros
+v2.1,hombro,plural → estudio bilateral,rx de hombros,radiografía simple de ambos miembros superiores
+v2.1,hombro,plural → estudio bilateral,rayos de hombros y brazos,radiografía simple de ambos miembros superiores
+v2.1,mano,plural → estudio bilateral,rx de pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,rayos de pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,placa de pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,radiografia de pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,rayos de los pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,rayos pulgares,radiografía simple de ambos pulgares
+v2.1,mano,plural → estudio bilateral,rx pulgares,radiografía simple de ambos pulgares
+v2.1,pie,sin lado → sin lado,una placa simple del pie,radiografía simple de antepié
+v2.1,hombro,sin lado → sin lado,rayo de hombro,radiografía simple de articulación acromioclavicular
+v2.1,muñeca,lado distinto,rayos de la muneca izquierda no,radiografía simple de articulación acromioclavicular derecha
+v2.1,mano,sin lado → sin lado,radiografia de la mano,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v2.1,mano,sin lado → sin lado,rayos de la mano con estres,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v2.1,mano,sin lado → sin lado,rayos de la mano con fuerza,radiografía simple de articulación carpometacarpiana en condiciones de estrés
+v2.1,hombro,sin lado → sin lado,hacer un rayo simple de hombro,radiografía simple de articulación de región de hombro
+v2.1,tobillo,sin lado → sin lado,hacer una placa de tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,hacer una rx del tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,hacer rayos de tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,hacer rayos para el tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,tomar un rx del tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,tomar una placa de tobillo en carga,radiografía simple de articulación de tobillo en carga
+v2.1,tobillo,sin lado → sin lado,radiografia simple de tobillo,radiografía simple de articulación de tobillo en carga
+v2.1,cadera,sin lado → sin lado,rayo de la cadera,radiografía simple de cadera
+v2.1,cadera,sin lado → sin lado,placa de cadera,radiografía simple de cadera
+v2.1,cadera,sin lado → sin lado,rx de cadera,radiografía simple de cadera
+v2.1,cadera,sin lado → sin lado,radiografia de cadera,radiografía simple de cadera
+v2.1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de cadera
+v2.1,pie,sin lado → sin lado,una placa de calcaneo,radiografía simple de calcáneo
+v2.1,pie,sin lado → sin lado,rayos de calcaneo,radiografía simple de calcáneo
+v2.1,pie,sin lado → sin lado,una rx de calcaneo,radiografía simple de calcáneo
+v2.1,codo,sin lado → sin lado,rayos de codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,placa de codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,rx de codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,rayos del codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,rx del codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,rayo simple del codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,corte codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,codo simple,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,rayo de codo,radiografía simple de codo
+v2.1,codo,sin lado → sin lado,codo placa,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v2.1,codo,sin lado → sin lado,codo rayos,"radiografía simple de codo, proyecciones anteroposterior y lateral"
+v2.1,cadera,sin lado → sin lado,rx de la cadera,radiografía simple de columna lumbar
+v2.1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de columna vertebral lumbar y sacra
+v2.1,cadera,sin lado → sin lado,rayos de la lumbar y la cadera,radiografía simple de columna vertebral lumbar y sacra
+v2.1,rodilla,sin lado → sin lado,rayos de la rodilla arriba,radiografía simple de cuello de fémur
+v2.1,mano,sin lado → sin lado,rayos x del dedo de la mano,radiografía simple de dedo de la mano
+v2.1,pie,sin lado → sin lado,placa del pie,radiografía simple de dedo de pie
+v2.1,pie,sin lado → sin lado,rx del pie,radiografía simple de dedo de pie
+v2.1,pie,sin lado → sin lado,rayos del dedo del pie,radiografía simple de dedo de pie
+v2.1,pie,sin lado → sin lado,rayos de la punta del pie,radiografía simple de dedo de pie
+v2.1,pie,sin lado → sin lado,rayo del pie,radiografía simple de dedo de pie
+v2.1,mano,sin lado → sin lado,rayos del dedo medio de la mano,radiografía simple de dedo medio de mano
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de extremidad inferior
+v2.1,pie,sin lado → sin lado,placa del pie,radiografía simple de extremidad inferior para medición de longitud de hueso
+v2.1,hombro,sin lado → sin lado,radiografia de hombro,radiografía simple de hombro
+v2.1,hombro,sin lado → sin lado,rayos de hombro,radiografía simple de hombro
+v2.1,hombro,sin lado → sin lado,rx de hombro,radiografía simple de hombro
+v2.1,hombro,sin lado → sin lado,rayos de la placa de hombro,radiografía simple de hombro
+v2.1,hombro,sin lado → sin lado,rayos de hombro simple,radiografía simple de hombro
+v2.1,hombro,sin lado → sin lado,radiografia de hombro simple,radiografía simple de hombro
+v2.1,cadera,sin lado → sin lado,rayo x de la cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rx de la cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rayos de mi cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rayos de cadera,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,cadera para rayos,radiografía simple de hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,cadera para rx,radiografía simple de hueso de articulación de región de cadera
+v2.1,codo,sin lado → sin lado,placa de hueso de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,codo,sin lado → sin lado,rx de articulacion de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,codo,sin lado → sin lado,placa sencilla de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,codo,sin lado → sin lado,rayo simple de hueso de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,codo,sin lado → sin lado,radiografia de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,codo,sin lado → sin lado,rayo de hueso de articulacion de codo,radiografía simple de hueso de articulación de región de codo
+v2.1,mano,sin lado → sin lado,rayos de hueso de la mano,radiografía simple de hueso de extremidad superior
+v2.1,mano,sin lado → sin lado,rayo de mano,radiografía simple de hueso de mano
+v2.1,mano,sin lado → sin lado,rayo x de mano,radiografía simple de hueso de mano
+v2.1,mano,sin lado → sin lado,placa de huesos de mano,radiografía simple de hueso de mano
+v2.1,mano,sin lado → sin lado,rayo de la mano,radiografía simple de hueso de mano y hueso de región de muñeca
+v2.1,"mano, muñeca",sin lado → sin lado,placa de mano y muneca,radiografía simple de hueso de mano y hueso de región de muñeca
+v2.1,cadera,sin lado → sin lado,rayos de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,placa de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rx de pelvis y cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v2.1,cadera,sin lado → sin lado,rayos de cadera,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera
+v2.1,pie,sin lado → sin lado,placa de pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,rayos de pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,rayos simples de pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,placa del pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,rx de pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de hueso de pie
+v2.1,pie,sin lado → sin lado,placa simple de pie,radiografía simple de hueso de pie
+v2.1,codo,sin lado → sin lado,rayos de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,placa de codo y brazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,rx de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,rayos de articulacion de codo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,placa simple de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,rayos de brazo y codo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,codo,sin lado → sin lado,radiografia simple de codo y antebrazo,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo
+v2.1,tobillo,sin lado → sin lado,rayo simple tobillo,radiografía simple de hueso de región de articulación de tobillo
+v2.1,tobillo,sin lado → sin lado,placa tobillo,radiografía simple de hueso de región de articulación de tobillo
+v2.1,tobillo,sin lado → sin lado,rayos de la articulacion de tobillo,radiografía simple de hueso de región de articulación de tobillo
+v2.1,muñeca,sin lado → sin lado,rayos de la muneca sin torax,radiografía simple de hueso de región de muñeca
+v2.1,muñeca,sin lado → sin lado,radiografia simple de la muneca,radiografía simple de hueso de región de muñeca
+v2.1,rodilla,sin lado → sin lado,rx de rodilla,radiografía simple de hueso de región de rodilla
+v2.1,rodilla,sin lado → sin lado,placa de rodilla,radiografía simple de hueso de región de rodilla
+v2.1,rodilla,sin lado → sin lado,radiografia de rodilla,radiografía simple de hueso de región de rodilla
+v2.1,rodilla,sin lado → sin lado,radiografia simple de rodilla,radiografía simple de hueso de región de rodilla
+v2.1,mano,sin lado → sin lado,rx de la mano,radiografía simple de hueso metacarpiano
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,pie,sin lado → sin lado,rx del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,pie,sin lado → sin lado,rayos de los huesos del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,pie,sin lado → sin lado,placa del sesamoideo del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,pie,sin lado → sin lado,placa de los huesos del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,pie,sin lado → sin lado,del pie,radiografía simple de hueso sesamoideo de pie
+v2.1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de la cabeza del fémur
+v2.1,cadera,sin lado → sin lado,x de la cadera,radiografía simple de la cabeza del fémur
+v2.1,cadera,sin lado → sin lado,radiografia simple de la cadera,radiografía simple de la cabeza del fémur
+v2.1,mano,sin lado → sin lado,un rayo de la mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,la placa de la mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,un rx de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,rayos de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,la radiografia de la mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,un rayo simple de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,la mano por rayos,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,rayos de la mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,placa de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,rx de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,placa de la mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,radiografia de mano,radiografía simple de mano
+v2.1,mano,sin lado → sin lado,la mano en rx,radiografía simple de mano proyección anteroposterior
+v2.1,mano,sin lado → sin lado,rx simple de mano,radiografía simple de mano proyección combinada anteroposterior y lateral
+v2.1,mano,sin lado → sin lado,rayos de la mano ap y lateral,radiografía simple de mano proyección combinada anteroposterior y lateral
+v2.1,mano,sin lado → sin lado,placa de mano combinada,radiografía simple de mano proyección combinada anteroposterior y lateral
+v2.1,mano,sin lado → sin lado,rayos de mano ap y lateral,radiografía simple de mano proyección combinada anteroposterior y lateral
+v2.1,mano,sin lado → sin lado,placa de mano oblicua,radiografía simple de mano proyección oblicua
+v2.1,mano,sin lado → sin lado,rayos de la mano oblicua,radiografía simple de mano proyección oblicua
+v2.1,mano,sin lado → sin lado,rx oblicua de la mano,radiografía simple de mano proyección oblicua
+v2.1,mano,sin lado → sin lado,rayos oblicuos de la mano,radiografía simple de mano proyección oblicua
+v2.1,mano,sin lado → sin lado,rayos oblicuos de mano simple,radiografía simple de mano proyección oblicua
+v2.1,muñeca,sin lado → sin lado,rayo de muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,placa de muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,rx simple de muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,rayos de la muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,placa de muneca simple,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,rx de la muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,radiografia de la muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,placa de la muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,rayos de muneca,radiografía simple de muñeca
+v2.1,muñeca,sin lado → sin lado,rx de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v2.1,muñeca,sin lado → sin lado,rayo simple de muneca,"radiografía simple de muñeca, proyecciones anteroposterior y lateral"
+v2.1,hombro,sin lado → sin lado,radiografia del hombro,radiografía simple de omóplato
+v2.1,pie,sin lado → sin lado,radiografia simple de pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,rx de pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,rayo simple de pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,placa de pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,rayos de pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,radiografia de pie simple,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,placa del pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,rayo del pie,radiografía simple de pie
+v2.1,pie,sin lado → sin lado,rayo simple del pie,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,radiografia simple del pie cargado,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,placa del pie cargado,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,rx del pie en carga,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,placa del pie,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,rayo simple del pie en carga,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,radiografia simple del pie,radiografía simple de pie en carga
+v2.1,pie,sin lado → sin lado,me hace una placa simple del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v2.1,pie,sin lado → sin lado,hacer un rx simple del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v2.1,pie,sin lado → sin lado,rayos simples del pie,"radiografía simple de pie, proyecciones anteroposterior y lateral"
+v2.1,pie,sin lado → sin lado,rayo de pie,radiografía simple de porción media de pie
+v2.1,pie,sin lado → sin lado,placa de pie,radiografía simple de porción media de pie
+v2.1,pie,sin lado → sin lado,rx de pie,radiografía simple de porción media de pie
+v2.1,pie,sin lado → sin lado,rayos de pie,radiografía simple de porción media de pie
+v2.1,pie,sin lado → sin lado,rayo de pie medio,radiografía simple de porción media de pie
+v2.1,pie,sin lado → sin lado,mandame el rx del pie,radiografía simple de porción media de pie
+v2.1,mano,sin lado → sin lado,rayo del pulgar,radiografía simple de pulgar
+v2.1,mano,sin lado → sin lado,placa del pulgar,radiografía simple de pulgar
+v2.1,mano,sin lado → sin lado,rx del pulgar,radiografía simple de pulgar
+v2.1,mano,sin lado → sin lado,rayos del pulgar,radiografía simple de pulgar
+v2.1,mano,sin lado → sin lado,radiografia simple pulgar,radiografía simple de pulgar
+v2.1,mano,sin lado → sin lado,rx pulgar simple,radiografía simple de pulgar
+v2.1,mano,variante sin lado → estudio con lado,radiografia de pulgar,radiografía simple de pulgar derecho
+v2.1,mano,sin lado → sin lado,rayo de pulgar bajo carga,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,rx de pulgar descargado,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,placa de pulgar con peso,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,rayos de pulgar en carga,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,radiografia de pulgar con carga,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,rayos de pulgar cargado,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,radiografia simple de pulgar,radiografía simple de pulgar en carga
+v2.1,mano,sin lado → sin lado,rx pulgar en carga descargado,radiografía simple de pulgar en carga
+v2.1,rodilla,plural → estudio bilateral,un rx de las rodillas,radiografía simple de región de ambas rodillas
+v2.1,rodilla,plural → estudio bilateral,placa de rodillas,radiografía simple de región de ambas rodillas
+v2.1,rodilla,plural → estudio bilateral,rayos de rodillas,radiografía simple de región de ambas rodillas
+v2.1,hombro,sin lado → sin lado,rayo de la articulacion de hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,placa de hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,r x hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,rayos de la articulacion de hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,rx hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,la placa de hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,rayos de hombro en carga,radiografía simple de región de articulación de hombro en carga
+v2.1,hombro,sin lado → sin lado,rayo simple de hombro,radiografía simple de región de articulación de hombro en carga
+v2.1,cadera,sin lado → sin lado,placa de la cadera con rx movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,radiografia de la cadera con placa movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,rayos de la cadera con placa,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,cadera con rayos,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,placa simple de la cadera con movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,radiografia de cadera con rx movil,radiografía simple de región de cadera con intensificador de imágenes móvil
+v2.1,cadera,sin lado → sin lado,rayo de la cadera,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,placa de la cadera,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,rx cadera,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,radiografia simple de la cadera,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,radiografia de cadera en carga,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,rayo de cadera en carga,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,placa de cadera,radiografía simple de región de cadera en carga
+v2.1,cadera,sin lado → sin lado,cadera en carga,radiografía simple de región de cadera en carga
+v2.1,rodilla,sin lado → sin lado,radiografia de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,radiografia simple de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,placa de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rx de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rayos de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rayo de la rodilla,radiografía simple de región de rodilla
+v2.1,rodilla,sin lado → sin lado,placa de rodilla en carga,radiografía simple de región de rodilla en carga
+v2.1,rodilla,sin lado → sin lado,rodilla con peso,radiografía simple de región de rodilla en carga
+v2.1,rodilla,sin lado → sin lado,rayos de rodilla en carga,radiografía simple de región de rodilla en carga
+v2.1,rodilla,sin lado → sin lado,rx rodilla carga,radiografía simple de región de rodilla en carga
+v2.1,rodilla,sin lado → sin lado,rodilla cargada,radiografía simple de región de rodilla en carga
+v2.1,rodilla,variante sin lado → estudio con lado,rayos de la rodilla chata,radiografía simple de región de rodilla izquierda
+v2.1,rodilla,sin lado → sin lado,un rayo de la rodilla,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral"
+v2.1,rodilla,sin lado → sin lado,la rx de la rodilla,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral"
+v2.1,tobillo,sin lado → sin lado,placa del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rayo del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rx del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rayos del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rayo simple del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,radiografia del tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,placa de tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rayos de tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rx de tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,radiografia de tobillo,radiografía simple de región de tobillo
+v2.1,tobillo,sin lado → sin lado,rayos x de tobillo,radiografía simple de región de tobillo
+v2.1,pie,sin lado → sin lado,rayos de atras del pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,placa de pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,rx del pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,rayos de la region posterior del pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,placa de la region posterior del pie,radiografía simple de región posterior de pie
+v2.1,pie,sin lado → sin lado,rx de atras del pie,radiografía simple de región posterior de pie
+v2.1,cadera,sin lado → sin lado,un rx de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,una placa de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,una radiografia de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,placa de tejido blando de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,rayos de tejido blando de la cadera,radiografía simple de tejido blando de cadera
+v2.1,cadera,sin lado → sin lado,un escaneo de la cadera,radiografía simple de tejido blando de cadera
+v2.1,pie,sin lado → sin lado,rayo simple del tejido blando del pie,radiografía simple de tejido blando de extremidad
+v2.1,hombro,sin lado → sin lado,placa de hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,rayos de hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,rx de hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,rayos de la hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,placa de la hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,rx simple de hombro,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,rayos de hombro simple,radiografía simple de tejido blando de hombro
+v2.1,hombro,sin lado → sin lado,radiografia de hombro sencillo,radiografía simple de tejido blando de hombro
+v2.1,mano,sin lado → sin lado,radiografia simple de mano,radiografía simple de tejido blando de mano
+v2.1,mano,sin lado → sin lado,radiografia mano,radiografía simple de tejido blando de mano
+v2.1,mano,sin lado → sin lado,mano con rayos,radiografía simple de tejido blando de mano
+v2.1,mano,sin lado → sin lado,radiografia simple mano,radiografía simple de tejido blando de mano
+v2.1,pie,sin lado → sin lado,una placa del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,rayos del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,una rx del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,rayos x del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,placa simple del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,placa del tejido blando del pie,radiografía simple de tejido blando de pie
+v2.1,pie,sin lado → sin lado,un rayo x del pie,radiografía simple de tejido blando de pie
+v2.1,codo,sin lado → sin lado,rayo del codo,radiografía simple de tejido blando de región de codo
+v2.1,codo,sin lado → sin lado,placa del codo,radiografía simple de tejido blando de región de codo
+v2.1,codo,sin lado → sin lado,placa de la region del codo,radiografía simple de tejido blando de región de codo
+v2.1,codo,sin lado → sin lado,rayos de la region del codo,radiografía simple de tejido blando de región de codo
+v2.1,codo,sin lado → sin lado,placa simple del codo,radiografía simple de tejido blando de región de codo
+v2.1,rodilla,sin lado → sin lado,rayos de rodilla,radiografía simple de tejido blando de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rx de tejido blando de rodilla,radiografía simple de tejido blando de región de rodilla
+v2.1,rodilla,sin lado → sin lado,placa de tejido blando de la rodilla,radiografía simple de tejido blando de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rayos de tejido blando de rodilla,radiografía simple de tejido blando de región de rodilla
+v2.1,rodilla,sin lado → sin lado,rayos de la rodilla de adelante,radiografía simple de tejido blando de región de rodilla
+v2.1,"pie, tobillo",sin lado → sin lado,rayos de tobillo y pie,radiografía simple de tobillo y pie
+v2.1,"pie, tobillo",sin lado → sin lado,placa de tobillo y pie,radiografía simple de tobillo y pie
+v2.1,"pie, tobillo",sin lado → sin lado,rx de tobillo y pie,radiografía simple de tobillo y pie
+v2.1,tobillo,sin lado → sin lado,rayos de tobillo y pe,radiografía simple de tobillo y pie
+v2.1,tobillo,sin lado → sin lado,un rayo de tobillo,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v2.1,tobillo,sin lado → sin lado,una rx de tobillo ap,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v2.1,tobillo,sin lado → sin lado,una radiografia de tobillo ap,"radiografía simple de tobillo, proyección anteroposterior y lateral"
+v2.1,mano,sin lado → sin lado,placa simple de la mano,radiografía simple de todos los dedos de mano
+v2.1,mano,sin lado → sin lado,rayos de dedos de mano,radiografía simple de todos los dedos de mano
+v2.1,mano,sin lado → sin lado,rayos de mano toda,radiografía simple de todos los dedos de mano
+v2.1,pie,sin lado → sin lado,rayos de los dedos de pie,radiografía simple de todos los dedos de pie
+v2.1,pie,sin lado → sin lado,una placa de los dedos del pie,radiografía simple de todos los dedos de pie
+v2.1,pie,sin lado → sin lado,rx de todos los dedos de pie,radiografía simple de todos los dedos de pie
+v2.1,pie,sin lado → sin lado,placa de los dedos de pie,radiografía simple de todos los dedos de pie
+v2.1,pie,sin lado → sin lado,rayos de pie,radiografía simple de todos los dedos de pie
+v2.1,pie,sin lado → sin lado,una imagen de los dedos de pie,radiografía simple de todos los dedos de pie
+v2.1,cadera,sin lado → sin lado,rayos de la cadera,radiografía simple de unión lumbosacra
