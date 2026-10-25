@@ -9,11 +9,13 @@ Verifica que ningún mensaje de datos/heldout.csv:
 Además valida que las etiquetas existan en el catálogo y que los ids sean únicos.
 
 Uso:
-    python -m modelos.llm.evaluacion.verificar_heldout
+    python -m modelos.llm.evaluacion.verificar_heldout                 # catálogo v1
+    python -m modelos.llm.evaluacion.verificar_heldout --catalogo v2
 """
 
 from __future__ import annotations
 
+import argparse
 import itertools
 import os
 import sys
@@ -26,6 +28,9 @@ from modelos.llm.evaluacion.datos_etiquetados import (
 )
 from modelos.llm.evaluacion.comun import asegurar_dir_resultados
 from modelos.llm.extractor import CSV_TERMINOS
+
+CATALOGOS = {"v1": CSV_TERMINOS,
+             "v2": CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2.csv")}
 
 LARGO_MIN_VARIANTE = 8  # se chequean variantes de MÁS de 8 caracteres
 
@@ -51,7 +56,10 @@ def cargar_variantes(df: pd.DataFrame) -> dict[str, str]:
 
 
 def main() -> int:
-    df = pd.read_csv(CSV_TERMINOS)
+    parser = argparse.ArgumentParser(description="Chequeo de contaminación del held-out.")
+    parser.add_argument("--catalogo", choices=list(CATALOGOS), default="v1")
+    args = parser.parse_args()
+    df = pd.read_csv(CATALOGOS[args.catalogo])
     terminos = set(df["preferred_term"])
     variantes = cargar_variantes(df)
     heldout = cargar_heldout()
@@ -64,7 +72,7 @@ def main() -> int:
         print(texto)
 
     out("=" * 80)
-    out("  VERIFICACIÓN DEL SET HELD-OUT")
+    out(f"  VERIFICACIÓN DEL SET HELD-OUT — catálogo {args.catalogo}")
     out("=" * 80)
     out(f"  Mensajes: {len(heldout)}  |  por categoría: {dict(Counter(c['grupo'] for c in heldout))}")
     out(f"  Variantes del CSV con más de {LARGO_MIN_VARIANTE} caracteres (tras expandir '/'): {len(variantes)}")
@@ -102,7 +110,8 @@ def main() -> int:
     out(f"  Resultado: {'PASA' if ok else 'NO PASA'}")
     out("=" * 80)
 
-    ruta = os.path.join(asegurar_dir_resultados(), "verificacion_heldout.txt")
+    nombre = "verificacion_heldout.txt" if args.catalogo == "v1" else f"verificacion_heldout_{args.catalogo}.txt"
+    ruta = os.path.join(asegurar_dir_resultados(), nombre)
     with open(ruta, "w", encoding="utf-8") as f:
         f.write("\n".join(lineas) + "\n")
     print(f"  Reporte: {os.path.relpath(ruta)}\n")

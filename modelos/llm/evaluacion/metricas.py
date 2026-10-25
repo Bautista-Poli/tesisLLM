@@ -11,7 +11,9 @@ Cada configuración produce una clase por mensaje:
 Métrica estricta
 ----------------
   - accuracy top-1: predicción == esperado (texto exacto).
-  - P/R/F1 macro sobre las clases presentes en el gold (AMBIGUO y null son clases).
+  - P/R/F1 macro sobre las clases del gold más AMBIGUO y null, que se incluyen
+    siempre (aunque no se predigan ni aparezcan en el gold; una clase sin
+    aciertos aporta 0).
   - P/R/F1 de las clases AMBIGUO y null por separado.
 
 Métrica laxa (la anterior, para comparar)
@@ -57,11 +59,12 @@ def metricas_estrictas(esperados: list[str], predichos: list[str]) -> dict:
             conteo[p]["fp"] += 1
             conteo[e]["fn"] += 1
 
-    clases_gold = sorted(set(esperados))
-    por_clase = {c: _prf(**conteo[c]) for c in clases_gold}
+    clases = sorted(set(esperados) | {CLASE_AMBIGUO, CLASE_NULL})
+    por_clase = {c: _prf(**conteo[c]) for c in clases}
     n = len(esperados)
     return {
         "n": n,
+        "n_clases": len(clases),
         "accuracy": sum(e == p for e, p in zip(esperados, predichos)) / n if n else 0.0,
         "macro_p": sum(v[0] for v in por_clase.values()) / len(por_clase) if por_clase else 0.0,
         "macro_r": sum(v[1] for v in por_clase.values()) / len(por_clase) if por_clase else 0.0,

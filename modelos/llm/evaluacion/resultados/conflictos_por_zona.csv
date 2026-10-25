@@ -1,0 +1,21 @@
+zona,casos_ambiguos,variante,estudio_por_defecto,revisar_sugerencia
+espalda,suite/espalda_ambigua | heldout/h26_espalda | heldout/h60_multi_espalda,rayos de la espalda baja,radiografía simple de columna lumbar,False
+espalda,suite/espalda_ambigua | heldout/h26_espalda | heldout/h60_multi_espalda,placa de la espalda baja,radiografía simple de columna lumbar,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rayos de los pies,radiografía simple bilateral de pies,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rayos del pie derecho,radiografía de pie derecho,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,placa del pie derecho,radiografía de pie derecho,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,placa del pie izquierdo,radiografía de pie izquierdo,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,placa de pie derecho,radiografía de pie derecho,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,placa de pies,radiografía simple bilateral de pies,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,placa del dedo del pie derecho,radiografía simple de dedo de pie derecho,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,radiografia de pies,radiografía simple bilateral de pies,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rayos de ambos pies,radiografía simple bilateral de pies,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rayos de pies,radiografía simple bilateral de pies,False
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rayos del pie izquierdo,radiografía de pie izquierdo,True
+pie,suite/pie_ambiguo | heldout/h32_pie_lado,rx del pie izquierdo,radiografía de pie izquierdo,True
+cadera,suite/cadera_ambigua | heldout/h31_cadera,rayos de ambas caderas,radiografía simple de ambas caderas,False
+cadera,suite/cadera_ambigua | heldout/h31_cadera,rayos de las caderas,radiografía simple de ambas caderas,False
+columna,suite/columna_sola_ambigua | heldout/h28_columna,rayos de la columna cervical,radiografía simple de columna vertebral cervical,True
+columna,suite/columna_sola_ambigua | heldout/h28_columna,rx de la columna lumbar y sacra,radiografía simple de columna vertebral lumbar y sacra,False
+hombro,suite/hombro_sin_lateralidad | heldout/h29_hombro,rayos de hombro derecho,radiografía simple de hombro derecho,False
+hombro,suite/hombro_sin_lateralidad | heldout/h29_hombro,rayos de los hombros,radiografía simple de ambos hombros,False

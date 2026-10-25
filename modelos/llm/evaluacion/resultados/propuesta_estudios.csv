@@ -1,0 +1,488 @@
+conceptId,preferred_term,n_variantes,frecuente,pedible_por_turno,motivo
+171229005,cribado mediante radiografía de tórax,8,False,False,"cribado poblacional, no a pedido"
+537081000221106,espinograma,6,True,True,zona frecuente sin calificadores técnicos
+1375980001,pielografía simple con contraste intravenoso,6,False,True,zona poco frecuente en radiología ambulatoria
+268428008,radiografía abdominal en bipedestación,6,False,True,zona poco frecuente en radiología ambulatoria
+105301000220109,radiografía cefalométrica lateral,8,False,True,zona poco frecuente en radiología ambulatoria
+432778008,radiografía de abdomen con intensificador móvil de imágenes,8,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+105281000220105,radiografía de aleta de mordida horizontal de dientes,0,False,True,zona poco frecuente en radiología ambulatoria
+241085001,radiografía de articulación subastragalina,7,False,True,zona poco frecuente en radiología ambulatoria
+433155002,radiografía de cistometrografía,2,False,True,zona poco frecuente en radiología ambulatoria
+703940002,radiografía de codo para determinación de la edad ósea,8,True,True,zona frecuente sin calificadores técnicos
+431892005,radiografía de columna lumbar y pelvis,0,True,True,zona frecuente sin calificadores técnicos
+711104001,radiografía de columna vertebral cervical y dorsal,5,True,True,zona frecuente sin calificadores técnicos
+432770001,radiografía de columna vertebral dorsal con intensificador de imágenes móvil,0,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+241069006,radiografía de cúbito,7,False,True,zona poco frecuente en radiología ambulatoria
+241119000,radiografía de diente extraído,7,False,False,pieza dental extraída
+241071006,radiografía de escafoides,6,True,True,zona frecuente sin calificadores técnicos
+241075002,radiografía de fémur,7,True,True,zona frecuente sin calificadores técnicos
+426945003,radiografía de hueso,6,False,True,zona poco frecuente en radiología ambulatoria
+429148001,radiografía de hueso cigomático,8,False,True,zona poco frecuente en radiología ambulatoria
+241079008,radiografía de huesos metatarsianos,6,False,True,zona poco frecuente en radiología ambulatoria
+428603007,radiografía de mano y muñeca para el estudio de edad ósea,0,True,True,zona frecuente sin calificadores técnicos
+711220000,radiografía de miembro,8,False,True,zona poco frecuente en radiología ambulatoria
+432906003,radiografía de miembro inferior con intensificador móvil de imágenes,7,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+431677006,radiografía de miembro superior con intensificador de imágenes móvil,0,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+310810003,radiografía de partes blandas de piso de boca,8,False,True,zona poco frecuente en radiología ambulatoria
+168745003,radiografía de partes blandas: aorta torácica,1,False,True,zona poco frecuente en radiología ambulatoria
+426311001,radiografía de pie derecho,8,True,True,zona frecuente sin calificadores técnicos
+426908009,radiografía de pie izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+708734000,radiografía de próstata y vesículas seminales,8,False,True,zona poco frecuente en radiología ambulatoria
+168669007,radiografía de rótula,7,True,True,zona frecuente sin calificadores técnicos
+432078003,radiografía de sacro con intensificador de imagen móvil,6,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+445515006,radiografía de shunt de líquido cefalorraquídeo,0,False,False,control de derivación / shunt (indicación hospitalaria)
+426721006,radiografía de tobillo derecho,8,True,True,zona frecuente sin calificadores técnicos
+432769002,radiografía de tórax con intensificador de imágenes móvil,7,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+420233006,radiografía de tórax y abdomen,9,True,True,zona frecuente sin calificadores técnicos
+440607000,radiografía dental en vista lateral oblicua,4,False,True,zona poco frecuente en radiología ambulatoria
+241048009,radiografía dental oclusal,8,False,True,zona poco frecuente en radiología ambulatoria
+241047004,radiografía dental simple periapical,8,False,True,zona poco frecuente en radiología ambulatoria
+241597008,radiografía digital con haz hendido,8,False,True,zona poco frecuente en radiología ambulatoria
+241599006,"radiografía digital con haz hendido, longitud de pierna",2,False,True,zona poco frecuente en radiología ambulatoria
+16319561000119104,radiografía panorámica,13,True,True,zona frecuente sin calificadores técnicos
+1343710007,radiografía seriada de tracto gastrointestinal superior con contraste de bario,8,False,True,zona poco frecuente en radiología ambulatoria
+1343708005,radiografía seriada de tracto gastrointestinal superior y de intestino delgado con contraste de bario,7,False,True,zona poco frecuente en radiología ambulatoria
+1293121006,radiografía simple bilateral de glándulas salivales,8,False,True,zona poco frecuente en radiología ambulatoria
+426581005,radiografía simple bilateral de pies,8,True,True,zona frecuente sin calificadores técnicos
+4131000087103,radiografía simple bilateral de tibias y peronés,5,False,True,zona poco frecuente en radiología ambulatoria
+425703002,radiografía simple bilateral de tobillos,8,False,True,zona poco frecuente en radiología ambulatoria
+168702005,radiografía simple de abdomen,8,True,True,zona frecuente sin calificadores técnicos
+713565002,radiografía simple de abdomen con contraste,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+416733000,radiografía simple de abdomen en decúbito supino,9,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293249009,radiografía simple de abdomen inferior,8,True,True,zona frecuente sin calificadores técnicos
+1293182001,radiografía simple de abdomen superior,8,True,True,zona frecuente sin calificadores técnicos
+1293177008,"radiografía simple de abdomen, decúbito lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293178003,"radiografía simple de abdomen, oblicua",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293078001,radiografía simple de abertura de conducto auditivo externo,7,False,True,zona poco frecuente en radiología ambulatoria
+1290605001,radiografía simple de acetábulo,7,False,True,zona poco frecuente en radiología ambulatoria
+1295278008,radiografía simple de adenoide,1,False,True,zona poco frecuente en radiología ambulatoria
+105291000220108,radiografía simple de aleta de mordida vertical de dientes,0,False,True,zona poco frecuente en radiología ambulatoria
+3961000087106,radiografía simple de ambas articulaciones acromioclaviculares,5,False,True,zona poco frecuente en radiología ambulatoria
+17141000087101,radiografía simple de ambas articulaciones sacroilíacas,8,True,True,zona frecuente sin calificadores técnicos
+4051000087106,radiografía simple de ambas caderas,7,True,True,zona frecuente sin calificadores técnicos
+3981000087100,radiografía simple de ambas clavículas,8,False,True,zona poco frecuente en radiología ambulatoria
+4041000087108,radiografía simple de ambas manos,8,True,True,zona frecuente sin calificadores técnicos
+1290485007,"radiografía simple de ambas manos y muñecas, proyecciones anteroposterior, lateral y receptor de pelota",9,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293035006,radiografía simple de ambas mastoides,0,False,True,zona poco frecuente en radiología ambulatoria
+4141000087109,radiografía simple de ambas muñecas,0,False,True,zona poco frecuente en radiología ambulatoria
+1290414000,"radiografía simple de ambas regiones de rodillas, en bipedestación lateral, axial y anteroposterior",1,False,True,zona poco frecuente en radiología ambulatoria
+4071000087100,radiografía simple de ambas rótulas,1,False,True,zona poco frecuente en radiología ambulatoria
+4021000087104,radiografía simple de ambos antebrazos,8,False,True,zona poco frecuente en radiología ambulatoria
+3971000087102,radiografía simple de ambos calcáneos,8,False,True,zona poco frecuente en radiología ambulatoria
+3991000087103,radiografía simple de ambos codos,7,False,True,zona poco frecuente en radiología ambulatoria
+1343534000,radiografía simple de ambos conductos nasolagrimales con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1293045008,radiografía simple de ambos conductos ópticos,8,False,True,zona poco frecuente en radiología ambulatoria
+4091000087101,radiografía simple de ambos escafoides,8,True,True,zona frecuente sin calificadores técnicos
+4001000087105,radiografía simple de ambos fémures,8,False,True,zona poco frecuente en radiología ambulatoria
+4111000087108,radiografía simple de ambos hombros,8,False,True,zona poco frecuente en radiología ambulatoria
+4061000087109,radiografía simple de ambos húmeros,8,False,True,zona poco frecuente en radiología ambulatoria
+9771000087103,radiografía simple de ambos miembros inferiores,7,False,True,zona poco frecuente en radiología ambulatoria
+9751000087109,radiografía simple de ambos miembros superiores,8,False,True,zona poco frecuente en radiología ambulatoria
+4101000087106,radiografía simple de ambos omóplatos,8,False,True,zona poco frecuente en radiología ambulatoria
+4121000087100,radiografía simple de ambos pulgares,8,False,True,zona poco frecuente en radiología ambulatoria
+1293113000,radiografía simple de ambos senos esfenoidales,5,False,True,zona poco frecuente en radiología ambulatoria
+1293085002,radiografía simple de amígdala y adenoides,1,False,True,zona poco frecuente en radiología ambulatoria
+783544001,radiografía simple de antebrazo,8,True,True,zona frecuente sin calificadores técnicos
+3591000087109,radiografía simple de antebrazo derecho,8,True,True,zona frecuente sin calificadores técnicos
+3581000087107,radiografía simple de antebrazo izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290563003,"radiografía simple de antebrazo, proyecciones anteroposterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+276015003,radiografía simple de antepié,3,False,True,zona poco frecuente en radiología ambulatoria
+1290787003,radiografía simple de apófisis condílea de mandíbula,7,False,True,zona poco frecuente en radiología ambulatoria
+1290788008,"radiografía simple de apófisis condílea de mandíbula, posteroanterior",6,False,True,zona poco frecuente en radiología ambulatoria
+1293069007,radiografía simple de apófisis estiloides de cráneo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290638005,radiografía simple de apófisis odontoides de axis,8,False,True,zona poco frecuente en radiología ambulatoria
+426296008,radiografía simple de articulación,8,False,True,zona poco frecuente en radiología ambulatoria
+1290552001,radiografía simple de articulación acromioclavicular,6,False,True,zona poco frecuente en radiología ambulatoria
+3471000087109,radiografía simple de articulación acromioclavicular derecha,8,False,True,zona poco frecuente en radiología ambulatoria
+3461000087100,radiografía simple de articulación acromioclavicular izquierda,8,False,True,zona poco frecuente en radiología ambulatoria
+1359987006,radiografía simple de articulación atlanto-occipital,8,False,True,zona poco frecuente en radiología ambulatoria
+1290637000,radiografía simple de articulación atloidodontoidea,7,False,True,zona poco frecuente en radiología ambulatoria
+428665002,radiografía simple de articulación carpometacarpiana en condiciones de estrés,7,False,True,zona poco frecuente en radiología ambulatoria
+1290588006,radiografía simple de articulación de región de hombro,1,True,True,zona frecuente sin calificadores técnicos
+1290461004,radiografía simple de articulación de tobillo,6,True,True,zona frecuente sin calificadores técnicos
+1290456001,radiografía simple de articulación de tobillo en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290587001,radiografía simple de articulación esternoclavicular,4,False,True,zona poco frecuente en radiología ambulatoria
+1290677008,radiografía simple de articulación sacrococcígea,7,False,True,zona poco frecuente en radiología ambulatoria
+783627007,radiografía simple de articulación sacroilíaca,8,True,True,zona frecuente sin calificadores técnicos
+3731000087102,radiografía simple de articulación sacroilíaca derecha,8,True,True,zona frecuente sin calificadores técnicos
+3721000087104,radiografía simple de articulación sacroilíaca izquierda,10,True,True,zona frecuente sin calificadores técnicos
+1290691002,radiografía simple de articulación temporomandibular,8,False,True,zona poco frecuente en radiología ambulatoria
+1295429000,radiografía simple de barrido de esqueleto,8,False,True,zona poco frecuente en radiología ambulatoria
+1293175000,radiografía simple de bazo,8,False,True,zona poco frecuente en radiología ambulatoria
+168619004,radiografía simple de cabeza de húmero,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+783628002,radiografía simple de cadera,8,True,True,zona frecuente sin calificadores técnicos
+3651000087100,radiografía simple de cadera derecha,8,True,True,zona frecuente sin calificadores técnicos
+3641000087103,radiografía simple de cadera izquierda,7,True,True,zona frecuente sin calificadores técnicos
+1295210009,radiografía simple de caja torácica,8,False,True,zona poco frecuente en radiología ambulatoria
+1290447009,radiografía simple de calcáneo,5,True,True,zona frecuente sin calificadores técnicos
+3491000087108,radiografía simple de calcáneo derecho,1,True,True,zona frecuente sin calificadores técnicos
+3481000087106,radiografía simple de calcáneo izquierdo,3,True,True,zona frecuente sin calificadores técnicos
+1293080007,radiografía simple de calota de cráneo,8,True,True,zona frecuente sin calificadores técnicos
+1290812008,radiografía simple de cara,8,True,True,zona frecuente sin calificadores técnicos
+1290505007,radiografía simple de carpo,4,False,True,zona poco frecuente en radiología ambulatoria
+1290582007,radiografía simple de cintura escapular,8,False,True,zona poco frecuente en radiología ambulatoria
+1295392000,radiografía simple de cisterna magna con contraste,0,False,True,zona poco frecuente en radiología ambulatoria
+168594001,radiografía simple de clavícula,8,True,True,zona frecuente sin calificadores técnicos
+1290580004,radiografía simple de clavícula completa,8,True,True,zona frecuente sin calificadores técnicos
+3511000087103,radiografía simple de clavícula derecha,10,True,True,zona frecuente sin calificadores técnicos
+3501000087100,radiografía simple de clavícula izquierda,9,True,True,zona frecuente sin calificadores técnicos
+1293086001,radiografía simple de clivus,8,False,True,zona poco frecuente en radiología ambulatoria
+713025006,radiografía simple de codo,8,True,True,zona frecuente sin calificadores técnicos
+3531000087108,radiografía simple de codo derecho,8,True,True,zona frecuente sin calificadores técnicos
+3521000087106,radiografía simple de codo izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290512003,"radiografía simple de codo, proyecciones anteroposterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+431557005,radiografía simple de columna cervical con intensificador de imágenes móvil,3,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+1290675000,"radiografía simple de columna cervical, anteroposterior y lateral",8,True,True,zona frecuente sin calificadores técnicos
+1290646006,"radiografía simple de columna dorsal y lumbar, proyección supina y erecta",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+840361000,radiografía simple de columna lumbar,8,True,True,zona frecuente sin calificadores técnicos
+1290649004,radiografía simple de columna lumbar y articulación sacroilíaca,7,True,True,zona frecuente sin calificadores técnicos
+1290651000,radiografía simple de columna lumbar y articulación sacroilíaca derecha,7,True,True,zona frecuente sin calificadores técnicos
+1290650004,radiografía simple de columna lumbar y articulación sacroilíaca izquierda,0,True,True,zona frecuente sin calificadores técnicos
+1290660008,"radiografía simple de columna lumbar y sacra, proyección en flexión",1,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290647002,"radiografía simple de columna lumbar, proyección combinada anteroposterior y lateral",0,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290655009,radiografía simple de columna sacra,8,True,True,zona frecuente sin calificadores técnicos
+1290678003,radiografía simple de columna sacrococcígea,8,True,True,zona frecuente sin calificadores técnicos
+1290676004,"radiografía simple de columna torácica y lumbar, anteroposterior y lateral",7,True,True,zona frecuente sin calificadores técnicos
+1290648007,"radiografía simple de columna torácica y lumbar, en bipedestación",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290653002,"radiografía simple de columna torácica, anteroposterior y lateral",7,True,True,zona frecuente sin calificadores técnicos
+712970008,radiografía simple de columna vertebral cervical,6,True,True,zona frecuente sin calificadores técnicos
+1367647005,radiografía simple de columna vertebral completa,5,True,True,zona frecuente sin calificadores técnicos
+715458009,radiografía simple de columna vertebral completa con utilización de intensificador de imágenes móvil,6,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+1290674001,"radiografía simple de columna vertebral completa, anteroposterior y lateral",6,True,True,zona frecuente sin calificadores técnicos
+444634007,radiografía simple de columna vertebral dorsal y lumbar,7,True,True,zona frecuente sin calificadores técnicos
+431871005,radiografía simple de columna vertebral lumbar con intensificador de imágenes móvil,6,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+1290652007,radiografía simple de columna vertebral lumbar y ambas articulaciones sacroilíacas,1,True,True,zona frecuente sin calificadores técnicos
+22791004,radiografía simple de columna vertebral lumbar y sacra,8,True,True,zona frecuente sin calificadores técnicos
+1290938007,"radiografía simple de columna vertebral lumbar y sacra, anteroposterior y lateral",7,True,True,zona frecuente sin calificadores técnicos
+1290659003,"radiografía simple de columna vertebral lumbar y sacra, proyección oblicua",6,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290953004,radiografía simple de columna vertebral y pelvis,8,True,True,zona frecuente sin calificadores técnicos
+1336226002,radiografía simple de complejo cigomaticomaxilar,9,False,True,zona poco frecuente en radiología ambulatoria
+1295497005,radiografía simple de conducto biliar con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1290847000,radiografía simple de conducto de raíz dental,2,False,True,zona poco frecuente en radiología ambulatoria
+1343531008,radiografía simple de conducto nasolagrimal con contraste,1,False,True,zona poco frecuente en radiología ambulatoria
+1343533006,radiografía simple de conducto nasolagrimal derecho con contraste,5,False,True,zona poco frecuente en radiología ambulatoria
+1343532001,radiografía simple de conducto nasolagrimal izquierdo con contraste,7,False,True,zona poco frecuente en radiología ambulatoria
+1293042006,radiografía simple de conducto óptico,8,False,True,zona poco frecuente en radiología ambulatoria
+1293044007,radiografía simple de conducto óptico derecho,7,False,True,zona poco frecuente en radiología ambulatoria
+1293043001,radiografía simple de conducto óptico izquierdo,8,False,True,zona poco frecuente en radiología ambulatoria
+1290970007,radiografía simple de corazón,3,False,True,zona poco frecuente en radiología ambulatoria
+6161000087100,radiografía simple de costilla derecha,8,True,True,zona frecuente sin calificadores técnicos
+6151000087103,radiografía simple de costilla izquierda,8,True,True,zona frecuente sin calificadores técnicos
+370142005,radiografía simple de cráneo,8,True,True,zona frecuente sin calificadores técnicos
+439100007,radiografía simple de cráneo con intensificador de imágenes móvil,8,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+552661000221106,radiografía simple de cráneo proyección anteroposterior,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552681000221104,radiografía simple de cráneo proyección combinada anteroposterior y lateral,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552671000221102,radiografía simple de cráneo proyección lateral,1,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+303938002,radiografía simple de cuello,8,False,True,zona poco frecuente en radiología ambulatoria
+168664002,radiografía simple de cuello de fémur,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1345273004,radiografía simple de cuerpo cavernoso de pene con contraste,10,False,True,zona poco frecuente en radiología ambulatoria
+1290556003,radiografía simple de cúbito y radio,8,False,True,zona poco frecuente en radiología ambulatoria
+1290476007,radiografía simple de dedo anular,8,True,True,zona frecuente sin calificadores técnicos
+786844003,radiografía simple de dedo de la mano,8,True,True,zona frecuente sin calificadores técnicos
+785711007,radiografía simple de dedo de pie,8,True,True,zona frecuente sin calificadores técnicos
+1290446000,radiografía simple de dedo de pie derecho,8,True,True,zona frecuente sin calificadores técnicos
+1290445001,radiografía simple de dedo de pie izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290479000,radiografía simple de dedo medio de mano,4,True,True,zona frecuente sin calificadores técnicos
+1290478008,radiografía simple de dedo meñique de mano,8,True,True,zona frecuente sin calificadores técnicos
+1290477003,radiografía simple de dedo índice,8,True,True,zona frecuente sin calificadores técnicos
+1290850002,radiografía simple de dentición,8,False,True,zona poco frecuente en radiología ambulatoria
+713701007,radiografía simple de derivación ventriculoperitoneal,3,False,False,control de derivación / shunt (indicación hospitalaria)
+1290971006,radiografía simple de diafragma,8,False,True,zona poco frecuente en radiología ambulatoria
+1290849002,radiografía simple de diente,7,False,True,zona poco frecuente en radiología ambulatoria
+711488007,radiografía simple de dispositivo de derivación,8,False,False,control de derivación / shunt (indicación hospitalaria)
+1290561001,radiografía simple de diáfisis de cúbito,8,False,True,zona poco frecuente en radiología ambulatoria
+1290562008,radiografía simple de diáfisis de hueso de antebrazo,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+168620005,radiografía simple de diáfisis de húmero,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290560000,radiografía simple de diáfisis de radio,8,False,True,zona poco frecuente en radiología ambulatoria
+1290517009,radiografía simple de diáfisis de tibia y diáfisis de peroné,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1295496001,radiografía simple de drenaje con contraste,8,False,False,control de drenaje con contraste (indicación hospitalaria)
+1343535004,radiografía simple de drenaje lagrimal con contraste,8,False,False,control de drenaje con contraste (indicación hospitalaria)
+1295467002,radiografía simple de epidídimo,8,False,True,zona poco frecuente en radiología ambulatoria
+1295458002,radiografía simple de epidídimo con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1295459005,radiografía simple de epidídimo y conducto deferente con contraste,4,False,True,zona poco frecuente en radiología ambulatoria
+3851000087101,radiografía simple de escafoides derecho,8,True,True,zona frecuente sin calificadores técnicos
+3841000087104,radiografía simple de escafoides izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1295457007,radiografía simple de escroto,8,False,True,zona poco frecuente en radiología ambulatoria
+1359979005,radiografía simple de esfuerzo de columna lumbosacra,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1268495008,radiografía simple de espécimen de tejido de mama,8,False,False,radiografía de pieza / espécimen quirúrgico
+491141000119108,radiografía simple de espécimen de tejido de mama derecha,9,False,False,radiografía de pieza / espécimen quirúrgico
+1295209004,radiografía simple de esternón,0,False,True,zona poco frecuente en radiología ambulatoria
+1306745009,radiografía simple de estructura genital,8,False,True,zona poco frecuente en radiología ambulatoria
+1251531008,radiografía simple de estructura ósea de costilla,3,True,True,zona frecuente sin calificadores técnicos
+1290586005,"radiografía simple de estructura ósea de costilla, clavícula y esternón",6,True,True,zona frecuente sin calificadores técnicos
+1295283000,radiografía simple de esófago cervical con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1295282005,radiografía simple de esófago con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1370899006,radiografía simple de esófago y estómago con ingestión de medio de contraste gastrografin,7,False,True,zona poco frecuente en radiología ambulatoria
+1290611003,radiografía simple de extremidad inferior,7,False,True,zona poco frecuente en radiología ambulatoria
+449616006,radiografía simple de extremidad inferior para medición de longitud de hueso,2,False,True,zona poco frecuente en radiología ambulatoria
+1295463003,radiografía simple de faringe,8,False,True,zona poco frecuente en radiología ambulatoria
+1295464009,radiografía simple de faringe con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1343702006,radiografía simple de faringe y esófago cervical con contraste,4,False,True,zona poco frecuente en radiología ambulatoria
+1293077006,radiografía simple de fosa hipofisaria,8,False,True,zona poco frecuente en radiología ambulatoria
+3541000087102,radiografía simple de fémur izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290471002,"radiografía simple de fémur, proyecciones anteroposterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290417007,radiografía simple de ganglio linfático,8,False,True,zona poco frecuente en radiología ambulatoria
+1290753008,radiografía simple de ganglio linfático cervical,8,False,True,zona poco frecuente en radiología ambulatoria
+1348347006,radiografía simple de genital femenino,8,False,True,zona poco frecuente en radiología ambulatoria
+1293088000,radiografía simple de genitales externos,8,False,True,zona poco frecuente en radiología ambulatoria
+1295465005,radiografía simple de glándula con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1293067009,radiografía simple de glándula parótida,8,False,True,zona poco frecuente en radiología ambulatoria
+1293120007,radiografía simple de glándula salival,8,False,True,zona poco frecuente en radiología ambulatoria
+21231000087103,radiografía simple de glándula salival derecha,8,False,True,zona poco frecuente en radiología ambulatoria
+21461000087109,radiografía simple de glándula salival izquierda,7,False,True,zona poco frecuente en radiología ambulatoria
+1293065001,radiografía simple de glándula salival submandibular,6,False,True,zona poco frecuente en radiología ambulatoria
+783543007,radiografía simple de hombro,8,True,True,zona frecuente sin calificadores técnicos
+3771000087100,radiografía simple de hombro derecho,8,True,True,zona frecuente sin calificadores técnicos
+3761000087109,radiografía simple de hombro izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290557007,radiografía simple de hueso de antebrazo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290598000,radiografía simple de hueso de articulación de región de cadera,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290511005,radiografía simple de hueso de articulación de región de codo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290814009,radiografía simple de hueso de cara,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290583002,radiografía simple de hueso de cintura escapular,5,False,True,zona poco frecuente en radiología ambulatoria
+1295454000,radiografía simple de hueso de costillas de ambos hemitórax,8,False,True,zona poco frecuente en radiología ambulatoria
+1290664004,radiografía simple de hueso de cóccix,7,False,True,zona poco frecuente en radiología ambulatoria
+1290633001,radiografía simple de hueso de extremidad inferior,1,False,True,zona poco frecuente en radiología ambulatoria
+1290565005,radiografía simple de hueso de extremidad superior,5,False,True,zona poco frecuente en radiología ambulatoria
+1290480002,radiografía simple de hueso de mano,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290486008,radiografía simple de hueso de mano y hueso de región de muñeca,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290949001,radiografía simple de hueso de pelvis,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1356790005,radiografía simple de hueso de pelvis en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290608004,radiografía simple de hueso de pelvis y hueso de articulación de región de cadera,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290449007,radiografía simple de hueso de pie,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290526007,radiografía simple de hueso de pierna,8,False,True,zona poco frecuente en radiología ambulatoria
+1290513008,radiografía simple de hueso de región de articulación de codo y hueso de antebrazo,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290458000,radiografía simple de hueso de región de articulación de tobillo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290506008,radiografía simple de hueso de región de muñeca,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290416003,radiografía simple de hueso de región de rodilla,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290679006,radiografía simple de hueso de sacro,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293027008,radiografía simple de hueso de órbita,8,False,True,zona poco frecuente en radiología ambulatoria
+55965002,radiografía simple de hueso del cráneo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290606000,radiografía simple de hueso ilíaco,6,False,True,zona poco frecuente en radiología ambulatoria
+1290481003,radiografía simple de hueso metacarpiano,8,False,True,zona poco frecuente en radiología ambulatoria
+1290808002,radiografía simple de hueso nasal,8,False,True,zona poco frecuente en radiología ambulatoria
+1334086005,radiografía simple de hueso sesamoideo de ambos pies,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+752201000000100,radiografía simple de hueso sesamoideo de pie,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1334085009,radiografía simple de hueso sesamoideo de pie derecho,1,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1334084008,radiografía simple de hueso sesamoideo de pie izquierdo,9,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293170005,radiografía simple de hígado,8,False,True,zona poco frecuente en radiología ambulatoria
+1295503002,radiografía simple de hígado con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+713026007,radiografía simple de húmero,0,True,True,zona frecuente sin calificadores técnicos
+3671000087106,radiografía simple de húmero derecho,6,True,True,zona frecuente sin calificadores técnicos
+3661000087102,radiografía simple de húmero izquierdo,4,True,True,zona frecuente sin calificadores técnicos
+552691000221101,radiografía simple de húmero proyección anteroposterior,3,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552711000221103,radiografía simple de húmero proyección combinada anteroposterior y lateral,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552701000221101,radiografía simple de húmero proyección lateral,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290581000,radiografía simple de húmero y hueso de cintura escapular,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293063008,radiografía simple de implante coclear,8,False,False,control de implante (posquirúrgico); revisar
+1295443005,radiografía simple de intestino,8,False,True,zona poco frecuente en radiología ambulatoria
+1290609007,radiografía simple de isquion,8,False,True,zona poco frecuente en radiología ambulatoria
+168565008,radiografía simple de la base del cráneo,7,True,True,zona frecuente sin calificadores técnicos
+168663008,radiografía simple de la cabeza del fémur,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+168665001,radiografía simple de la diáfisis del fémur,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290818007,radiografía simple de labio,7,False,True,zona poco frecuente en radiología ambulatoria
+1295460000,radiografía simple de laringe,8,False,True,zona poco frecuente en radiología ambulatoria
+1295461001,radiografía simple de laringe con contraste,2,False,True,zona poco frecuente en radiología ambulatoria
+1290822002,radiografía simple de lengua,7,False,True,zona poco frecuente en radiología ambulatoria
+1290796003,radiografía simple de mandíbula inferior,8,False,True,zona poco frecuente en radiología ambulatoria
+713027003,radiografía simple de mano,8,True,True,zona frecuente sin calificadores técnicos
+3631000087109,radiografía simple de mano derecha,8,True,True,zona frecuente sin calificadores técnicos
+3621000087107,radiografía simple de mano izquierda,7,True,True,zona frecuente sin calificadores técnicos
+552721000221108,radiografía simple de mano proyección anteroposterior,3,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552741000221104,radiografía simple de mano proyección combinada anteroposterior y lateral,6,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552731000221106,radiografía simple de mano proyección lateral,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552751000221102,radiografía simple de mano proyección oblicua,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293029006,radiografía simple de mastoides,8,False,True,zona poco frecuente en radiología ambulatoria
+1293034005,radiografía simple de mastoides derecha,8,False,True,zona poco frecuente en radiología ambulatoria
+1293033004,radiografía simple de mastoides izquierda,8,False,True,zona poco frecuente en radiología ambulatoria
+1290789000,radiografía simple de maxilar inferior,8,False,True,zona poco frecuente en radiología ambulatoria
+1290790009,"radiografía simple de maxilar inferior, oblicua lateral",8,False,True,zona poco frecuente en radiología ambulatoria
+1290791008,"radiografía simple de maxilar inferior, posteroanterior",8,False,True,zona poco frecuente en radiología ambulatoria
+1290794000,radiografía simple de maxilar superior,8,False,True,zona poco frecuente en radiología ambulatoria
+1293079009,radiografía simple de meato auditivo interno de hueso temporal,1,False,True,zona poco frecuente en radiología ambulatoria
+9251000087100,radiografía simple de miembro inferior derecho,7,False,True,zona poco frecuente en radiología ambulatoria
+9241000087103,radiografía simple de miembro inferior izquierdo,8,False,True,zona poco frecuente en radiología ambulatoria
+713023004,radiografía simple de miembro superior,8,False,True,zona poco frecuente en radiología ambulatoria
+9191000087103,radiografía simple de miembro superior derecho,7,False,True,zona poco frecuente en radiología ambulatoria
+9201000087101,radiografía simple de miembro superior izquierdo,1,False,True,zona poco frecuente en radiología ambulatoria
+385731000119105,radiografía simple de muestra de tejido,8,False,False,radiografía de pieza / espécimen quirúrgico
+1290469002,radiografía simple de muslo,8,False,True,zona poco frecuente en radiología ambulatoria
+713024005,radiografía simple de muñeca,8,True,True,zona frecuente sin calificadores técnicos
+3831000087105,radiografía simple de muñeca derecha,7,True,True,zona frecuente sin calificadores técnicos
+3821000087108,radiografía simple de muñeca izquierda,8,True,True,zona frecuente sin calificadores técnicos
+1290508009,"radiografía simple de muñeca, proyecciones anteroposterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290507004,"radiografía simple de muñeca, proyección de túnel carpiano",7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290811001,radiografía simple de nariz,8,True,True,zona frecuente sin calificadores técnicos
+1293090004,radiografía simple de nasofaringe,15,True,True,zona frecuente sin calificadores técnicos
+1293091000,radiografía simple de nasofaringe con contraste,6,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293087005,radiografía simple de ojo para cuerpo extraño retenido,6,False,True,zona poco frecuente en radiología ambulatoria
+713028008,radiografía simple de omóplato,8,False,True,zona poco frecuente en radiología ambulatoria
+3741000087108,radiografía simple de omóplato derecho,8,False,True,zona poco frecuente en radiología ambulatoria
+3751000087106,radiografía simple de omóplato izquierdo,7,False,True,zona poco frecuente en radiología ambulatoria
+1295462008,radiografía simple de orofaringe con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1293064002,radiografía simple de oído,8,False,True,zona poco frecuente en radiología ambulatoria
+1293179006,radiografía simple de pared anterior de abdomen,7,True,True,zona frecuente sin calificadores técnicos
+1295279000,radiografía simple de pared torácica,7,False,True,zona poco frecuente en radiología ambulatoria
+1290422007,radiografía simple de partes blandas,7,False,True,zona poco frecuente en radiología ambulatoria
+1290821009,radiografía simple de partes blandas de cavidad bucal,8,False,True,zona poco frecuente en radiología ambulatoria
+1354574006,radiografía simple de partes blandas de mama,8,False,True,zona poco frecuente en radiología ambulatoria
+395041000119103,radiografía simple de partes blandas del cuello,8,False,True,zona poco frecuente en radiología ambulatoria
+713021002,radiografía simple de pelvis,6,True,True,zona frecuente sin calificadores técnicos
+1290950001,radiografía simple de pelvis con contraste,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+431251007,radiografía simple de pelvis con intensificador de imágenes móvil,2,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+716679005,radiografía simple de pelvis y extremidad inferior,7,True,True,zona frecuente sin calificadores técnicos
+395761000119101,"radiografía simple de pelvis, vista anteroposterior",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+406451000119107,"radiografía simple de pelvis, vista lateral en posición de rana",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1295277003,radiografía simple de pene,8,False,True,zona poco frecuente en radiología ambulatoria
+1290934009,radiografía simple de periné,1,False,True,zona poco frecuente en radiología ambulatoria
+1290520001,radiografía simple de peroné,9,True,True,zona frecuente sin calificadores técnicos
+1290523004,"radiografía simple de peroné, proyección combinada anteroposterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290452004,radiografía simple de pie,8,True,True,zona frecuente sin calificadores técnicos
+1356788009,radiografía simple de pie en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290453009,"radiografía simple de pie, proyecciones anteroposterior y lateral",5,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290525006,radiografía simple de pierna,6,False,True,zona poco frecuente en radiología ambulatoria
+449617002,radiografía simple de pierna para medición de longitud de hueso,2,False,True,zona poco frecuente en radiología ambulatoria
+1293172002,radiografía simple de placenta,8,False,True,zona poco frecuente en radiología ambulatoria
+440695003,radiografía simple de porción media de pie,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1295281003,radiografía simple de primer dedo de pie,8,True,True,zona frecuente sin calificadores técnicos
+1290939004,radiografía simple de próstata,8,False,True,zona poco frecuente en radiología ambulatoria
+783542002,radiografía simple de pulgar,8,False,True,zona poco frecuente en radiología ambulatoria
+3791000087101,radiografía simple de pulgar derecho,8,False,True,zona poco frecuente en radiología ambulatoria
+1290482005,radiografía simple de pulgar en carga,8,False,True,zona poco frecuente en radiología ambulatoria
+3781000087103,radiografía simple de pulgar izquierdo,8,False,True,zona poco frecuente en radiología ambulatoria
+303931008,radiografía simple de pulmón,8,False,True,zona poco frecuente en radiología ambulatoria
+1295393005,radiografía simple de páncreas,8,False,True,zona poco frecuente en radiología ambulatoria
+168637003,radiografía simple de radio,7,False,True,zona poco frecuente en radiología ambulatoria
+1372718000,radiografía simple de recto con contraste de bario y aire,4,False,True,zona poco frecuente en radiología ambulatoria
+1290665003,radiografía simple de región coccígea de dorso,8,False,True,zona poco frecuente en radiología ambulatoria
+1290410009,radiografía simple de región de ambas rodillas,5,False,True,zona poco frecuente en radiología ambulatoria
+1290579002,radiografía simple de región de articulación de hombro en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+432848006,radiografía simple de región de cadera con intensificador de imágenes móvil,7,False,False,con intensificador de imágenes móvil (intraoperatorio / en quirófano)
+1356789001,radiografía simple de región de cadera en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1344647007,radiografía simple de región de clavícula,8,True,True,zona frecuente sin calificadores técnicos
+1290640000,radiografía simple de región de columna vertebral,8,True,True,zona frecuente sin calificadores técnicos
+1290645005,radiografía simple de región de columna vertebral con flexión y extensión,6,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290654008,radiografía simple de región de columna vertebral dorsal,8,True,True,zona frecuente sin calificadores técnicos
+1356834006,radiografía simple de región de columna vertebral lumbar en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290793006,radiografía simple de región de mandíbula,2,False,True,zona poco frecuente en radiología ambulatoria
+1290795004,radiografía simple de región de maxilar superior,8,False,True,zona poco frecuente en radiología ambulatoria
+1293046009,radiografía simple de región de ojo,8,False,True,zona poco frecuente en radiología ambulatoria
+1290407002,radiografía simple de región de rodilla,8,True,True,zona frecuente sin calificadores técnicos
+1290409004,radiografía simple de región de rodilla derecha,7,True,True,zona frecuente sin calificadores técnicos
+1290411008,radiografía simple de región de rodilla en carga,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290408007,radiografía simple de región de rodilla izquierda,8,True,True,zona frecuente sin calificadores técnicos
+1290413006,"radiografía simple de región de rodilla, proyecciones anteroposterior y lateral",5,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290459008,radiografía simple de región de tobillo,7,True,True,zona frecuente sin calificadores técnicos
+1356833000,radiografía simple de región de unión cervicodorsal de espalda,7,False,True,zona poco frecuente en radiología ambulatoria
+241081005,radiografía simple de región posterior de pie,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293176004,radiografía simple de riñón,8,False,True,zona poco frecuente en radiología ambulatoria
+1345260003,radiografía simple de riñón con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1345056006,"radiografía simple de riñón, uréter y vejiga",8,False,True,zona poco frecuente en radiología ambulatoria
+1345057002,"radiografía simple de riñón, uréter y vejiga con contraste",9,False,True,zona poco frecuente en radiología ambulatoria
+3691000087105,radiografía simple de rótula derecha,7,True,True,zona frecuente sin calificadores técnicos
+3681000087108,radiografía simple de rótula izquierda,8,True,True,zona frecuente sin calificadores técnicos
+1290656005,"radiografía simple de sacro, proyección combinada anteroposterior y lateral",13,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293070008,radiografía simple de seno esfenoidal,2,False,True,zona poco frecuente en radiología ambulatoria
+1293112005,radiografía simple de seno esfenoidal derecho,8,False,True,zona poco frecuente en radiología ambulatoria
+1293111003,radiografía simple de seno esfenoidal izquierdo,8,False,True,zona poco frecuente en radiología ambulatoria
+1293082004,radiografía simple de seno etmoidal,8,False,True,zona poco frecuente en radiología ambulatoria
+1293081006,radiografía simple de seno frontal,8,False,True,zona poco frecuente en radiología ambulatoria
+1290797007,radiografía simple de seno maxilar,8,False,True,zona poco frecuente en radiología ambulatoria
+1293056008,radiografía simple de seno nasal,8,False,True,zona poco frecuente en radiología ambulatoria
+16318521000119108,"radiografía simple de senos paranasales, proyección occipitomentoniana",4,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1356808003,radiografía simple de silla turca,8,False,True,zona poco frecuente en radiología ambulatoria
+1295417009,radiografía simple de sistema esquelético,7,False,True,zona poco frecuente en radiología ambulatoria
+1345250007,radiografía simple de sistema genitourinario,8,False,True,zona poco frecuente en radiología ambulatoria
+1345251006,radiografía simple de sistema genitourinario con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1293132006,radiografía simple de sistema musculoesquelético,7,False,True,zona poco frecuente en radiología ambulatoria
+1345246000,radiografía simple de sistema urinario,8,False,True,zona poco frecuente en radiología ambulatoria
+1345247009,radiografía simple de sistema urinario con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1290554000,radiografía simple de surco bicipital,8,False,True,zona poco frecuente en radiología ambulatoria
+1306661002,radiografía simple de surco bicipital interno,7,False,True,zona poco frecuente en radiología ambulatoria
+1290792001,radiografía simple de sínfisis de maxilar inferior,8,False,True,zona poco frecuente en radiología ambulatoria
+1290947004,radiografía simple de sínfisis de pubis,0,False,True,zona poco frecuente en radiología ambulatoria
+241080006,radiografía simple de tarso,6,False,True,zona poco frecuente en radiología ambulatoria
+1293180009,radiografía simple de tejido blando de abdomen,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293248001,radiografía simple de tejido blando de abdomen inferior,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293251008,radiografía simple de tejido blando de abdomen superior,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290420004,radiografía simple de tejido blando de antebrazo,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290584008,radiografía simple de tejido blando de brazo,0,False,True,zona poco frecuente en radiología ambulatoria
+1290817002,radiografía simple de tejido blando de cabeza,8,False,True,zona poco frecuente en radiología ambulatoria
+1290610002,radiografía simple de tejido blando de cadera,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1306636000,radiografía simple de tejido blando de cara,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290596001,radiografía simple de tejido blando de extremidad,6,False,True,zona poco frecuente en radiología ambulatoria
+1290627005,radiografía simple de tejido blando de extremidad inferior,8,False,True,zona poco frecuente en radiología ambulatoria
+1290585009,radiografía simple de tejido blando de extremidad superior,4,False,True,zona poco frecuente en radiología ambulatoria
+1290578005,radiografía simple de tejido blando de hombro,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290418002,radiografía simple de tejido blando de mano,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290628000,radiografía simple de tejido blando de muslo,8,False,True,zona poco frecuente en radiología ambulatoria
+1290820005,radiografía simple de tejido blando de nariz,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290819004,radiografía simple de tejido blando de oído externo,3,False,True,zona poco frecuente en radiología ambulatoria
+1290965000,radiografía simple de tejido blando de pared torácica,7,False,True,zona poco frecuente en radiología ambulatoria
+1290419005,radiografía simple de tejido blando de pelvis,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290450007,radiografía simple de tejido blando de pie,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290421000,radiografía simple de tejido blando de región de codo,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290415004,radiografía simple de tejido blando de región de rodilla,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290457005,radiografía simple de tejido blando de tobillo,5,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1293254000,radiografía simple de tejido blando de tronco,10,False,True,zona poco frecuente en radiología ambulatoria
+1290964001,radiografía simple de tejido blando de tórax,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+491131000119104,radiografía simple de tejido resecado de mama izquierda,8,False,False,radiografía de pieza / espécimen quirúrgico
+1290524005,radiografía simple de tibia,8,True,True,zona frecuente sin calificadores técnicos
+783631001,radiografía simple de tibia y peroné,6,True,True,zona frecuente sin calificadores técnicos
+3811000087100,radiografía simple de tibia y peroné derechos,8,True,True,zona frecuente sin calificadores técnicos
+3801000087102,radiografía simple de tibia y peroné izquierdos,6,True,True,zona frecuente sin calificadores técnicos
+552761000221100,radiografía simple de tibia y peroné proyección anteroposterior,5,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552781000221107,radiografía simple de tibia y peroné proyección combinada anteroposterior y lateral,4,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+552771000221109,radiografía simple de tibia y peroné proyección lateral,7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290519007,"radiografía simple de tibia, proyección combinada anteroposterior y lateral",10,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290752003,radiografía simple de tiroides,8,False,True,zona poco frecuente en radiología ambulatoria
+426420006,radiografía simple de tobillo izquierdo,8,True,True,zona frecuente sin calificadores técnicos
+1290451006,radiografía simple de tobillo y pie,4,True,True,zona frecuente sin calificadores técnicos
+1290460003,"radiografía simple de tobillo, proyección anteroposterior y lateral",7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+446463003,radiografía simple de toda la dentadura,8,False,True,zona poco frecuente en radiología ambulatoria
+6141000087101,radiografía simple de todos los dedos de la mano derecha,6,True,True,zona frecuente sin calificadores técnicos
+6131000087107,radiografía simple de todos los dedos de la mano izquierda,7,True,True,zona frecuente sin calificadores técnicos
+1290473004,radiografía simple de todos los dedos de mano,8,True,True,zona frecuente sin calificadores técnicos
+1295280002,radiografía simple de todos los dedos de pie,8,True,True,zona frecuente sin calificadores técnicos
+6211000087107,radiografía simple de todos los dedos del pie derecho,6,True,True,zona frecuente sin calificadores técnicos
+6201000087105,radiografía simple de todos los dedos del pie izquierdo,4,True,True,zona frecuente sin calificadores técnicos
+1372724006,radiografía simple de tracto gastrointestinal inferior con contraste de aire y enema de bario,7,False,True,zona poco frecuente en radiología ambulatoria
+1336131005,radiografía simple de tráquea,8,False,True,zona poco frecuente en radiología ambulatoria
+1336132003,radiografía simple de tráquea con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+399208008,radiografía simple de tórax,8,True,True,zona frecuente sin calificadores técnicos
+1290961009,"radiografía simple de tórax, lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290962002,"radiografía simple de tórax, oblicua",7,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1290963007,"radiografía simple de tórax, proyección combinada posteroanterior y lateral",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+394421000119103,"radiografía simple de tórax, vista anteroposterior",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+486261000119109,"radiografía simple de tórax, vista posteroanterior",8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+383501000119107,"radiografía simple de tórax, vistas apical y lordótica",1,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1295238001,radiografía simple de unión cardioesofágica con contraste,0,False,True,zona poco frecuente en radiología ambulatoria
+1290644009,radiografía simple de unión cervicotorácica de columna vertebral,0,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1356826000,radiografía simple de unión dorsolumbar de columna vertebral,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1359964003,radiografía simple de unión lumbosacra,8,False,True,zona poco frecuente en radiología ambulatoria
+1293168001,radiografía simple de uréter,8,False,True,zona poco frecuente en radiología ambulatoria
+1380119001,radiografía simple de uréter con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1290954005,radiografía simple de vejiga urinaria,0,False,True,zona poco frecuente en radiología ambulatoria
+1293129008,radiografía simple de vesícula biliar,8,False,True,zona poco frecuente en radiología ambulatoria
+1343538002,radiografía simple de vesícula biliar con contraste,8,False,True,zona poco frecuente en radiología ambulatoria
+1293089008,radiografía simple de vulva,8,False,True,zona poco frecuente en radiología ambulatoria
+1293169009,radiografía simple de vía biliar,8,False,True,zona poco frecuente en radiología ambulatoria
+1295424005,radiografía simple de vía biliar con contraste,2,False,True,zona poco frecuente en radiología ambulatoria
+1292972006,radiografía simple de vía respiratoria baja,8,False,True,zona poco frecuente en radiología ambulatoria
+1295444004,radiografía simple de área supraorbitaria,2,False,True,zona poco frecuente en radiología ambulatoria
+1295495002,radiografía simple de órbita con contraste,3,False,True,zona poco frecuente en radiología ambulatoria
+1293026004,radiografía simple de órbita propiamente dicha,8,False,True,zona poco frecuente en radiología ambulatoria
+1290957003,radiografía simple de útero,8,False,True,zona poco frecuente en radiología ambulatoria
+1290956007,radiografía simple de útero grávido,8,False,True,zona poco frecuente en radiología ambulatoria
+1293092007,radiografía simple de úvula palatina,8,False,True,zona poco frecuente en radiología ambulatoria
+241046008,radiografía simple dental con aleta de mordida,8,False,True,zona poco frecuente en radiología ambulatoria
+1290848005,"radiografía simple dental de boca completa, proyección periapical",8,False,True,zona poco frecuente en radiología ambulatoria
+241050001,radiografía simple oclusal de región mandibular,8,False,True,zona poco frecuente en radiología ambulatoria
+1290935005,radiografía simple pelvimétrica,8,False,True,zona poco frecuente en radiología ambulatoria
+1290958008,radiografía simple seriada de tórax,8,False,True,"tiene calificador técnico (proyección, tejido blando, contraste, etc.)"
+1373320005,radiografía simple y fluoroscopia,8,False,True,zona poco frecuente en radiología ambulatoria
+,cistouretrografía miccional,7,False,True,zona poco frecuente en radiología ambulatoria
+,radiografía seriada esofagogastroduodenal,8,False,True,zona poco frecuente en radiología ambulatoria
+,escanometría de miembros inferiores,11,True,True,zona frecuente sin calificadores técnicos
+16319081000119104,telerradiografía cefalométrica,7,False,True,zona poco frecuente en radiología ambulatoria
+,radiografía seriada de ambos maxilares,6,False,True,zona poco frecuente en radiología ambulatoria
+,serie periapical completa,7,False,True,zona poco frecuente en radiología ambulatoria

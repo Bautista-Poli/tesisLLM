@@ -1,0 +1,64 @@
+Catálogo v2: CSVs/snomed_con_variantes_v2.csv
+Propuesta aplicada: a = 142, b = 39, c (sin tocar) = 56
+Ocurrencias de variantes: v1 = 3318 → v2 = 2926
+  eliminadas por (a) de estudios no por defecto: 303
+  eliminadas por (b): 137
+  agregadas al estudio por defecto: 48
+Estudios con variantes modificadas: 202 de 487
+Estudios sin variantes: v1 = 19 → v2 = 21
+Variantes que siguen compartidas (solo las de acción c): 56
+conceptId: sin '.0'; corregidos por notación científica:
+  radiografía panorámica: 1.6319561000119104e+16 → 16319561000119105 (Verhoeff)
+  radiografía simple de senos paranasales, proyección occipitomentoniana: 1.6318521000119108e+16 → 16318521000119109 (Verhoeff)
+  telerradiografía cefalométrica: 1.6319081000119104e+16 → 16319081000119105 (Verhoeff)
+Validado: mismas filas, mismo orden; solo cambian conceptId y variantes_coloquiales.
+
+Variantes agregadas:
+  «rayos de la mano» → radiografía simple de mano
+  «rayos de la mano derecha» → radiografía simple de mano derecha
+  «placa de la muñeca» → radiografía simple de muñeca
+  «placa de mano» → radiografía simple de mano
+  «rayos de los pies» → radiografía simple bilateral de pies
+  «rayos de tobillo» → radiografía simple de región de tobillo
+  «placa de la espalda baja» → radiografía simple de columna lumbar
+  «rayos del pie derecho» → radiografía de pie derecho
+  «rx de mano» → radiografía simple de mano
+  «placa de la mano» → radiografía simple de mano
+  «placa de pelvis» → radiografía simple de pelvis
+  «placa del pie derecho» → radiografía de pie derecho
+  «placa del pie izquierdo» → radiografía de pie izquierdo
+  «rayo de la rodilla» → radiografía simple de región de rodilla
+  «rayos de húmero» → radiografía simple de húmero
+  «rayos de la cara» → radiografía simple de cara
+  «rayos de la nariz» → radiografía simple de nariz
+  «rayos de la panza» → radiografía simple de abdomen
+  «rayos de la pelvis» → radiografía simple de pelvis
+  «rx de la panza» → radiografía simple de abdomen
+  «rx de tibia y peroné» → radiografía simple de tibia y peroné
+  «rx de tobillo» → radiografía simple de región de tobillo
+  «cráneo simple» → radiografía simple de cráneo
+  «pelvis» → radiografía simple de pelvis
+  «Placa de clavícula» → radiografía simple de clavícula
+  «placa de húmero» → radiografía simple de húmero
+  «placa de la pelvis» → radiografía simple de pelvis
+  «placa de tibia y peroné» → radiografía simple de tibia y peroné
+  «Placa simple de la cara» → radiografía simple de cara
+  «placa simple de maxilar inferior» → radiografía simple de maxilar inferior
+  «radiografía de cráneo» → radiografía simple de cráneo
+  «radiografia de la mano izquierda» → radiografía simple de mano izquierda
+  «radiografía de mano» → radiografía simple de mano
+  «radiografía de pelvis» → radiografía simple de pelvis
+  «radiografía de tobillo» → radiografía simple de región de tobillo
+  «rayo de codo» → radiografía simple de codo
+  «rayo de la clavícula» → radiografía simple de clavícula
+  «rayos de ambas manos» → radiografía simple de ambas manos
+  «Rayos de la columna cervical» → radiografía simple de columna vertebral cervical
+  «rayos de muñeca» → radiografía simple de muñeca
+  «Rayos de pecho» → radiografía simple de tórax
+  «rayos de tórax sin contraste» → radiografía simple de tórax
+  «rayos del pie izquierdo» → radiografía de pie izquierdo
+  «Rayos simples de tórax» → radiografía simple de tórax
+  «rayos x de tobillo» → radiografía simple de región de tobillo
+  «RX de clavícula» → radiografía simple de clavícula
+  «rx de muslo» → radiografía simple de muslo
+  «Rx del pie izquierdo» → radiografía de pie izquierdo

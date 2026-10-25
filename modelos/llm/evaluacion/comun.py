@@ -71,6 +71,15 @@ def calificadores_no_mencionados(estudio: str | None, texto_usuario: str) -> lis
     ]
 
 
+def tipo_error(mensaje: str) -> str:
+    """'' sin error, 'conexion' si falló Ollama, 'parseo' si la salida del LLM no se pudo leer."""
+    if not mensaje:
+        return ""
+    if any(t in mensaje for t in ("Connection", "timed out", "HTTP", "Max retries")):
+        return "conexion"
+    return "parseo"
+
+
 def asegurar_dir_resultados() -> str:
     os.makedirs(DIR_RESULTADOS, exist_ok=True)
     return DIR_RESULTADOS

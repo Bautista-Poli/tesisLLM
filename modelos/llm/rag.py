@@ -52,21 +52,34 @@ def cargar_preparaciones(path: str) -> dict:
         return {}
 
 
-def similitudes_tfidf(query: str, df: pd.DataFrame):
+ANALIZADOR = "palabras"  # "palabras" (default) o "char" (n-gramas de caracteres char_wb 3-5)
+
+
+def _vectorizador(analizador: str) -> TfidfVectorizer:
+    if analizador == "palabras":
+        return TfidfVectorizer()
+    if analizador == "char":
+        return TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5))
+    raise ValueError(f"Analizador desconocido: {analizador!r} (usar 'palabras' o 'char')")
+
+
+def similitudes_tfidf(query: str, df: pd.DataFrame, analizador: str = ANALIZADOR):
     """Similitud coseno TF-IDF entre la query y cada fila de df (array, mismo orden que df)."""
     corpus = df["texto_completo"].tolist() + [query.lower()]
-    vectorizer = TfidfVectorizer().fit(corpus)
+    vectorizer = _vectorizador(analizador).fit(corpus)
     matriz = vectorizer.transform(corpus)
     return cosine_similarity(matriz[-1], matriz[:-1]).flatten()
 
 
-def buscar_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K) -> list:
-    similitudes = similitudes_tfidf(query, df)
+def buscar_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K,
+                      analizador: str = ANALIZADOR) -> list:
+    similitudes = similitudes_tfidf(query, df, analizador)
     return similitudes.argsort()[-top_k:][::-1]
 
 
-def buscar_terminos_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K) -> str:
-    indices = buscar_relevantes(query, df, top_k)
+def buscar_terminos_relevantes(query: str, df: pd.DataFrame, top_k: int = TOP_K,
+                               analizador: str = ANALIZADOR) -> str:
+    indices = buscar_relevantes(query, df, top_k, analizador)
     query_words = set(query.lower().split())
     lineas = []
     for i in indices:

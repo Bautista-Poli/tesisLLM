@@ -92,7 +92,7 @@ Los tests de los tres modelos se pueden correr uno por uno con los comandos de l
 │   │   ├── extractor.py           # ExtractorLLM: RAG + LLM + validación de slots
 │   │   ├── borrar.py              # Script auxiliar de exploración de términos
 │   │   ├── playground_llm.py      # Playground de conversación con Ollama + RAG
-│   │   ├── evaluacion/            # Evaluación: TOP_K (recall@k, F1) y baseline TF-IDF (curva PR)
+│   │   ├── evaluacion/            # Evaluación: sets etiquetados (suite + held-out), comparación de configuraciones, TOP_K y baseline TF-IDF
 │   │   └── tests/                 # Tests de extracción NLU (requieren Ollama)
 │   │       ├── _runner.py         # Infraestructura compartida (F1, colores, runner)
 │   │       ├── test_estudios.py   # Tests de extracción de estudios
