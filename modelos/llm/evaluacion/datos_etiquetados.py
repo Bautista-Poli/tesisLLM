@@ -14,7 +14,7 @@ La columna `esperado` es un preferred_term exacto del catálogo, "AMBIGUO"
   falta_segmento columna o espalda sin segmento (cervical, dorsal, lumbar)
   zona_amplia    zona mencionada pero amplia (pierna, brazo, huesos largos)
   falta_zona     sin zona ("rx", "necesito una radiografía", "todo el cuerpo")
-No cambia la accuracy; sirve para el diálogo y para el F1 de AMBIGUO por tipo.
+No cambia la accuracy; sirve para el diálogo y para el recall de AMBIGUO por tipo.
 Ambos sets se cargan con el mismo formato: id, grupo, input, ultima_pregunta,
 esperado, revisar, nota y los datos necesarios para la métrica laxa.
 """

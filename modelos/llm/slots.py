@@ -20,7 +20,7 @@ def slots_faltantes(slots: dict) -> list:
 def fusionar_slots(slots: dict, nuevos: dict) -> dict:
     resultado = slots.copy()
     for k, v in nuevos.items():
-        if k in ("estudio_ambiguo", "pregunta_aclaracion", "_turno_chequeado"):
+        if k in ("estudio_ambiguo", "pregunta_aclaracion", "tipo_ambiguedad", "_turno_chequeado"):
             continue
         if v is not None and resultado.get(k) is None:
             resultado[k] = v

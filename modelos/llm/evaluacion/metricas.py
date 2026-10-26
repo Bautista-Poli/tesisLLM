@@ -15,10 +15,10 @@ Métrica estricta
     siempre (aunque no se predigan ni aparezcan en el gold; una clase sin
     aciertos aporta 0).
   - P/R/F1 de las clases AMBIGUO y null por separado.
-  - F1 de AMBIGUO por tipo_ambiguedad (falta_lado / falta_segmento / zona_amplia / falta_zona):
-    AMBIGUO vs resto, sacando los casos AMBIGUO de los otros tipos. La predicción
-    no trae tipo, así que los falsos positivos (predijo AMBIGUO y no lo era) cuentan
-    en todos los tipos.
+  - Recall de AMBIGUO por tipo_ambiguedad (falta_lado / falta_segmento / zona_amplia /
+    falta_zona): casos del tipo predichos como AMBIGUO / casos del tipo. Es recall y no
+    F1 porque la predicción no siempre trae tipo, así que los falsos positivos no se
+    pueden asignar a un tipo.
 
 Métrica laxa (la anterior, para comparar)
 -----------------------------------------
@@ -78,24 +78,15 @@ def metricas_estrictas(esperados: list[str], predichos: list[str]) -> dict:
     }
 
 
-def f1_ambiguo_por_tipo(items: list[dict], predichos: list[str]) -> dict[str, dict]:
-    """tipo -> {p, r, f1, n} (n = casos AMBIGUO de ese tipo)."""
+def recall_ambiguo_por_tipo(items: list[dict], predichos: list[str]) -> dict[str, dict]:
+    """tipo -> {recall, detectados, n}: casos AMBIGUO del tipo predichos como AMBIGUO (recall None si n = 0)."""
     res = {}
     for tipo in TIPOS_AMBIGUEDAD:
-        tp = fp = fn = n = 0
-        for item, pred in zip(items, predichos):
-            es_amb = item["esperado"] == CLASE_AMBIGUO
-            if es_amb and item["tipo_ambiguedad"] != tipo:
-                continue
-            n += es_amb
-            if es_amb and pred == CLASE_AMBIGUO:
-                tp += 1
-            elif es_amb:
-                fn += 1
-            elif pred == CLASE_AMBIGUO:
-                fp += 1
-        p, r, f = _prf(tp, fp, fn)
-        res[tipo] = {"p": p, "r": r, "f1": f, "n": n}
+        del_tipo = [pred for item, pred in zip(items, predichos)
+                    if item["esperado"] == CLASE_AMBIGUO and item["tipo_ambiguedad"] == tipo]
+        detectados = sum(p == CLASE_AMBIGUO for p in del_tipo)
+        res[tipo] = {"recall": detectados / len(del_tipo) if del_tipo else None,
+                     "detectados": detectados, "n": len(del_tipo)}
     return res
 
 

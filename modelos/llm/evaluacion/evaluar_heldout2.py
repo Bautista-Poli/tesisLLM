@@ -1,12 +1,15 @@
 """
 evaluar_heldout2.py — Evaluación final, UNA sola vez, sobre el held-out 2.
 
-Compara la configuración elegida, i) (f + few-shot de fuera de dominio, k=5), con el
-catálogo v1 y con el v2.1, sobre los mismos mensajes de datos/heldout2.csv:
+Compara, con el catálogo v1 y sobre los mismos mensajes de datos/heldout2.csv:
+  i) f + few-shot de fuera de dominio, k=5 (la configuración elegida)
+  j) i) + regla post-LLM de lateralidad (modelos/llm/lateralidad.py)
+j) se deriva de la misma predicción de i) (una sola llamada al LLM por mensaje), así
+que la diferencia entre las dos es solo la regla. Reporta:
   - accuracy estricta, con IC 95% bootstrap (percentil, 10 000 remuestreos de
-    casos, semilla fija); también el IC de la diferencia v2.1 − v1 (remuestreo pareado);
-  - F1 de AMBIGUO (total y por tipo_ambiguedad) y F1 de null;
-  - McNemar exacto (binomial bilateral sobre los pares discordantes) entre v1 y v2.1.
+    casos, semilla fija); también el IC de la diferencia j − i (remuestreo pareado);
+  - F1 de AMBIGUO total, recall de AMBIGUO por tipo_ambiguedad y F1 de null;
+  - McNemar exacto (binomial bilateral sobre los pares discordantes) entre i y j.
 
 Antes de llamar al LLM corre verificar_heldout --set heldout2 y no sigue si falla.
 Si ya existe resultados/heldout2_por_caso.csv no vuelve a evaluar (es una
@@ -35,13 +38,14 @@ from modelos.llm.evaluacion import verificar_heldout
 from modelos.llm.evaluacion.comparar_configuraciones import CATALOGOS, CONFIGS, predecir_llm
 from modelos.llm.evaluacion.comun import asegurar_dir_resultados
 from modelos.llm.evaluacion.datos_etiquetados import CLASE_NULL, TIPOS_AMBIGUEDAD, cargar_heldout2
-from modelos.llm.evaluacion.metricas import f1_ambiguo_por_tipo, metricas_estrictas
+from modelos.llm.evaluacion.metricas import metricas_estrictas, recall_ambiguo_por_tipo
 from modelos.llm.extractor import CSV_COBERTURAS
+from modelos.llm.lateralidad import aplicar_a_clase
 from modelos.llm.ollama_client import MODEL, OLLAMA_URL
 from modelos.llm.rag import cargar_coberturas, cargar_terminos
 
-CONFIG = "i"
-CATALOGOS_COMPARADOS = ("v1", "v2.1")
+CONFIGS_COMPARADAS = ("i", "j")  # j = i + regla de lateralidad sobre la misma predicción
+CATALOGO = "v1"
 K = 5
 N_BOOTSTRAP = 10_000
 SEMILLA = 20261025
@@ -61,11 +65,11 @@ def mcnemar_exacto(a_bien: list[bool], b_bien: list[bool]) -> tuple[int, int, fl
 
 
 def ic_bootstrap(aciertos: dict[str, np.ndarray], rng: np.random.Generator) -> dict[str, tuple[float, float]]:
-    """IC 95% percentil de la accuracy de cada catálogo y de la diferencia, con los mismos remuestreos."""
+    """IC 95% percentil de la accuracy de cada configuración y de la diferencia, con los mismos remuestreos."""
     n = len(next(iter(aciertos.values())))
     idx = rng.integers(0, n, size=(N_BOOTSTRAP, n))
     medias = {c: v[idx].mean(axis=1) for c, v in aciertos.items()}
-    a, b = CATALOGOS_COMPARADOS
+    a, b = CONFIGS_COMPARADAS
     medias[f"{b} − {a}"] = medias[b] - medias[a]
     return {c: (float(np.percentile(m, 2.5)), float(np.percentile(m, 97.5))) for c, m in medias.items()}
 
@@ -74,9 +78,8 @@ def chequear_prerequisitos(ruta_por_caso: str, forzar: bool) -> list[str]:
     problemas = []
     if verificar_heldout.main(["--set", "heldout2"]) != 0:
         problemas.append("verificar_heldout --set heldout2 no pasa (ver el reporte de arriba)")
-    for cat in CATALOGOS_COMPARADOS:
-        if not os.path.exists(CATALOGOS[cat]):
-            problemas.append(f"no existe el catálogo {cat}: {CATALOGOS[cat]}")
+    if not os.path.exists(CATALOGOS[CATALOGO]):
+        problemas.append(f"no existe el catálogo {CATALOGO}: {CATALOGOS[CATALOGO]}")
     if os.path.exists(ruta_por_caso) and not forzar:
         problemas.append(f"ya existe {os.path.relpath(ruta_por_caso)}: el held-out 2 ya se evaluó "
                          "(--forzar para pisarlo)")
@@ -92,46 +95,51 @@ def chequear_prerequisitos(ruta_por_caso: str, forzar: bool) -> list[str]:
 
 def evaluar(items: list[dict]) -> list[dict]:
     df_coberturas = cargar_coberturas(CSV_COBERTURAS)
-    cfg = CONFIGS[CONFIG]
+    df_terminos = cargar_terminos(CATALOGOS[CATALOGO])
     filas = []
-    for cat in CATALOGOS_COMPARADOS:
-        df_terminos = cargar_terminos(CATALOGOS[cat])
-        for i, item in enumerate(items):
-            print(f"  {CONFIG}@{cat} [{i + 1}/{len(items)}]", end="\r", flush=True)
-            t0 = time.perf_counter()
-            error = ""
-            try:
-                pred = predecir_llm(item, df_terminos, df_coberturas, cfg, K, CATALOGOS[cat])
-            except Exception as e:  # el caso cuenta como null, igual que en comparar_configuraciones
-                pred, error = CLASE_NULL, f"{type(e).__name__}: {e}"
-            filas.append({"catalogo": cat, "id": item["id"], "grupo": item["grupo"], "input": item["input"],
-                          "esperado": item["esperado"], "tipo_ambiguedad": item["tipo_ambiguedad"],
-                          "prediccion": pred, "correcto": pred == item["esperado"],
-                          "latencia_s": round(time.perf_counter() - t0, 4), "error": error})
-        print(" " * 60, end="\r")
+    for n, item in enumerate(items):
+        print(f"  i@{CATALOGO} [{n + 1}/{len(items)}]", end="\r", flush=True)
+        t0 = time.perf_counter()
+        error = ""
+        try:
+            pred_i = predecir_llm(item, df_terminos, df_coberturas, CONFIGS["i"], K, CATALOGOS[CATALOGO])
+        except Exception as e:  # el caso cuenta como null, igual que en comparar_configuraciones
+            pred_i, error = CLASE_NULL, f"{type(e).__name__}: {e}"
+        latencia = round(time.perf_counter() - t0, 4)
+        pred_j, tipo_j = aplicar_a_clase(pred_i, item["input"])
+        for config, pred, tipo in (("i", pred_i, ""), ("j", pred_j, tipo_j)):
+            filas.append({"config": config, "catalogo": CATALOGO, "id": item["id"], "grupo": item["grupo"],
+                          "input": item["input"], "esperado": item["esperado"],
+                          "tipo_ambiguedad": item["tipo_ambiguedad"], "prediccion": pred,
+                          "tipo_ambiguedad_pred": tipo, "correcto": pred == item["esperado"],
+                          "latencia_s": latencia, "error": error})
+    print(" " * 60, end="\r")
     return filas
 
 
 def reporte(items: list[dict], filas: list[dict], forzado: bool) -> str:
     esperados = [it["esperado"] for it in items]
-    por_cat = {cat: [f for f in filas if f["catalogo"] == cat] for cat in CATALOGOS_COMPARADOS}
-    aciertos = {cat: np.array([f["correcto"] for f in fs], dtype=float) for cat, fs in por_cat.items()}
+    por_cfg = {c: [f for f in filas if f["config"] == c] for c in CONFIGS_COMPARADAS}
+    aciertos = {c: np.array([f["correcto"] for f in fs], dtype=float) for c, fs in por_cfg.items()}
     ic = ic_bootstrap(aciertos, np.random.default_rng(SEMILLA))
-    a, b = CATALOGOS_COMPARADOS
-    solo_a, solo_b, p = mcnemar_exacto([f["correcto"] for f in por_cat[a]], [f["correcto"] for f in por_cat[b]])
+    a, b = CONFIGS_COMPARADAS
+    solo_a, solo_b, p = mcnemar_exacto([f["correcto"] for f in por_cfg[a]], [f["correcto"] for f in por_cfg[b]])
 
-    lineas = [f"# Held-out 2 — configuración {CONFIG}) {CONFIGS[CONFIG]['nombre']}, k={K}: catálogo {a} vs {b}", "",
-              f"Casos: {len(items)}. Evaluación única" + (" (**repetida con --forzar**)." if forzado else "."), "",
-              "| Catálogo | Accuracy | IC 95% bootstrap | F1 AMBIGUO | "
-              + " | ".join(f"F1 AMBIGUO {t}" for t in TIPOS_AMBIGUEDAD) + " | F1 null | Errores |",
+    def rec(r: dict) -> str:
+        return "—" if r["recall"] is None else f"{r['recall']:.3f} ({r['detectados']}/{r['n']})"
+
+    lineas = [f"# Held-out 2 — {a}) {CONFIGS[a]['nombre']} vs {b}) {CONFIGS[b]['nombre']} (catálogo {CATALOGO}, k={K})",
+              "", f"Casos: {len(items)}. Evaluación única" + (" (**repetida con --forzar**)." if forzado else "."), "",
+              "| Config | Accuracy | IC 95% bootstrap | F1 AMBIGUO | "
+              + " | ".join(f"Recall AMBIGUO {t}" for t in TIPOS_AMBIGUEDAD) + " | F1 null | Errores |",
               "|---|---|---|---|" + "---|" * len(TIPOS_AMBIGUEDAD) + "---|---|"]
-    for cat, fs in por_cat.items():
+    for c, fs in por_cfg.items():
         predichos = [f["prediccion"] for f in fs]
         m = metricas_estrictas(esperados, predichos)
-        por_tipo = f1_ambiguo_por_tipo(items, predichos)
-        lo, hi = ic[cat]
-        lineas.append(f"| {cat} | {m['accuracy']:.3f} | [{lo:.3f}, {hi:.3f}] | {m['ambiguo'][2]:.3f} | "
-                      + " | ".join(f"{por_tipo[t]['f1']:.3f} (n={por_tipo[t]['n']})" for t in TIPOS_AMBIGUEDAD)
+        por_tipo = recall_ambiguo_por_tipo(items, predichos)
+        lo, hi = ic[c]
+        lineas.append(f"| {c}) {CONFIGS[c]['nombre']} | {m['accuracy']:.3f} | [{lo:.3f}, {hi:.3f}] | "
+                      f"{m['ambiguo'][2]:.3f} | " + " | ".join(rec(por_tipo[t]) for t in TIPOS_AMBIGUEDAD)
                       + f" | {m['null'][2]:.3f} | {sum(1 for f in fs if f['error'])} |")
     lo, hi = ic[f"{b} − {a}"]
     diff = aciertos[b].mean() - aciertos[a].mean()
@@ -141,16 +149,16 @@ def reporte(items: list[dict], filas: list[dict], forzado: bool) -> str:
                "", "## Definiciones", "",
                "- Accuracy estricta: predicción == preferred_term esperado; AMBIGUO y null son clases.",
                f"- IC 95%: bootstrap percentil, {N_BOOTSTRAP} remuestreos de casos con reposición, semilla {SEMILLA}; "
-               "los dos catálogos usan los mismos remuestreos.",
-               "- F1 AMBIGUO por tipo: AMBIGUO vs resto, sin los AMBIGUO de los otros tipos; "
-               "los falsos positivos de AMBIGUO cuentan en todos los tipos.",
+               "las dos configuraciones usan los mismos remuestreos.",
+               "- Recall AMBIGUO por tipo: casos del tipo predichos como AMBIGUO / casos del tipo.",
+               "- j) aplica la regla de lateralidad sobre la misma predicción de i): no hay una segunda llamada al LLM.",
                "- McNemar exacto: binomial bilateral (p = 0.5) sobre los casos en que acierta uno solo.",
                "- Un error del LLM (conexión o parseo) cuenta como predicción null."]
     return "\n".join(lineas) + "\n"
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Evaluación única de i) con v1 vs v2.1 sobre el held-out 2.")
+    parser = argparse.ArgumentParser(description="Evaluación única de i) vs j) (catálogo v1) sobre el held-out 2.")
     parser.add_argument("--chequear", action="store_true", help="solo chequear prerequisitos, sin llamar al LLM")
     parser.add_argument("--forzar", action="store_true", help="evaluar aunque ya exista el resultado")
     args = parser.parse_args()

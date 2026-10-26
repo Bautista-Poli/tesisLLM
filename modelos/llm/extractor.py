@@ -12,6 +12,7 @@ import time
 from dataclasses import dataclass
 
 from modelos.llm.estudios import normalizar_estudio
+from modelos.llm.lateralidad import aplicar_a_slots
 from modelos.llm.ollama_client import llamar_ollama, extraer_json
 from modelos.llm.prompt import construir_system_prompt
 from modelos.llm.rag import (
@@ -39,9 +40,15 @@ class Extraccion:
 
 
 class ExtractorLLM:
-    """Extrae slots de un mensaje de usuario usando Ollama + RAG sobre los CSVs."""
+    """
+    Extrae slots de un mensaje de usuario usando Ollama + RAG sobre los CSVs.
 
-    def __init__(self) -> None:
+    regla_lateralidad: aplica la regla post-LLM de lateralidad.py (zona par sin lado
+    → estudio ambiguo con tipo_ambiguedad = falta_lado). Apagada por defecto.
+    """
+
+    def __init__(self, regla_lateralidad: bool = False) -> None:
+        self.regla_lateralidad = regla_lateralidad
         # Si falta el CSV de estudios, la excepción se propaga: sin terminología no hay extracción.
         self.df_terminos = cargar_terminos(CSV_TERMINOS)
         try:
@@ -100,6 +107,8 @@ class ExtractorLLM:
             if normalizado != original:
                 estudio_original = original
             slots["estudio"] = normalizado
+            if self.regla_lateralidad:
+                aplicar_a_slots(slots, texto)
 
         return Extraccion(
             slots=slots,

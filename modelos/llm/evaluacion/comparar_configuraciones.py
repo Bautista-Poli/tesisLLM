@@ -16,6 +16,10 @@ Todas las configuraciones se corren sobre los MISMOS casos (suite_etiquetada y h
       zonas) + 4 ejemplos few-shot tomados de la suite.
   i)  f) + 3 ejemplos few-shot de la suite SOLO de fuera de dominio (→ null),
       manteniendo la lista original de zonas ambiguas del prompt.
+  j)  i) + regla post-LLM de lateralidad (modelos/llm/lateralidad.py): zona par sin
+      lado en el mensaje → AMBIGUO / falta_lado. Es un post-proceso: si hay
+      predicciones de i) (guardadas con --reusar o de la misma corrida) se derivan
+      de ellas sin llamar al LLM.
 
 Catálogo: --catalogo v1 (CSVs/snomed_con_variantes.csv, default), v2 o v2.1
 (snomed_con_variantes_v2.csv / _v2_1.csv). Las corridas se guardan como "<config>@v2" o "@v2.1".
@@ -55,10 +59,11 @@ from modelos.llm.estudios import normalizar_estudio
 from modelos.llm.evaluacion.comun import asegurar_dir_resultados, tipo_error
 from modelos.llm.evaluacion.datos_etiquetados import CLASE_AMBIGUO, CLASE_NULL, SETS, TIPOS_AMBIGUEDAD
 from modelos.llm.evaluacion.metricas import (
-    clase_desde_slots, correcto_laxo, es_termino, f1_ambiguo_por_tipo, gold_laxo, metricas_estrictas,
+    clase_desde_slots, correcto_laxo, es_termino, gold_laxo, metricas_estrictas, recall_ambiguo_por_tipo,
     metricas_laxas,
 )
 from modelos.llm.extractor import CSV_COBERTURAS, CSV_TERMINOS
+from modelos.llm.lateralidad import aplicar_a_clase
 from modelos.llm.ollama_client import extraer_json, llamar_ollama
 from modelos.llm.prompt import construir_system_prompt
 from modelos.llm.rag import (
@@ -81,6 +86,7 @@ CONFIGS = {
            "restringida": True,
            "few_shot": ("fuera_dominio_resonancia", "fuera_dominio_ecografia", "fuera_dominio_laboratorio")},
 }
+CONFIGS["j"] = {**CONFIGS["i"], "nombre": "i + regla de lateralidad", "post_lateralidad": True, "deriva_de": "i"}
 
 CATALOGOS = {"v1": CSV_TERMINOS,
              "v2": CSV_TERMINOS.replace("snomed_con_variantes.csv", "snomed_con_variantes_v2.csv"),
@@ -275,11 +281,11 @@ def calcular_recuperacion(datos: dict, df_terminos, k: int, catalogo: str) -> di
 # ─── Corrida ─────────────────────────────────────────────────────────────────
 
 def _fila(s: str, clave: str, nombre: str, item: dict, pred: str, k_recup, hit_recup,
-          latencia: float, error: str) -> dict:
+          latencia: float, error: str, tipo_pred: str = "") -> dict:
     return {
         "set": s, "config": clave, "config_nombre": nombre,
         "id": item["id"], "grupo": item["grupo"], "input": item["input"],
-        "esperado": item["esperado"], "prediccion": pred,
+        "esperado": item["esperado"], "prediccion": pred, "tipo_ambiguedad_pred": tipo_pred,
         "correcto_estricto": pred == item["esperado"],
         "gold_laxo": gold_laxo(item) or "",
         "correcto_laxo": correcto_laxo(item, pred) if gold_laxo(item) else "",
@@ -291,8 +297,11 @@ def _fila(s: str, clave: str, nombre: str, item: dict, pred: str, k_recup, hit_r
 
 
 def correr(configs: dict, datos: dict, k: int, df_terminos, df_coberturas, recup: dict,
-           catalogo: str) -> tuple[list[dict], dict | None]:
+           catalogo: str, previas: list[dict]) -> tuple[list[dict], dict | None]:
+    """previas: filas ya calculadas; las configs derivadas (j) toman de ahí la predicción de su base."""
     umbrales = None
+    calculadas = {(f["config"], f["set"], f["id"]): f for f in previas}
+    sufijo = "" if catalogo == "v1" else f"@{catalogo}"
     if "b2" in configs:
         umbrales = calibrar_umbrales(SETS["suite"](), df_terminos, CONFIGS["b2"]["analizador"])
 
@@ -302,9 +311,12 @@ def correr(configs: dict, datos: dict, k: int, df_terminos, df_coberturas, recup
             for i, item in enumerate(items):
                 print(f"  {clave}) {cfg['nombre'][:34]:<34} {s:<8} [{i + 1}/{len(items)}]", end="\r", flush=True)
                 t0 = time.perf_counter()
-                error = ""
+                error = tipo_pred = ""
+                base = calculadas.get((f"{cfg.get('deriva_de')}{sufijo}", s, item["id"]))
                 try:
-                    if cfg["llm"]:
+                    if base is not None:  # post-proceso sobre la predicción guardada de la config base
+                        pred, error = base["prediccion"], base["error"]
+                    elif cfg["llm"]:
                         pred = predecir_llm(item, df_terminos, df_coberturas, cfg, k, CATALOGOS[catalogo])
                     elif cfg.get("umbrales"):
                         pred = aplicar_umbrales(*puntajes_tfidf(item, df_terminos, cfg["analizador"]), umbrales)
@@ -312,7 +324,9 @@ def correr(configs: dict, datos: dict, k: int, df_terminos, df_coberturas, recup
                         pred = predecir_tfidf(item, df_terminos, cfg["analizador"])
                 except Exception as e:  # el caso cuenta como null
                     pred, error = CLASE_NULL, f"{type(e).__name__}: {e}"
-                latencia = time.perf_counter() - t0
+                if cfg.get("post_lateralidad"):
+                    pred, tipo_pred = aplicar_a_clase(pred, item["input"])
+                latencia = time.perf_counter() - t0 + (base["latencia_s"] if base is not None else 0.0)
 
                 if cfg["analizador"] is None:
                     k_recup, hit_recup = "", ""
@@ -320,7 +334,9 @@ def correr(configs: dict, datos: dict, k: int, df_terminos, df_coberturas, recup
                     k_recup, hit_recup = k, recup[(catalogo, s, cfg["analizador"])]["por_caso"][i]["contexto"]
                 else:
                     k_recup, hit_recup = 1, recup[(catalogo, s, cfg["analizador"])]["por_caso"][i]["top1"]
-                filas.append(_fila(s, clave, cfg["nombre"], item, pred, k_recup, hit_recup, latencia, error))
+                fila = _fila(s, clave, cfg["nombre"], item, pred, k_recup, hit_recup, latencia, error, tipo_pred)
+                filas.append(fila)
+                calculadas[(clave, s, item["id"])] = fila
         print(" " * 90, end="\r")
     return filas, umbrales
 
@@ -346,7 +362,7 @@ def cargar_filas_previas(ruta: str, datos: dict, reemplazar: set) -> list[dict]:
                 hit_r = ""
             k_r = int(r["k_recuperacion"]) if r["k_recuperacion"] else ""
             filas.append(_fila(r["set"], r["config"], r["config_nombre"], item, r["prediccion"], k_r, hit_r,
-                               float(r["latencia_s"]), r["error"]))
+                               float(r["latencia_s"]), r["error"], r.get("tipo_ambiguedad_pred", "")))
     return filas
 
 
@@ -361,7 +377,7 @@ def resumir(filas: list[dict], configs: list[str], sets: list[str]) -> list[dict
             predichos = [f["prediccion"] for f in fs]
             m = metricas_estrictas(esperados, predichos)
             ml = metricas_laxas([f["_item"] for f in fs], predichos)
-            por_tipo = f1_ambiguo_por_tipo([f["_item"] for f in fs], predichos)
+            por_tipo = recall_ambiguo_por_tipo([f["_item"] for f in fs], predichos)
             latencias = [f["latencia_s"] for f in fs]
             ids_few = CONFIGS[base_config(clave)].get("few_shot", ())
             fuera_few = [f for f in fs if f["id"] not in ids_few]
@@ -373,7 +389,8 @@ def resumir(filas: list[dict], configs: list[str], sets: list[str]) -> list[dict
                 "accuracy": m["accuracy"],
                 "macro_p": m["macro_p"], "macro_r": m["macro_r"], "macro_f1": m["macro_f1"],
                 "f1_ambiguo": m["ambiguo"][2], "f1_null": m["null"][2],
-                **{f"f1_ambiguo_{t}": por_tipo[t]["f1"] for t in TIPOS_AMBIGUEDAD},
+                **{f"recall_ambiguo_{t}": por_tipo[t]["recall"] for t in TIPOS_AMBIGUEDAD},
+                **{f"detectados_ambiguo_{t}": por_tipo[t]["detectados"] for t in TIPOS_AMBIGUEDAD},
                 **{f"n_ambiguo_{t}": por_tipo[t]["n"] for t in TIPOS_AMBIGUEDAD},
                 "laxa_p": ml["p"], "laxa_r": ml["r"], "laxa_f1": ml["f1"],
                 "latencia_media_s": statistics.mean(latencias),
@@ -429,14 +446,14 @@ def tabla_markdown(resumen: list[dict], recup: dict, sets: list[str], k: int, um
                       f"| {_f(r['macro_p'])} | {_f(r['macro_r'])} | {_f(r['macro_f1'])} | {_f(r['f1_ambiguo'])} "
                       f"| {_f(r['f1_null'])} | {_f(r['laxa_f1'])} | {_lat(r['latencia_media_s'])} | {r['errores']} |")
 
-    lineas += ["", "## F1 de AMBIGUO por tipo_ambiguedad", "",
-               "AMBIGUO vs resto, sin los AMBIGUO de los otros tipos (n = casos AMBIGUO del tipo). "
-               "La predicción no trae tipo: los falsos positivos de AMBIGUO cuentan en todos los tipos.", "",
+    lineas += ["", "## Recall de AMBIGUO por tipo_ambiguedad", "",
+               "Casos del tipo predichos como AMBIGUO / casos del tipo (detectados/n).", "",
                "| Config | Set | F1 AMBIGUO | " + " | ".join(TIPOS_AMBIGUEDAD) + " |",
                "|---|---|---|" + "---|" * len(TIPOS_AMBIGUEDAD)]
     for r in resumen:
         lineas.append(f"| {r['config']}) {r['config_nombre']} | {r['set']} | {_f(r['f1_ambiguo'])} | "
-                      + " | ".join(f"{_f(r[f'f1_ambiguo_{t}'])} (n={r[f'n_ambiguo_{t}']})" for t in TIPOS_AMBIGUEDAD)
+                      + " | ".join(f"{_f(r[f'recall_ambiguo_{t}'])} ({r[f'detectados_ambiguo_{t}']}/{r[f'n_ambiguo_{t}']})"
+                                   for t in TIPOS_AMBIGUEDAD)
                       + " |")
 
     if "suite" in sets and "heldout" in sets:
@@ -504,7 +521,7 @@ def escribir_csv(ruta: str, filas: list[dict]) -> None:
         w.writerows(filas)
 
 
-ORDEN = ["a", "b", "b2", "c", "d", "e", "f", "g", "i"]
+ORDEN = ["a", "b", "b2", "c", "d", "e", "f", "g", "i", "j"]
 
 
 def main() -> None:
@@ -525,7 +542,7 @@ def main() -> None:
     d = asegurar_dir_resultados()
     sufijo = "" if args.catalogo == "v1" else f"@{args.catalogo}"
     configs = {f"{c}{sufijo}": ({**CONFIGS[c], "nombre": f"{CONFIGS[c]['nombre']} [{args.catalogo}]"} if sufijo
-                                else CONFIGS[c]) for c in args.configs}
+                                else CONFIGS[c]) for c in sorted(args.configs, key=ORDEN.index)}
 
     recup = {}
     for cat, ruta in CATALOGOS.items():
@@ -533,7 +550,7 @@ def main() -> None:
             recup.update(calcular_recuperacion(todos, cargar_terminos(ruta), args.k, cat))
     reemplazar = {(c, s) for c in configs for s in args.sets}
     previas = cargar_filas_previas(os.path.join(d, CSV_POR_CASO), todos, reemplazar) if args.reusar else []
-    nuevas, umbrales = correr(configs, datos, args.k, df_terminos, df_coberturas, recup, args.catalogo)
+    nuevas, umbrales = correr(configs, datos, args.k, df_terminos, df_coberturas, recup, args.catalogo, previas)
     filas = previas + nuevas
 
     presentes = {f["config"] for f in filas}

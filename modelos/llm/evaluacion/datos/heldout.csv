@@ -5,7 +5,7 @@ h03_abdomen,claro,tengo que hacerme una radiografía del abdomen,,radiografía s
 h04_seno_frontal,claro,me duele mucho la frente y el otorrino quiere ver con rayos el seno de la frente,,radiografía simple de seno frontal,,False,,seno frontal|frontal
 h05_talon,claro,el traumatólogo me pidió rayos del talón izquierdo,,radiografía simple de calcáneo izquierdo,,False,talón = calcáneo,calcáneo
 h06_rotula,claro,"necesito ver si me fisuré la rótula derecha, me pidieron rayos x",,radiografía simple de rótula derecha,,False,,rótula
-h07_dedo_gordo,claro,"me golpeé el dedo gordo del pie, quiero una placa",,AMBIGUO,falta_lado,True,"pie sin lado (regla de lateralidad); el catálogo no tiene primer dedo de pie con lado: tras aclarar, dedo de pie derecho/izquierdo",dedo
+h07_dedo_gordo,claro,"me golpeé el dedo gordo del pie, quiero una placa",,AMBIGUO,falta_lado,False,"pie sin lado (regla de lateralidad); el catálogo no tiene primer dedo de pie con lado, pero la regla se aplica igual",dedo
 h08_pulgar,claro,necesito radiografiar el pulgar de la mano izquierda,,radiografía simple de pulgar izquierdo,,False,,pulgar
 h09_esternon,claro,me mandaron una radiografía del esternón,,radiografía simple de esternón,,False,,esternón
 h10_atm,claro,me cruje la mandíbula al abrir la boca y el odontólogo quiere estudiar con rayos x la articulación temporomandibular,,radiografía simple de articulación temporomandibular,,False,,temporomandibular

@@ -17,6 +17,7 @@ Casos por set: suite = 80 (23 clases), heldout = 60 (33 clases). Todas las confi
 | g) f + ambigüedad genérica + few-shot | 0.75 | 0.67 | 0.29 / 0.15 | 1.00 / 0.95 | 0 / 0 | 3.92 s / 3.97 s |
 | i) f + few-shot fuera de dominio | 0.79 | 0.75 | 0.42 / 0.59 | 1.00 / 1.00 | 0 / 0 | 3.92 s / 4.04 s |
 | i@v2) f + few-shot fuera de dominio [v2] | 0.75 | 0.70 | 0.35 / 0.59 | 0.99 / 0.95 | 0 / 0 | 3.89 s / 4.04 s |
+| j) i + regla de lateralidad | 0.84 | 0.80 | 0.72 / 0.80 | 1.00 / 1.00 | 0 / 0 | 3.92 s / 4.04 s |
 
 ## Métricas por configuración
 
@@ -44,35 +45,39 @@ Casos por set: suite = 80 (23 clases), heldout = 60 (33 clases). Todas las confi
 | i) f + few-shot fuera de dominio | heldout | 0.89 (k=5) | 0.75 | 0.80 | 0.79 | 0.79 | 0.59 | 1.00 | 0.80 | 4.05 s | 0 |
 | i@v2) f + few-shot fuera de dominio [v2] | suite | 0.88 (k=5) | 0.75 | 0.85 | 0.76 | 0.79 | 0.35 | 0.99 | 0.84 | 4.23 s | 0 |
 | i@v2) f + few-shot fuera de dominio [v2] | heldout | 0.86 (k=5) | 0.70 | 0.76 | 0.74 | 0.73 | 0.59 | 0.95 | 0.81 | 4.00 s | 0 |
+| j) i + regla de lateralidad | suite | 0.82 (k=5) | 0.84 | 0.80 | 0.75 | 0.77 | 0.72 | 1.00 | 0.84 | 4.34 s | 0 |
+| j) i + regla de lateralidad | heldout | 0.89 (k=5) | 0.80 | 0.80 | 0.79 | 0.79 | 0.80 | 1.00 | 0.82 | 4.05 s | 0 |
 
-## F1 de AMBIGUO por tipo_ambiguedad
+## Recall de AMBIGUO por tipo_ambiguedad
 
-AMBIGUO vs resto, sin los AMBIGUO de los otros tipos (n = casos AMBIGUO del tipo). La predicción no trae tipo: los falsos positivos de AMBIGUO cuentan en todos los tipos.
+Casos del tipo predichos como AMBIGUO / casos del tipo (detectados/n).
 
 | Config | Set | F1 AMBIGUO | falta_lado | falta_segmento | zona_amplia | falta_zona |
 |---|---|---|---|---|---|---|
-| a) TF-IDF palabras top-1 | suite | 0.00 | 0.00 (n=5) | 0.00 (n=2) | 0.00 (n=3) | 0.00 (n=2) |
-| a) TF-IDF palabras top-1 | heldout | 0.00 | 0.00 (n=3) | 0.00 (n=3) | 0.00 (n=2) | 0.00 (n=4) |
-| b) TF-IDF char 3-5 top-1 | suite | 0.00 | 0.00 (n=5) | 0.00 (n=2) | 0.00 (n=3) | 0.00 (n=2) |
-| b) TF-IDF char 3-5 top-1 | heldout | 0.00 | 0.00 (n=3) | 0.00 (n=3) | 0.00 (n=2) | 0.00 (n=4) |
-| b2) TF-IDF char 3-5 + umbrales | suite | 0.50 | 0.44 (n=5) | 0.31 (n=2) | 0.15 (n=3) | 0.00 (n=2) |
-| b2) TF-IDF char 3-5 + umbrales | heldout | 0.33 | 0.31 (n=3) | 0.17 (n=3) | 0.18 (n=2) | 0.00 (n=4) |
-| c) LLM + RAG palabras | suite | 0.40 | 0.00 (n=5) | 0.29 (n=2) | 0.25 (n=3) | 0.50 (n=2) |
-| c) LLM + RAG palabras | heldout | 0.41 | 0.00 (n=3) | 0.13 (n=3) | 0.14 (n=2) | 0.42 (n=4) |
-| d) LLM + RAG char 3-5 | suite | 0.46 | 0.14 (n=5) | 0.33 (n=2) | 0.17 (n=3) | 0.33 (n=2) |
-| d) LLM + RAG char 3-5 | heldout | 0.50 | 0.00 (n=3) | 0.36 (n=3) | 0.00 (n=2) | 0.57 (n=4) |
-| e) LLM sin RAG | suite | 0.58 | 0.50 (n=5) | 0.00 (n=2) | 0.27 (n=3) | 0.29 (n=2) |
-| e) LLM sin RAG | heldout | 0.75 | 0.50 (n=3) | 0.67 (n=3) | 0.00 (n=2) | 0.73 (n=4) |
-| f) d + salida restringida | suite | 0.48 | 0.15 (n=5) | 0.36 (n=2) | 0.18 (n=3) | 0.36 (n=2) |
-| f) d + salida restringida | heldout | 0.52 | 0.00 (n=3) | 0.40 (n=3) | 0.00 (n=2) | 0.62 (n=4) |
-| f@v2) d + salida restringida [v2] | suite | 0.42 | 0.15 (n=5) | 0.36 (n=2) | 0.00 (n=3) | 0.36 (n=2) |
-| f@v2) d + salida restringida [v2] | heldout | 0.43 | 0.00 (n=3) | 0.20 (n=3) | 0.00 (n=2) | 0.57 (n=4) |
-| g) f + ambigüedad genérica + few-shot | suite | 0.29 | 0.00 (n=5) | 0.00 (n=2) | 0.00 (n=3) | 1.00 (n=2) |
-| g) f + ambigüedad genérica + few-shot | heldout | 0.15 | 0.00 (n=3) | 0.00 (n=3) | 0.00 (n=2) | 0.40 (n=4) |
-| i) f + few-shot fuera de dominio | suite | 0.42 | 0.00 (n=5) | 0.33 (n=2) | 0.29 (n=3) | 0.57 (n=2) |
-| i) f + few-shot fuera de dominio | heldout | 0.59 | 0.00 (n=3) | 0.50 (n=3) | 0.00 (n=2) | 1.00 (n=4) |
-| i@v2) f + few-shot fuera de dominio [v2] | suite | 0.35 | 0.00 (n=5) | 0.40 (n=2) | 0.00 (n=3) | 0.67 (n=2) |
-| i@v2) f + few-shot fuera de dominio [v2] | heldout | 0.59 | 0.00 (n=3) | 0.50 (n=3) | 0.00 (n=2) | 1.00 (n=4) |
+| a) TF-IDF palabras top-1 | suite | 0.00 | 0.00 (0/5) | 0.00 (0/2) | 0.00 (0/3) | 0.00 (0/2) |
+| a) TF-IDF palabras top-1 | heldout | 0.00 | 0.00 (0/3) | 0.00 (0/3) | 0.00 (0/2) | 0.00 (0/4) |
+| b) TF-IDF char 3-5 top-1 | suite | 0.00 | 0.00 (0/5) | 0.00 (0/2) | 0.00 (0/3) | 0.00 (0/2) |
+| b) TF-IDF char 3-5 top-1 | heldout | 0.00 | 0.00 (0/3) | 0.00 (0/3) | 0.00 (0/2) | 0.00 (0/4) |
+| b2) TF-IDF char 3-5 + umbrales | suite | 0.50 | 0.80 (4/5) | 1.00 (2/2) | 0.33 (1/3) | 0.00 (0/2) |
+| b2) TF-IDF char 3-5 + umbrales | heldout | 0.33 | 0.67 (2/3) | 0.33 (1/3) | 0.50 (1/2) | 0.00 (0/4) |
+| c) LLM + RAG palabras | suite | 0.40 | 0.00 (0/5) | 0.50 (1/2) | 0.33 (1/3) | 1.00 (2/2) |
+| c) LLM + RAG palabras | heldout | 0.41 | 0.00 (0/3) | 0.33 (1/3) | 0.50 (1/2) | 1.00 (4/4) |
+| d) LLM + RAG char 3-5 | suite | 0.46 | 0.20 (1/5) | 1.00 (2/2) | 0.33 (1/3) | 1.00 (2/2) |
+| d) LLM + RAG char 3-5 | heldout | 0.50 | 0.00 (0/3) | 0.67 (2/3) | 0.00 (0/2) | 1.00 (4/4) |
+| e) LLM sin RAG | suite | 0.58 | 1.00 (5/5) | 0.00 (0/2) | 0.67 (2/3) | 1.00 (2/2) |
+| e) LLM sin RAG | heldout | 0.75 | 0.67 (2/3) | 1.00 (3/3) | 0.00 (0/2) | 1.00 (4/4) |
+| f) d + salida restringida | suite | 0.48 | 0.20 (1/5) | 1.00 (2/2) | 0.33 (1/3) | 1.00 (2/2) |
+| f) d + salida restringida | heldout | 0.52 | 0.00 (0/3) | 0.67 (2/3) | 0.00 (0/2) | 1.00 (4/4) |
+| f@v2) d + salida restringida [v2] | suite | 0.42 | 0.20 (1/5) | 1.00 (2/2) | 0.00 (0/3) | 1.00 (2/2) |
+| f@v2) d + salida restringida [v2] | heldout | 0.43 | 0.00 (0/3) | 0.33 (1/3) | 0.00 (0/2) | 1.00 (4/4) |
+| g) f + ambigüedad genérica + few-shot | suite | 0.29 | 0.00 (0/5) | 0.00 (0/2) | 0.00 (0/3) | 1.00 (2/2) |
+| g) f + ambigüedad genérica + few-shot | heldout | 0.15 | 0.00 (0/3) | 0.00 (0/3) | 0.00 (0/2) | 0.25 (1/4) |
+| i) f + few-shot fuera de dominio | suite | 0.42 | 0.00 (0/5) | 0.50 (1/2) | 0.33 (1/3) | 1.00 (2/2) |
+| i) f + few-shot fuera de dominio | heldout | 0.59 | 0.00 (0/3) | 0.33 (1/3) | 0.00 (0/2) | 1.00 (4/4) |
+| i@v2) f + few-shot fuera de dominio [v2] | suite | 0.35 | 0.00 (0/5) | 0.50 (1/2) | 0.00 (0/3) | 1.00 (2/2) |
+| i@v2) f + few-shot fuera de dominio [v2] | heldout | 0.59 | 0.00 (0/3) | 0.33 (1/3) | 0.00 (0/2) | 1.00 (4/4) |
+| j) i + regla de lateralidad | suite | 0.72 | 1.00 (5/5) | 0.50 (1/2) | 0.33 (1/3) | 1.00 (2/2) |
+| j) i + regla de lateralidad | heldout | 0.80 | 1.00 (3/3) | 0.33 (1/3) | 0.00 (0/2) | 1.00 (4/4) |
 
 ## Caída suite → heldout (heldout − suite)
 
@@ -89,6 +94,7 @@ AMBIGUO vs resto, sin los AMBIGUO de los otros tipos (n = casos AMBIGUO del tipo
 | g) f + ambigüedad genérica + few-shot | -0.08 | -0.03 | -0.05 |
 | i) f + few-shot fuera de dominio | -0.04 | -0.01 | -0.05 |
 | i@v2) f + few-shot fuera de dominio [v2] | -0.05 | -0.05 | -0.03 |
+| j) i + regla de lateralidad | -0.04 | +0.02 | -0.01 |
 
 ## Few-shot
 
@@ -97,6 +103,7 @@ Los ejemplos salen de la suite, así que en la suite esos casos están vistos. A
 - g) f + ambigüedad genérica + few-shot — ejemplos: torax_especifico, rodilla_especifica, pierna_ambigua, fuera_dominio_resonancia → 0.75 (con ellos: 0.75)
 - i) f + few-shot fuera de dominio — ejemplos: fuera_dominio_resonancia, fuera_dominio_ecografia, fuera_dominio_laboratorio → 0.78 (con ellos: 0.79)
 - i@v2) f + few-shot fuera de dominio [v2] — ejemplos: fuera_dominio_resonancia, fuera_dominio_ecografia, fuera_dominio_laboratorio → 0.74 (con ellos: 0.75)
+- j) i + regla de lateralidad — ejemplos: fuera_dominio_resonancia, fuera_dominio_ecografia, fuera_dominio_laboratorio → 0.83 (con ellos: 0.84)
 
 ## Calibración de b2 (solo sobre la suite)
 

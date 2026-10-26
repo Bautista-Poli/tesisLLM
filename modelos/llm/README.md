@@ -28,6 +28,7 @@ Extrae entidades (nombre, DNI, estudio, obra social, sede) del texto libre del u
 ```bash
 python3 -m modelos.llm.playground_llm                  # playground conversacional
 python3 -m modelos.llm.tests.test_suite                 # suite completa de tests NLU
+python3 -m unittest modelos.llm.tests.test_lateralidad -v  # tests unitarios de la regla de lateralidad (sin Ollama)
 ```
 
 Filtrar tests por grupo: `python -m modelos.llm.tests.test_estudios ambiguos` (o `test_datos`, `test_bordes`).
@@ -44,7 +45,7 @@ Las salidas (CSV, tablas y gráficos) se guardan en `modelos/llm/evaluacion/resu
 | `heldout.csv` | Held-out 1: 60 mensajes nuevos (claros, ambiguos, typos, fuera de dominio, multislot) con etiqueta exacta y `clave_laxa` para la métrica laxa. Ya se usó para elegir la configuración: **no se evalúa nada más contra él**. |
 | `heldout2.csv` | Held-out 2: plantilla de 35 filas (12 claros, 8 ambiguos, 5 typos, 5 multislot, 5 fuera de dominio) con solo `categoria` completa. Los mensajes y las etiquetas se escriben a mano. Es para una única evaluación final. |
 
-En los casos `AMBIGUO`, la columna `tipo_ambiguedad` dice qué falta: `falta_lado` (zona par sin lado), `falta_segmento` (columna o espalda sin cervical / dorsal / lumbar), `zona_amplia` (zona mencionada pero amplia: pierna, brazo, huesos largos) o `falta_zona` (sin zona: "rx", "necesito una radiografía", "todo el cuerpo"). No cambia la accuracy; se usa para reportar el F1 de `AMBIGUO` por tipo y, más adelante, para el diálogo.
+En los casos `AMBIGUO`, la columna `tipo_ambiguedad` dice qué falta: `falta_lado` (zona par sin lado), `falta_segmento` (columna o espalda sin cervical / dorsal / lumbar), `zona_amplia` (zona mencionada pero amplia: pierna, brazo, huesos largos) o `falta_zona` (sin zona: "rx", "necesito una radiografía", "todo el cuerpo"). No cambia la accuracy; se usa para reportar el recall de `AMBIGUO` por tipo (casos del tipo detectados como `AMBIGUO` / casos del tipo) y, más adelante, para el diálogo.
 
 **Regla de lateralidad.** Para las zonas pares (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo), si el mensaje no dice el lado (derecho / izquierdo / ambos), la etiqueta es `AMBIGUO` con `falta_lado`. En el catálogo, una variante sin lado no puede apuntar a un estudio con lado. La zona en plural sin lado ("rodillas", "rayos de pies") cuenta como ambos.
 
@@ -80,21 +81,26 @@ python3 -m modelos.llm.evaluacion.generar_catalogo_v2 --version v2.1
 ```bash
 # a) TF-IDF palabras top-1   b) TF-IDF char 3-5 top-1   b2) TF-IDF char 3-5 + umbrales   (sin LLM)
 # c) LLM + RAG palabras k=5  d) LLM + RAG char 3-5 k=5  e) LLM sin RAG   (requieren Ollama)
+# f) d + salida restringida  g) f + ambigüedad genérica + few-shot  i) f + few-shot fuera de dominio
+# j) i + regla post-LLM de lateralidad (post-proceso: con --reusar se deriva de las predicciones de i, sin Ollama)
 python3 -m modelos.llm.evaluacion.comparar_configuraciones
+python3 -m modelos.llm.evaluacion.comparar_configuraciones --configs j --reusar   # j sobre las predicciones guardadas de i
 python3 -m modelos.llm.evaluacion.comparar_configuraciones --configs a b b2       # solo baselines
 python3 -m modelos.llm.evaluacion.comparar_configuraciones --configs b2 --reusar  # recalcula sin volver a llamar al LLM
 python3 -m modelos.llm.evaluacion.comparar_configuraciones --sets heldout --k 5
 ```
 
-Reporta por configuración y set: recall@k de la recuperación, accuracy top-1 exacta, P/R/F1 macro (con `AMBIGUO` y `null` siempre incluidas como clases), F1 de `AMBIGUO` y de `null`, la métrica laxa anterior, latencia media por mensaje y la caída suite → heldout. Genera `comparacion_por_caso.csv`, `comparacion_resumen.csv` y `comparacion_resumen.md`.
+Reporta por configuración y set: recall@k de la recuperación, accuracy top-1 exacta, P/R/F1 macro (con `AMBIGUO` y `null` siempre incluidas como clases), F1 de `AMBIGUO` y de `null`, recall de `AMBIGUO` por tipo, la métrica laxa anterior, latencia media por mensaje y la caída suite → heldout. Genera `comparacion_por_caso.csv`, `comparacion_resumen.csv` y `comparacion_resumen.md`.
 
 b2) devuelve `null` si el coseno top-1 < `umbral_null` y `AMBIGUO` si el margen top1−top2 < `umbral_margen`; ambos umbrales se calibran solo sobre la suite (búsqueda en grilla, máxima accuracy), así que la cifra válida es la del held-out. `--reusar` toma de `comparacion_por_caso.csv` las predicciones de las configs que no se corren y recalcula todas las métricas con las etiquetas actuales.
+
+**Regla de lateralidad post-LLM** (`modelos/llm/lateralidad.py`): si el estudio predicho es de una zona par (hombro, pie, cadera, rodilla, mano, codo, muñeca, tobillo, dedos), su `preferred_term` no tiene lado y el mensaje no dice derecho / izquierdo / ambos ni nombra la zona en plural, el estudio pasa a `AMBIGUO` con `tipo_ambiguedad = falta_lado`. Está apagada por defecto; en el pipeline se activa con `ExtractorLLM(regla_lateralidad=True)`. Limitación conocida: "Radiografía de Edad Ósea" (estudio de mano y muñeca sin lado) pasa a `AMBIGUO`, porque el mensaje no dice lado.
 
 Los defaults del sistema no cambian: `rag.TOP_K = 3` y el analizador por palabras. El analizador por n-gramas de caracteres es una opción de `rag.py` (`analizador="char"`).
 
 ### Evaluación final sobre el held-out 2 (una sola vez)
 
-Configuración elegida: **i) con catálogo v1**. La evaluación final compara i) con v1 contra i) con v2.1 sobre el held-out 2: accuracy estricta con IC 95% bootstrap (y el de la diferencia), F1 de `AMBIGUO` (total y por `tipo_ambiguedad`), F1 de `null` y McNemar exacto entre los dos. Antes de llamar al LLM corre `verificar_heldout --set heldout2` y no sigue si falla; si el resultado ya existe no vuelve a evaluar (`--forzar` lo pisa y queda anotado). Requiere Ollama.
+Configuración elegida: **i) con catálogo v1**. La evaluación final compara i) contra j) (i + regla de lateralidad), las dos con catálogo v1, sobre el held-out 2. j) se deriva de la misma predicción de i), así que hay una sola llamada al LLM por mensaje y la diferencia es solo la regla. Reporta accuracy estricta con IC 95% bootstrap (y el de la diferencia j − i), F1 de `AMBIGUO` total, recall de `AMBIGUO` por `tipo_ambiguedad`, F1 de `null` y McNemar exacto entre las dos. Antes de llamar al LLM corre `verificar_heldout --set heldout2` y no sigue si falla; si el resultado ya existe no vuelve a evaluar (`--forzar` lo pisa y queda anotado). Requiere Ollama.
 
 ```bash
 python3 -m modelos.llm.evaluacion.evaluar_heldout2 --chequear   # solo prerequisitos, sin LLM
